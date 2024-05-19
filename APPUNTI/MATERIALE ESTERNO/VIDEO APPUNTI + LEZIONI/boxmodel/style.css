@@ -1,0 +1,68 @@
+/*quando si va a lavorare sui riquadri (div) e buona abitudine applicare uno sfondo TEMPORANEO dietro di esso,
+cosi che ci permette di vedere a cosa si sta lavorando e distinguerlo senza confondersi.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-DIMENSIONI 
+
+                                    IN TERMINI ASSOLUTI 
+width: 300PX (indica la LARGHEZZA del div, se restringiamo la pagina il div rimarra sempre invariato)
+
+height: 300PX (indica l'ALTEZZA del div, se non viene modificata l'altezza, verra settata in automatico in base a quanto contenuto e presente nel div.
+effettuando questa operazione pero, se creeiamo un riquadro piccolo che non contiene tutto il contenuto, finisce che trasborda fuori dal div. se restringiamo
+anche in questo caso la pagina, il div rimarra sempre invariato.)
+
+                                    IN TERMINI IN %
+width: 0/100% (ora andiamo a lavorare con le percentuali {ex 50%} , se restringiamo la pagina, il nostro div avra sempre il 50% della larghezza della nostra pagina
+e cambiera sempre in base a quanto andiamo a res tringerla.)
+
+height: 0/100% (si puo fare lo stesso lavoro con le %, con l'altezza, anche se pero il discorso e piu complicato, di solito l'altezza la lasciamo di default per 
+problemi con il contenuto, salvo casi specifici.)
+
+
+                              DIMENSIONI MIN/MAX WIDHT/HEIGHT (px)
+min-width:
+
+
+
+-DIV CONTENITORE SUPREMO DELLA PAGINA
+
+    3.32*/
+
+body {
+  text-align: left;
+  background-color: rgb(240, 240, 231);
+  font-family: "Comic Sans MS";
+}
+
+p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: rgb(199, 107, 126);
+  font-weight: bold;
+  font-size: 27px;
+}
+
+#testa {
+  background-color: aqua;
+  width: 400px; /*unita di misura in PX*/
+  width: 70%; /*unita di misura in %*/
+}
+
+h1.dentroTesta {
+  color: red;
+  font-size: 45px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+p.dentroTesta {
+  font-weight: bold;
+}
+
+p.dentroFooter {
+  font-style: italic;
+}

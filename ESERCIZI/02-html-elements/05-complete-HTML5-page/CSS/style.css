@@ -1,0 +1,74 @@
+/* dividiamo i vari div con un colore di sfondo diverso */
+
+header {
+    background-color: red;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+}
+
+span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+.immagini {
+    width: 200px;
+    border: solid;
+}
+
+
+a {
+    font-size: 20px;
+}
+
+
+a:hover {
+    color: red;
+    text-decoration: line-through;
+}
+
+
+nav {
+    background-color: aqua;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    table {
+        border: 4px solid black;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    th {
+        border: 3px solid black;
+        font-size: 30px;
+        background-color: yellow;
+    }
+
+
+    td {
+        border: 1px solid black;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: darkcyan;
+    }
+}
+
+
+aside {
+    background-color: chartreuse;
+    font-size: 20px;
+}
+
+
+
+footer {
+    background-color: darkorange;
+    font-family: 'Courier New', Courier, monospace;
+}

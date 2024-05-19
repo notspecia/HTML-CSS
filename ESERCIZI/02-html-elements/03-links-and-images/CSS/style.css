@@ -1,0 +1,41 @@
+body {
+    font-family: "Comic Sans MS";
+}
+
+
+h1 {
+    font-size: 55px;
+    color: darkblue;
+}
+
+#canePallina {
+    height: 300px;
+    width: 400px;
+    border-style: solid;
+}
+
+figcaption {
+    font-size: 20px;
+}
+
+
+h2 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+
+span {
+    font-size: 40px;
+}
+
+
+a {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+a:hover {
+    color: red;
+}

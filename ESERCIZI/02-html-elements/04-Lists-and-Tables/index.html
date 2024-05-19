@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- informazioni di meta dati sul file HTML -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LISTE E TABELLE</title>
+    <meta name="descrizione" content="pagina con liste e tabelle">
+    <meta name="autore" content="Gabriele Speciale">
+
+    <!-- collegamento external al file css -->
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <!-- inizio contenuto -->
+    <h1>pagina con liste e tabelle &#10084;</h1>
+
+    <!-- collegamento interno alla pagina -->
+    <a id="ordinata"></a>
+
+    <!-- lista ordinata -->
+    <h2>lista ordinata &#10549;</h2>
+    <ol>
+        <li>cane con pallina</li>
+        <li>cosa mi piace fare</li>
+        <li>cibo nel frigorifero</li>
+    </ol>
+
+    <hr>
+
+    <!-- lista disordinata -->
+    <h2>lista disordinata &#10549;</h2>
+    <ul>
+        <li>cane con pallina</li>
+        <li>cosa mi piace fare</li>
+        <li>cibo nel frigorifero</li>
+    </ul>
+
+    <hr>
+
+    <!-- lista con i link -->
+    <h2>lista di alcuni link &#10549;</h2>
+    <ol>
+        <li><a href="#ordinata" title="collegamento lista ord.">vai alla lista ordinata</a></li>
+        <li><a href="https://www.melarossa.it/nutrizione/i-migliori-piatti-del-mondo/" title="cibi buoni"> cibi + buoni
+                del mondo</a></li>
+        <li><a href="mailto:gabriele.speciale@its-ictpiemonte.it" title="contattami!">per problemi scrivimi qui!</a>
+        </li>
+    </ol>
+
+    <hr>
+
+    <!-- lista con delle immagini -->
+    <h2>lista di alcune immagini &#10549;</h2>
+    <ul>
+        <li><img src="IMG/download.jpg" alt="hamburger" class="listaIMG"></li>
+        <li><img src="IMG/Russka_Handgymnastikball_gelb-1.jpg" alt="pallina" class="listaIMG"></li>
+        <li><img src="IMG/proprieta-dell-acqua-orig.avif" alt="acqua" class="listaIMG"></li>
+    </ul>
+
+    <hr>
+    
+    <!-- **TABELLA con liste immagini e links** -->
+    <h2>tabella con liste immagini e links</h2>
+    <table>
+
+        <!-- testa della tabella -->
+        <thead>
+            <tr>
+                <th>liste</th>
+                <th>immagini</th>
+                <th>links</th>
+            </tr>
+        </thead>
+
+        <!-- body della tabella -->
+        <tbody>
+            <tr>
+                <td>
+                    <ol>
+                        <li> lista nella tabella</li>
+                        <li>pallina del cane</li>
+                    </ol>
+                </td>
+                <td><img src="IMG/download.jpg" alt="hamburger" class="listaIMG">
+                </td>
+                <td>
+                    <a href="#ordinata" title="collegamento lista ord.">vai alla lista ordinata</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>frigorifero</li>
+                        <li>amo l'acqua!</li>
+                    </ul>
+                </td>
+                <td><img src="IMG/Russka_Handgymnastikball_gelb-1.jpg" alt="pallina" class="listaIMG"></td>
+                <td><a href="https://www.melarossa.it/nutrizione/i-migliori-piatti-del-mondo/" title="cibi buoni">ecco i
+                        cibi + buoni!</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- fine contenuto -->
+</body>
+
+</html>

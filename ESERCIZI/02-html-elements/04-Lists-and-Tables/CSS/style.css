@@ -1,0 +1,46 @@
+body{
+    font-family: "Comic Sans MS";
+}
+
+
+h1{
+    font-size: 45px;
+    color:rgb(44, 33, 116);
+    margin-bottom: 5%;
+}
+
+
+h2{
+    font-size: 30px;
+    color: cornflowerblue;
+    
+}
+
+.listaIMG {
+    width: 200px;
+    height: 150px;
+}
+
+
+table {
+    border: 5px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+th {
+    border: 2px solid black;
+    font-size: 30px;
+}
+
+
+
+td {
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}

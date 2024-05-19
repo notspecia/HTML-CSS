@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- informazioni di meta dati sul file HTML -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CANDIDATURA ASTRO</title>
+    <meta name="descrizione" content="pagina con astronauta">
+    <meta name="autore" content="Gabriele Speciale">
+
+    <!-- collegamento external al file css -->
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+    <!-- inizio contenuto -->
+
+    <div>
+        <fieldset>
+
+            <legend> CANDIDATURA ASTRONAUTA</legend>
+            <form action="https://wiki.pokemoncentral.it/Pok%C3%A9mon_extraterrestri" method="post" target="_blank">
+                <!-- nome e cognome -->
+                <p>Nome e Cognome</p>
+                <label for="nome_astronauta">Nome:</label>
+                <input type="text" name="nome" id="nome_astronauta" placeholder="Giorgio" required>
+                <br><br>
+                <label for="cognome_astronauta">Cognome:</label>
+                <input type="text" name="cognome" id="cognome_astronauta" placeholder="Bianchi" required>
+                <br><br>
+                <hr>
+                <!-- età dell'astronauta -->
+                <p>Dati Sensibili</p>
+                <label for="eta_astronauta">Età:</label>
+                <input type="number" name="eta" id="eta_astronauta" min="18" max="60" required>
+                <br><br>
+                <!-- genere -->
+                <input type="radio" name="genere" id="maschio_astronauta" value="maschio" required>
+                <label for="maschio_astronauta">maschio</label>
+                <input type="radio" name="genere" id="femmina_astronauta" value="femmina" checked required>
+                <label for="femmina_astronauta">femmina</label>
+                <input type="radio" name="genere" id="nonspecificato_astronauta" value="nonspecificato" required>
+                <label for="nonspecificato_astronauta">non specificato</label>
+                <br><br>
+                <!-- colore capelli -->
+                <label for="capelli_astronauta">Capelli:</label>
+                <select name="capelli_astronauta" id="capelli_astronauta" required>
+                    <option value="" disabled selected hidden>Seleziona una opzione</option>
+                    <option value="biondi">biondi</option>
+                    <option value="mori">mori</option>
+                    <option value="neri">neri</option>
+                    <option value="rossi">rossi</option>
+                </select>
+                <br><br>
+                <!-- colore occhi -->
+                <label for="occhi_astronauta">Occhi:</label>
+                <select name="occhi_astronauta" id="occhi_astronauta" required>
+                    <option value="" disabled selected hidden>Seleziona una opzione</option>
+                    <option value="verdi">verdi</option>
+                    <option value="blu">blu</option>
+                    <option value="neri">neri</option>
+                    <option value="nocciola">nocciola</option>
+                </select>
+                <br><br>
+                <!-- peso dell'astronauta -->
+                <label for="peso_astronauta">Peso:</label>
+                <input type="number" name="peso" id="peso_astronauta" min="40" max="99" required>
+                <br><br>
+                <hr>
+                <!-- informazioni per contattarmi (email, n telefono, indirizzo) -->
+                <p>Recapiti per il Contatto</p>
+                <label for="email_astronauta">E-mail:</label>
+                <input type="email" name="email" id="email_astronauta" placeholder="tuaemail@gmail.com" required>
+                <br><br>
+                <label for="telefono_astronauta">Num Telefono:</label>
+                <input type="tel" name="telefono" id="telefono_astronauta" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="338-456-7890" maxlength="12" required>
+                <br><br>
+                <label for="indirizzo_astronauta">Indirizzo:</label>
+                <input type="text" name="indirizzo" id="indirizzo_astronauta" placeholder="Via Pietro Sarpi 23" required>
+                <br><br>
+                <hr>
+                <!-- missione dell'astronauta e + informazioni a piacere max lenght per dare una lunghezza massima alla biografia -->
+                <p>Altre Informazioni</p>
+                <label for="missione_astronauta">Missione:</label>
+                <textarea name="MISSIONE" id="missione_astronauta" cols="30" rows="5"
+                    placeholder="andare sulla luna a mangiare una pizza... (max 500 caratteri)" maxlength="500"
+                    required></textarea>
+                <br><br>
+                <label for="biografia_astronauta">Biografia:</label>
+                <textarea name="biografia" id="biografia_astronauta" cols="30" rows="5"
+                    placeholder="ciao sono Mario Rossi e sono... (max 255 caratteri)" maxlength="255" required></textarea>
+                <br><br><br><br><br>
+                <!-- pulsanti con invia o reset -->
+                <input type="reset" id="reset" value="RESET">
+                <input type="submit" id="submit" value="INVIA">
+            </form>
+            
+        </fieldset>
+    </div>
+
+    <!-- fine contenuto -->
+
+
+</body>
+
+</html>

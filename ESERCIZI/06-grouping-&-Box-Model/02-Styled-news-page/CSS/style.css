@@ -1,0 +1,356 @@
+/**
+ * style.css
+ *
+ * Let's go stylize and create a page within the
+ * semantic elements going to play with images padding border e margins
+ */
+
+/* We apply the box-sizing: border-box to everyone
+The elements of the page */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* centers The Container Horizontally */
+#container {
+  /* background: #EEF7FF; */
+  font-family: "Nunito", sans-serif;
+  max-width: 81%;
+  margin: 0 auto;
+}
+
+/* --------------------- ELEMENTS USED AROUND THE PAGE --------------------- */
+span {
+  font-size: 30px;
+  text-decoration: 2px underline blue;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+.controller {
+  width: 50px;
+  height: 50px;
+  margin-bottom: -15px;
+}
+
+hr {
+  color: black;
+  border: 2px solid;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+i {
+  font: italic;
+  font-weight: bold;
+}
+
+/* ------------------------  START HEADER  ------------------------------- */
+header {
+  background-image: url("../IMG/360_F_329844696_5hRJKmQPFiSDGeNQ4QeiDrKNJF1lcY2Y-removebg-preview.png");
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* title of the header */
+header>h1 {
+  color: black;
+  font-size: 50px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+header>h1::first-letter {
+  font-size: 80px;
+  color: #0071bd;
+}
+
+/*  ------------------------  START NAV  ------------------------------- */
+
+/* Let's model the nav contained in the header */
+nav {
+  background-color: rgba(0, 0, 0, 0.425);
+  width: 60%;
+  padding: 10px;
+  border: 6px solid black;
+  border-left-color: #0071bd;
+  border-top-color: #0071bd;
+  border-radius: 200px;
+  /* We center the nav whit margin auto (left, right) */
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+/* If we go over the nav with the mouse */
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 45px;
+  transition: 0.2s;
+}
+
+nav>h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
+}
+
+nav ol {
+  text-align: center;
+}
+
+nav ol li {
+  background-color: rgb(255, 255, 255);
+  margin: 0px 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* Features of both inline and block */
+  display: inline-block;
+}
+
+nav ol li a {
+  padding: 10px 20px;
+  display: block;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav ol a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*  ------------------------  END NAV  ------------------------------- */
+
+/* ------------------------  END HEADER  ------------------------------- */
+
+
+/* ------------------ START MAIN ---------------- */
+main {
+  /* background-color: black; */
+  width: 100%;
+  min-height: 1200px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+/* ----------- START SECTION --------------------------- */
+section {
+  /* background-color: yellow; */
+  width: 80%;
+  min-height: 400px;
+  padding: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+section h2 {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+div .imageSection {
+  background-image: url("../IMG/368b78f8c1a9f2619fae7da64a969ad7-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+section p {
+  font-size: 20px;
+  padding: 20px 0px;
+}
+
+/* ------------------------- END SECTION ----------------------- */
+
+/* -------------------- START ASIDE --------------------------- */
+aside {
+  /* background-color: aquamarine; */
+  width: 19%;
+  min-height: 1450px;
+  float: right;
+  overflow: hidden;
+}
+
+
+fieldset {
+  background-color: rgba(255, 255, 255, 0.801);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 170px;
+}
+
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+fieldset label {
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+}
+
+fieldset input {
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+fieldset input:hover {
+  transition: 0.3s;
+  background-color: #0071bd4f;
+  padding: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: green;
+  font-weight: bold;
+}
+
+input[type="reset"]:hover {
+  background-color: red;
+  font-weight: bold;
+}
+
+aside p {
+  text-align: justify;
+  font-size: 10px;
+  margin: 0 auto;
+  width: 250px;
+}
+
+/* Space between the FieldSet and the AD (hr) */
+.spazioAd {
+  margin: 100px 0;
+}
+
+aside a {
+  color: #0071bd;
+  text-decoration: none;
+}
+
+aside img {
+  display: block;
+  width: 270px;
+  height: auto;
+  margin: 0 auto;
+}
+
+aside figcaption {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+
+/* -------------------- END ASIDE ---------------------- */
+
+/* ------ START ARTICLE -------------- */
+article {
+  /* background-color: green; */
+  width: 80%;
+  min-height: 216px;
+  padding: 20px;
+  float: left;
+}
+
+article h2 a {
+  font-size: 30px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  width: 400px;
+  padding: 15px 0px;
+  margin: 0 auto;
+  display: block;
+}
+
+article h2::first-letter {
+  color: #0071bd;
+  font-size: 60px;
+}
+
+.imageArticleDevilMayCry {
+  background-image: url("../IMG/devil-may-cry-04_ts99.1200.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+  height: 550px;
+  display: inline-block;
+}
+
+.imageArticleRainbow {
+  background-image: url("../IMG/was-looking-through-my-old-screenshots-and-found-this-it-v0-rc2s0n7dzmib1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+  height: 550px;
+  display: inline-block;
+}
+
+.imageArticleTekken5 {
+  background-image: url("../IMG/tekken_5_image_Upc5PeuecPDkKjs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+  height: 500px;
+  display: inline-block;
+}
+
+.paragraphArticle {
+  /* background-color: blue; */
+  font-size: 25px;
+  width: 39%;
+  vertical-align: top;
+  padding: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* -------------------- END ARTICLE ------------------------------------ */
+
+/* -------------------------- END MAIN --------------------------------- */
+
+
+/* ------------- START FOOTER -------------------- */
+
+footer {
+  background-image: url("../IMG/360_F_329844696_5hRJKmQPFiSDGeNQ4QeiDrKNJF1lcY2Y-removebg-preview.png");
+  min-height: 100px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+footer p,
+footer address {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*------------------------ END FOOTER -----------------------------  */

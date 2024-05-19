@@ -1,0 +1,200 @@
+/* 
+il DOM: rappresenta il modello del documento (rappresentato con dei nodi) 
+ad esemmpio l'elemento head ha come "figli" il titolo, il body ha come figli l'elemento h1,href..... (padre e figlio)
+
+contollare l'eridetarietà= inherit(prendi il colore dal parent) initial (prende il valor iniziale color nero che è quello di deafult) unset(resetta i valori delle proprietà)
+
+cos'è il CSS? (cascading style sheets) è il linguaggio per modificare estiticamente la paginna html, 
+ogni pagina viene arricchita dal css (dimensione del testo, fonnt , colori...) se facciamo ispezione su una pagina web potremmo vedere la parte html/css. 
+funziona con il concetto di proprietà/valore, co css possiamo modificare tutta la pagina e le cose che vogliamo, 
+basta dargli un valore:   COLOR:RED.   
+viene utilizzato lo schema a cascata, perchè se modifichiamo una proprieta precedentmente creata, essa prenderà l'ultima creata.
+possiamo inserire gli attributi CSS annche nella pagina html <h1 style="color:color;..."   LE PROPRIETA DEL CSS SI SEPARANO CON ;
+
+il comportamento a cascata= (viene detto a cascata perchè se modifichiamo una proprieta precedentmente creata, essa prenderà l'ultima creata),
+ovviammente ha delle regole:
+con la parola chiave "!important" (prende più importanza delle altre regole che verranno sovrascritte)    ------->       h1{ color:red !important}    
+
+PRIMA DI INIZIARE UN PROGETTO E BUONA ABITUDINE PRIMA FORMATTARE LA PAGINA!!! (cioe rimuovere i settings di default come la grandezza dei titotli)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SELETTORI: è quello che c'e prima della graffa: body {.... 
+esistono vari tipi di selettori:
+
+-liste di selettori:   h1/p.higliths{...
+
+-selettori di elementi: qualunque elemento html{...
+
+-selettore universale: si indica con "*":   *{font-size: 20px ---->  facendo cosi tutti gli elemtni(h1,p,h2) avranno lo stesso font size
+
+-selettore di classe e selettore ID: molto utile il selettore classe quando ad esempio abbiamo tanti h2 senza andare a scrivere gli attributi uguali su tutti gli h2. 
+con il class possiamo usarlo + volte l'attributo lo mettiamo con il (.), se usiamo ID possiamo usarlo solo una volta mettiamo (#).
+possiamo dare + regole per ogni proprietà, l'id deve essere univoco.
+
+-selettori di attributo: a[title]{..... ---> a(elemento) title(che ha questo attributo)
+
+-pseudoclassi: a:hover{...  ---> se andremo sopra il link con il cursore cambierà ex colore.
+
+
+per evitare colnfilitti, sono state create delle regole apposite di priorità:
+4) quello che viene dopo
+3) selettori più specifici
+2) CSS in linea
+1) !important (questi vincono su tutto)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROPRIETA: 
+
+tutto ciò che viene dopo la graffa: { color:... font:...     non è necessario memorizzare tutte le proprietà (google è nostro amico idem l'IA)
+esistono una marea di proprietà, visualizzare questo link -------> https://websitesetup.org/wp-content/uploads/2019/08/CSS-CHEAT-SHEET-p1-2019-update.png
+utilizzare chat gpt come SPUNTO, ma senza abusarne e dare per certo che tutto sia giusto anche senza indicazioni.
+
+nonostante ciò, anilizzeremo alcune proprietà fondamentali del CSS:
+
+
+
+-COLORI: 
+
+definisce il colore del testo all'interno di quel elemento (viene data la lista dei colori in ordine alfabetico) sulla destra di ogni colore troviamo un codice di riferimento
+cosicchè riusciamo a riprodurre qualsiasi colore immaginabile (#ff7f50 = coral) 
+un altro modo per indicare i colori è l'utilizzo del formato RGB (red,green,blue).
+usare questo sito per trovare colori adattabili ----->  https://coolors.co/2e1f27-b4edd2-e01a4f-40531b-f2b7c6
+
+
+
+-TESTO: 
+
+                   text-align indica l'allinamento del testo:
+text-align: left (non cambia nulla perche l'allinaemento di default è di sinistra)
+text-align: right (il testo viene tutto allineato a destra)
+text-align: center (testo allineato al centro)
+text-align: justify (il testo di destra è perfettamente allineato come quello di sinistra)
+e buona norma allineare sempre il testo a sinistra, molto piu importante la leggibilita che l'estetica.
+
+                   text-decoration va ad apportare delle decorazioni sul testo:
+text-decoration: line-through (decorazione che sbarra un testo, come se si stesse cancellando)
+text-decoration: overline (la sottolineatura va SOPRA il testo)
+text-decoration: underline (la sottolineatura va SOTTO il testo, non usarlo troppo dato che potrebbero sembrare dei link)
+
+                   font-weight sta ad indicare lo spessore del testo:
+font-weight: 100 a 900 (andiamo ad indicare a piacimento lo spessore del nostro carattere)
+font-weight: bold/bolder (spesso o superspesso)
+font-weight: lighter (molto sottile)
+font-weight: normal (spessore normale ad ex vogliamo togliere lo spessore ai titoli h1 h2...)
+
+                font-style indica il tipo font che avra il testo:
+font-style: italic (testo in corsivo)
+
+
+
+-CARATTERI: 
+
+                          font-size indica la grandezza dei caratteri
+font-size: larger/large/medium/small/smaller... (modifica della grandezza del carattere)
+font-size: 300px (tramite unita di misura ne esistono anche altre come rem/pc/pt...)
+
+                        font-family indica la famiglia degli stili di scrittura
+font-family: Verdana, Geneva, Tahoma, sans-serif (in automatico ti da una serie di varie famiglie di stili diversi, se non e possibile 
+utilizzare il primo stile sul nostro web, prova ad utilizzare il secondo e cosi via, se non trova nessuno stile possibile, utilizzera quello di default.
+uno dei piu importanti e il 'Comic Sans MS')
+se vogliamo cercare e importare dei nuovi stili di carattere sul nostro sito, vai qui ----> https://fonts.google.com/
+/* 
+
+
+body{ 
+    background-color: #CCC5B9;
+}
+
+
+
+p{
+    font-size: 18px;
+    color: black;
+    }
+    
+
+
+ h2{ 
+    font-size: 30px;
+    background-color: blue;
+    color: yellow;
+}
+
+
+selettori di attributo
+a[title]{
+    color: rgb(95, 195, 199);
+    font-size: 20px;
+}
+
+
+a[href]{
+    background-color: rgb(51, 53, 53);
+}
+
+
+ pseudoclasse 
+a:hover{
+    color: blue;
+    background-color: chartreuse;
+}
+
+
+ con l'ID 
+#h2Due{
+    color: brown;
+    background-color: chartreuse;
+} 
+
+
+
+
+ con il class 
+.pDue{
+    font-size: 22px;
+    background-color: rgb(0, 0, 0);
+    color: cornflowerblue;
+} */
+
+/* --------------------------------------------------------------------------- */
+body {
+  color: black;
+  background-color: #f4fdd9; /*utilizzo codici*/
+  text-align: left;
+  font-family: "Comic Sans MS";
+}
+
+#testa {
+  background-color: rgb(0, 255, 255); /*utilizzo dell'RGB*/
+}
+
+.dentroTesta {
+  color: chocolate;
+  text-decoration: line-through;
+  font-weight: bolder;
+}
+
+#contenuto {
+  background-color: blueviolet;
+}
+
+.dentroContenuto {
+  color: chartreuse;
+  text-decoration: overline underline; /*possiamo mettere piu decorazioni insieme con SPAZIO*/
+  font-style: italic;
+}
+
+#footer {
+  background-color: chartreuse;
+}
+
+p.dentroFooter {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.dentroFooter {
+  color: blue;
+}

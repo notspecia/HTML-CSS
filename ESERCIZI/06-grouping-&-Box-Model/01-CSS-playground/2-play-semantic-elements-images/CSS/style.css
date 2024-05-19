@@ -1,0 +1,144 @@
+/**
+ * style.css
+ *
+ * Let's go stylize and create a page within the
+ * semantic elements going to play with images padding border e margins
+ * 
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* -------START HEADER + NAV -------- */
+
+header {
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+header>h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+nav {
+    background-color: greenyellow;
+    text-align: start;
+    font-size: 20px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    /* We center the nav whit margin auto (left, right) */
+    margin: 15px auto;
+}
+
+nav>h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+nav ul {
+    text-align: center;
+}
+
+
+nav ul li {
+    background-color: yellow;
+    width: 150px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li:hover {
+    background-color: aqua;
+    cursor: crosshair;
+}
+
+
+.logoSito {
+    width: 50px;
+    height: auto;
+}
+
+/* ------- END OF HEADER + NAV -------- */
+
+
+
+/* ------------------ START MAIN ---------------- */
+main {
+    background-color: black;
+    width: 100%;
+    min-height: 1000px;
+    padding: 20px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+main h2 {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ----------- START SECTION --------------------------- */
+section {
+    background-color: gray;
+    min-height: 500px;
+    width: 70%;
+    padding: 20px;
+    margin: 10px 0px;
+    float: left;
+}
+
+/* ------ START ARTICLE -------------- */
+article {
+    background-color: yellow;
+    padding: 20px;
+    width: 80%;
+    min-height: 300px;
+    margin: 10px auto 20px;
+}
+
+.immagineArticle {
+    width: 100px;
+    height: auto;
+}
+
+/* -------------------- END ARTICLE ------------------------------------ */
+/* ------------------------- END SECTION ----------------------- */
+
+
+/* -------------------- START ASIDE --------------------------- */
+aside {
+    background-color: gray;
+    width: 25%;
+    min-height: 1000px;
+    padding: 20px;
+    float: right;
+}
+
+/* -------------------- END ASIDE ---------------------- */
+/* -------------------------- END MAIN --------------------------------- */
+
+
+
+/* ------------- START FOOTER -------------------- */
+footer {
+    background-color: gray;
+    padding: 40px;
+}
+
+/*------------------------ END FOOTER -----------------------------  */

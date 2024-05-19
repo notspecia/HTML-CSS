@@ -1,0 +1,70 @@
+/**
+ * style.css
+ *
+ * We go to stylize in different ways a table containing information on people
+ *
+ */
+
+
+table {
+    border: 4px solid black;
+    border-collapse: collapse;
+
+}
+
+
+th {
+    border: 2px solid black;
+    background-color: yellow;
+    padding: 15px;
+}
+
+
+td {
+    border: 2px solid black;
+    padding: 15px;
+}
+
+
+
+
+
+/* !!PROVISIONAL!! (dont used):
+ Let's alternate the background-color of the rows (even and odd)*/
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+/* !!END PROVISIONAL PART!!*/
+
+
+
+
+
+/*!!USED!!:
+Let's go to alternate the background-color of the rows, every 2 lines  */
+
+/* We start from 1 and 2 line, and apply that property (bg color) every 4 line */
+tbody tr:nth-child(4n+1),
+tbody tr:nth-child(4n+2) {
+    background-color: lightgray;
+}
+
+
+/* We start from 3 and 4 line, and apply that property (bg color) every 4 line */
+tbody tr:nth-child(4n+3),
+tbody tr:nth-child(4n+4) {
+    background-color: white;
+}
+/* !!END USED PART!!*/
+
+
+
+
+/* lets change the bg color when we go on cells whit cursor (hover) */
+tbody tr:hover {
+    background-color: aqua;
+}

@@ -1,0 +1,124 @@
+ul .lista{
+    color: green;
+}
+
+
+
+
+
+
+ul li {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul>li {
+    color: red;
+}
+
+
+body>#main.mobile a:hover {
+    color: red;
+}
+
+
+div p>span {
+    color: red;
+}
+
+
+
+.users .name {
+    color: red;
+}
+
+
+
+
+[href] {
+    color: red;
+}
+
+
+
+
+
+:hover {
+    color: red;
+}
+
+
+
+div .name {
+    color: red;
+}
+
+
+
+
+a[href$='.pdf'] {
+    color: red;
+}
+
+
+
+.pictures img:hover {
+    color: red;
+}
+
+
+
+
+.news.breaking.featured {
+    color: red;
+}
+
+
+
+
+.user #name {
+    color: red;
+}
+
+
+
+
+#name span {
+    color: red;
+}
+
+
+
+
+
+nav#nav>li:hover {
+    color: red;
+}
+
+
+
+
+
+li:nth-child(2n+1):hover {
+    color: red;
+}

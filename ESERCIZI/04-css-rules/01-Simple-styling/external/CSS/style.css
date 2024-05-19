@@ -1,0 +1,82 @@
+    /**
+     * style.css
+     *
+     * We establish our page whit an external CSS file style, performed with selectors of:
+     * Elements, classes, id, pseudo:classes, group
+     * to which we apply some random statements
+     */
+
+
+
+    /* ID selector */
+    #titolo {
+        color: red;
+        font-size: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+    /* group selector */
+    h2,
+    h3 {
+        color: #000066;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+
+    /* element selector */
+    p {
+        background-color: violet;
+        font-size: 20px;
+    }
+
+
+    /* element selector */
+    a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    /* pseudo-class */
+    a:hover {
+        color: red;
+    }
+
+
+    /* Relational selector */
+    ul li p {
+        background-color: yellow;
+        font-weight: bolder;
+        font-size: 18px;
+        width: 30%;
+    }
+
+
+    /* pseudo:classes */
+    li:last-child {
+        background-color: chocolate;
+    }
+
+
+    /* class selector */
+    .elencoMod {
+        background-color: aqua;
+        width: 30%;
+        font-weight: bold;
+    }
+
+
+    /* element selector */
+    strong {
+        text-decoration: overline;
+        font-size: 30px;
+    }
+
+
+    /* class selector */
+    .classeDiv {
+        background-color: lime;
+        text-align: right;
+    }

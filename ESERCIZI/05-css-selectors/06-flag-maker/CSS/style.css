@@ -1,0 +1,152 @@
+/**
+ * style.css
+ *
+ * Let's create flags of some nations in the world using mainly
+ * the pseudoclasse td:nth-child(-n + 3) To go and change the cells of our tables
+ */
+
+body {
+    background-color: rgb(0, 255, 234);
+}
+
+
+/* Let's eliminate the spaces present between a cell and those around it 
+   And let's give some space between one table and another*/
+table {
+    border-collapse: collapse;
+    margin-bottom: 20%;
+}
+
+
+/* cells of the table to go and compose our flags */
+td {
+    border: 2px solid black;
+    /* It can be commented on to remove the edges to the cells */
+    font-size: 35px;
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+/* style of the cells of the table to create a checkered effect alternating the colors of the squares */
+
+/* !! SOME NOTES !! 
+
+   ODD  -->  DISPARI
+   EVEN -->  PARI
+
+   TR   -->  RIGA
+   TD   -->  COLONNA
+   
+   Seleziona tutti gli elementi figli dispari:
+   :nth-child(odd) 
+   
+   Seleziona tutti gli elementi figli pari:
+   :nth-child(even) */
+
+
+/* :nth-child(-n + 3) --> parte dall'inizio e prende i primi 3 */
+/* :nth-child(n + 7) --> parte dell'elemento 7 e li prende tutti quelli successivi*/
+/* :nth-child(2n + 7) --> parte dell'elemento 7 e li prende tutti gli elementi successivi saltando un elemento alternando*/
+
+
+
+/* Start composition of the Italian flag */
+tbody.italia td:nth-child(-n + 3) {
+    background-color: green;
+}
+
+tbody.italia td:nth-child(n +4) {
+    background-color: white;
+}
+
+tbody.italia td:nth-child(n +7) {
+    background-color: red;
+}
+
+/* End composition of the Italian flag */
+
+
+
+
+/* Start composition of the America flag */
+tbody.america tr:nth-child(odd) {
+    background-color: red;
+}
+
+tbody.america tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody.america tr:nth-child(-n + 4) td:nth-child(-n + 4) {
+    background-color: blue;
+}
+
+/* We go to insert "*" to the first 4 lines and 4 columns of the
+Table going to alternate even peers and odd odd */
+tbody.america tr:nth-child(-n + 4):nth-child(even) td:nth-child(-n + 4):nth-child(even)::after,
+tbody.america tr:nth-child(-n + 4):nth-child(odd) td:nth-child(-n + 4):nth-child(odd)::after {
+    content: "*";
+}
+/* End composition of the America flag */
+
+
+
+
+
+/* Start composition of the Germany flag */
+tbody.tedesca tr:nth-child(-n+3) {
+    background-color: #000;
+}
+
+tbody.tedesca tr:nth-child(n+4) {
+    background-color: red;
+}
+
+tbody.tedesca tr:nth-child(n+7) {
+    background-color: yellow;
+}
+
+/* End composition of the Germany flag */
+
+
+
+
+/* Start composition of the UNITED ARAB EMIRATES flag */
+tbody.emiratiArabi tr:nth-child(-n+3) {
+    background-color: green;
+}
+
+tbody.emiratiArabi tr:nth-child(n+4) {
+    background-color: white;
+}
+
+tbody.emiratiArabi tr:nth-child(n+7) {
+    background-color: black;
+}
+
+tbody.emiratiArabi td:nth-child(-n+3) {
+    background-color: red;
+}
+
+/* End composition of the UNITED ARAB EMIRATES flag */
+
+
+
+
+
+
+/* Start composition of the Morocco flag */
+tbody.marocco td {
+    background-color: rgb(155, 9, 9);
+}
+
+tbody.marocco .stella {
+    background-color: green;
+}
+
+/* End composition of the Morocco flag */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Meta Data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE STYLING</title>
+    <meta name="descrizione" content="">
+    <meta name="autore" content="stilizziamo semplicemente una pagina">
+
+
+    <!-- style embedded -->
+    <style>
+        /* ID selector */
+        #titolo {
+            color: red;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+
+        /* group selector */
+        h2,
+        h3 {
+            color: #000066;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+
+        /* element selector */
+        p {
+            background-color: violet;
+            font-style: italic;
+        }
+
+        /* element selector */
+        a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* pseudo-class */
+        a:hover {
+            color: red;
+        }
+
+        /* Relational selector */
+        ul li p {
+            font-weight: bolder;
+            font-size: 18px;
+            background-color: yellow;
+        }
+
+        /* class selector */
+        .elencoMod {
+            background-color: aqua;
+            width: 30%;
+            font-weight: bold;
+        }
+
+        /* element selector */
+        strong {
+            text-decoration: overline;
+            font-size: 30px;
+        }
+
+        /* class selector */
+        .classeDiv {
+            background-color: lime;
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Starting stylized content with embedded -->
+
+    <h1 id="titolo">HELLO WORLD!</h1>
+    <p>today im happy!</p>
+
+    <h2>and u how are u?</h2>
+    <a href="https://www.ciaomondo.us/">ciao mondo!!</a>
+    <ul>
+        <li>im fine thanks!
+            <p>tu invece?</p>
+        </li>
+        <li class="elencoMod">im good!</li>
+        <li>im sad!</li>
+        <li>im bored!</li>
+        <li class="elencoMod">im hungry!</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>At nesciunt, quos, aliquid sapiente ullam eum
+        </strong>commodi
+        minima aut impedit numquam harum autem deserunt dolores architecto officia vel voluptatibus quia! Amet.</p>
+
+    <hr>
+
+    <div class="classeDiv">
+        <h3>cibo preferito</h3>
+        <p>pizza, sushi</p>
+        <h3>sport preferito</h3>
+        <p>basket, calcio</p>
+    </div>
+
+    <!-- End content -->
+</body>
+
+</html>

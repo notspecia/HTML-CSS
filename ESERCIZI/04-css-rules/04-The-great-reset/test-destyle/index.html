@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+    <!-- Meta Data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST DESTYLE</title>
+    <meta name="descrizione" content="test del DESTYLE">
+    <meta name="autore" content="Gabriele Speciale">
+
+    <!-- External CSS file connection containing the destyle -->
+    <link rel="stylesheet" href="CSS/destyle.css">
+
+    <!-- External CSS file style -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+
+<body>
+    <!-- Content start -->
+    <h1 class="spazio">CIAO MONDO!!</h1>
+
+    <h2>ecco cosa mi piace fare:</h2>
+    <ul class="spazio">
+        <li>giocare</li>
+        <li>mangiare</li>
+        <li>dormire</li>
+    </ul>
+
+    <h2>ma anche...</h2>
+    <p class="spazio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>Eligendi perferendis beatae,
+            maiores</strong>
+        reprehenderit
+        repellat <i>veniam aliquid harum suscipit, sed saepe</i>, ratione nesciunt ipsam quisquam? In facere dignissimos
+        quaerat quae deserunt.</p>
+
+    <hr>
+
+    <h2 class="spazio">ma nelle tabelle cosa succede?</h2>
+    <table class="spazio">
+
+        <!-- Table head (TH) -->
+        <thead>
+            <tr>
+                <th>liste</th>
+                <th>immagini</th>
+                <th>links</th>
+            </tr>
+        </thead>
+
+        <!-- Body of the table (TD) develops horizontally-->
+        <tbody>
+
+            <!-- Start 1 line -->
+            <tr>
+                <td>
+                    <ol>
+                        <li> lista nella tabella</li>
+                        <li>pallina del cane</li>
+                    </ol>
+                </td>
+                <td><img src="IMG/haunter.jpg" alt="haunter pokemon">
+                </td>
+                <td>
+                    <a href="https://wiki.pokemoncentral.it/Haunter" target="_blank">vai a vedere haunter</a>
+                </td>
+            </tr>
+            <!-- end 1 line -->
+
+            <!-- Start 2 Riga -->
+            <tr>
+                <td>
+                    <ul>
+                        <li>frigorifero</li>
+                        <li>amo l'acqua!</li>
+                    </ul>
+                </td>
+                <td><img src="IMG/turtwig.jpg" alt="turtwig pokemon"></td>
+                <td><a href="https://wiki.pokemoncentral.it/Turtwig" target="_blank">vai a vedere turtwig</a></td>
+            </tr>
+            <!-- End of 2 line -->
+
+        </tbody>
+    </table>
+
+    <!-- Form start -->
+    <fieldset>
+
+        <legend>PROVA MODULO DESTYLE</legend>
+        <form action="https://wiki.pokemoncentral.it/Pok%C3%A9mon_extraterrestri" method="post" target="_blank">
+
+            <h3 class="spazio">Nome Cognome</h3>
+            <label for="nome_persona">Nome:</label>
+            <input type="text" name="nome" id="nome_persona" placeholder="Mario" required>
+            <br><br>
+            <label for="cognome_persona">Cognome:</label>
+            <input type="text" name="cognome" id="cognome_persona" placeholder="Rossi" required>
+            <br><br>
+
+            <h3 class="spazio">Dati Personali</h3>
+            <!-- age -->
+            <label for="eta_persona">Età:</label>
+            <input type="number" name="eta" id="eta_persona" min="1" max="100" required>
+            <br><br>
+            <!-- gender -->
+            <input type="radio" name="genere" id="maschio_persona" value="maschio" required class="spazio">
+            <label for="maschio_persona">maschio</label>
+            <input type="radio" name="genere" id="femmina_persona" value="femmina" checked required>
+            <label for="femmina_persona">femmina</label>
+            <input type="radio" name="genere" id="nonspecificato_persona" value="nonspecificato" required>
+            <label for="nonspecificato_persona">non specificato</label>
+            <br><br>
+
+            <!-- input and reset of form -->
+            <input type="reset" value="RESET">
+            <input type="submit" value="INVIA">
+        </form>
+    </fieldset>
+    <!-- End module -->
+
+
+    <!-- End content -->
+</body>
+
+</html>

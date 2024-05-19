@@ -1,0 +1,61 @@
+/**
+ * style.css
+ *
+ * Style Sheet Used To Create at Chessboard Whit The Cells Of A Table
+ * In this solution we will use pseudoclasses :nth-child () using as a parameter
+ * even and odd, this going to form a chessboard with alternating colors
+ */
+
+
+ 
+body {
+    background-color: beige;
+}
+
+
+/* Let's eliminate the spaces present between a cell and those around it */
+table {
+    border-collapse: collapse;
+}
+
+
+/* cells of the table used as a chessboard */
+td {
+    text-align: center;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* style of the cells of the table to create a checkered effect alternating the colors of the squares */
+
+/* !! SOME NOTES!!
+   ODD  -->  DISPARI
+   EVEN -->  PARI
+
+   TR   -->  RIGA
+   TD   -->  COLONNA
+   
+   Seleziona tutti gli elementi figli dispari:
+   :nth-child(odd) 
+   
+   Seleziona tutti gli elementi figli pari:
+   :nth-child(even) */
+
+
+/* Select all the cells found in the EVEN line (tr), located in the ODD column (td) */
+/* Select all the cells found in the ODD line (tr), located in the EVEN column (td) */
+tbody tr:nth-child(even) td:nth-child(odd),
+tbody tr:nth-child(odd) td:nth-child(even) {
+    background-color: red;
+}
+
+
+/* Select all the cells found in the EVEN line (tr), located in the EVEN column (td) */
+/* Select all the cells found in the ODD line (tr),  located in the ODD column (td) */
+tbody tr:nth-child(even) td:nth-child(even),
+tbody tr:nth-child(odd) td:nth-child(odd) {
+    background-color: rgb(0, 255, 42);
+}

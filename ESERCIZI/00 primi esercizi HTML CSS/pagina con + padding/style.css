@@ -1,0 +1,193 @@
+/* questo insieme di codici viene utilizzato per RESETTARE IL BROWSER, NON TOCCARE! */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+/* TERMINA QUI IL RESET */
+
+
+
+
+
+* {
+   box-sizing: border-box;
+}
+
+
+h1{
+   color: rgba(255, 255, 255, 0.658);
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   text-transform: uppercase; /* per  mettere la scritta in maiuscolo */
+   font-weight:bold; /* è il grassetto */
+   font-size: 50px;
+   text-align: center ;
+   line-height: 100vh;  /* per centrare al centro pagina usare il 100 vh */
+}
+
+
+
+h1 span{
+   font-weight: 100;
+   text-transform: lowercase; 
+}
+
+
+
+nav{
+   background-color: rgb(0, 0, 0);
+   height: 70px;
+}
+
+
+header{
+   background-color: black;
+   background-image: url(img/beatles.jpg), linear-gradient(to right top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);/* per fare sfondi con 2 colori fighi usare il sito colorspace css generator */
+   width: 100%;
+   height: calc(100vh - 56px);
+   /* background-image: url(img/beatles.jpg); per lo sfondo con immagine */
+   background-size: 100%,90%; /* 100% va riferimento all'immagine dei beatles, il 90% al bg color */   /* con bgs cover, l'immagine copre tutto lo sfondo */  /*con bgs conatin...  */
+   background-position: right bottom, center ; /* quando restringi la pagina, rimane tutto a sinistra con bgp centre left, right bottom è un tutto univoco */
+   background-repeat: no-repeat ; /* non ripete l'immagine */
+}
+
+
+
+/* primo riquadro  */
+.container {
+   width: 960px; /*indica la larghezza */
+   margin: 0 auto;
+   padding: 68px;
+   background-color:rgb(255, 0, 179) ; 
+   height: auto; /*imposta l'altezza il browser automaticamente calcolandola*/
+}
+/* fine primo riquadro */
+
+
+
+
+
+.container-fluid {
+   width: 100%;/*definisce la larghezza in % del blocco contenitore*/
+   padding:  0 15px;
+}
+
+
+
+
+.mt-5 {
+   margin-top: 50px;
+}
+
+
+
+
+.beat {
+   width: 25%;
+   height: auto;
+   float: left;
+   padding:  0 15px;
+}
+
+
+
+
+
+.clearfix {
+   clear: both;
+}
+
+
+
+
+.item {
+   /* background-color: aquamarine; */
+   height: 100%;
+   background-color: #f8f9fa;
+   border: black solid 1px;
+   border-radius: 15px;
+   margin-bottom: 15px;
+   overflow: hidden;
+}
+
+
+
+.img-fluid {
+   max-width: 100%;
+}
+
+
+
+img {
+   display: block;
+}
+
+
+
+
+figcaption {
+   background-color: black;
+   height: 50px;
+}
+
+
+
+
+figcaption h2 {
+   color: white;
+   line-height: 50px;
+   text-align: center;
+}
+
+
+
+.p-1 {
+   padding: 10px;
+}
+
+
+
+
+.item p {
+   padding: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,262 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+blockquote,
+q {
+   quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+
+* {
+   box-sizing: border-box;
+}
+
+nav {
+   background-color: red;
+   height: 56px;
+}
+
+header {
+   background-color: black;
+   height: 400px;
+   height: calc(100vh - 56px);
+   background-image: linear-gradient(to right bottom, #000000, #171416, #262226, #343037, #40404a, #40404a, #40404a, #40404a, #343037, #262226, #171416, #000000);
+   background-position: right bottom, center;
+   background-repeat: no-repeat;
+   /* si indica al browser di non ripetere lo sfondo e di visualizzarlo solo una volta, senza duplicare l'immagine o il colore di sfondo. */
+   background-size: cover
+      /* l'unica immagine copre tutto */
+}
+
+h1 {
+   text-align: right;
+   padding-right: 15px;
+   padding-top: 30%;
+   line-height: 100vh;
+   color: rgba(255, 255, 255, 0.699);
+   font-size: 50px;
+   text-transform: uppercase;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+}
+
+h1 span {
+   font-weight: 100;
+   text-transform: lowercase;
+
+}
+
+section,
+.container,
+.container-fluid {
+   padding: 0 15px;
+}
+
+section {
+   margin: 30px 0;
+}
+
+.container {
+   width: 960px;
+   margin: 0 auto;
+   padding: 68px;
+   background-color: blue;
+   height: auto;
+   align-items: center;
+}
+
+
+.container-fluid {
+   width: 100%;
+   margin: 0;
+   padding: 68px;
+   background-color: blue;
+}
+
+
+.img-beat {
+   max-width: 100%;
+   float: left;
+   margin-right: 30px;
+   margin-bottom: 30px;
+}
+
+.beat {
+   width: 25%;
+   height: auto;
+   float: left;
+   padding: 0 15px;
+}
+
+.card {
+   /* background-color: aquamarine; */
+   height: 100%;
+   background-color: #f8f9fa;
+   border: black solid 1px;
+   margin-bottom: 15px;
+   overflow: hidden;
+}
+
+.img-fluid {
+   max-width: 100%;
+}
+
+img {
+   display: block;
+}
+
+figcaption {
+   background-color: black;
+   height: 50px;
+}
+
+figcaption h2 {
+   color: white;
+   line-height: 50px;
+   text-align: center;
+}
+
+.p-1 {
+   padding: 10px;
+}
+
+.card p {
+   padding: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img-fluid {
+   max-width: 100%;
+}
+
+.clearfix {
+   clear: both;
+}
+
+footer {
+   background-color: rgb(2, 2, 2);
+   height: 500px;
+}
