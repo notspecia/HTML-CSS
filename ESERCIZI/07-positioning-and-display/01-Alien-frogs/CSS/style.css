@@ -1,0 +1,170 @@
+/**
+ * style.css
+ *
+ * This stylesheet defines the styles for the alien frogs project.
+ * It includes global settings, layout configurations, and specific styles
+ * for the frogs, including their types, sizes, and behaviors.
+ *
+ */
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: bisque;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+#container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/* default frog parameters */
+.frog {
+    border: 4px solid black;
+    border-radius: 10px;
+    margin-right: 75px;
+    margin-bottom: 60px;
+    display: inline-block;
+}
+
+.frog:active::before,
+.frog:active::after {
+    background-color: black;
+}
+
+.break {
+    display: block;
+}
+
+/* frog tipology */
+.type1 {
+    background-color: orangered;
+}
+
+.type1::before,
+.type1::after {
+    content: "O";
+    color: white;
+    background-color: rgb(100, 5, 5);
+}
+
+
+.type2 {
+    background-color: greenyellow;
+}
+
+.type2::before,
+.type2::after {
+    content: "O";
+    color: white;
+    background-color: green;
+
+}
+
+.type3 {
+    background-color: aqua;
+}
+
+.type3::before,
+.type3::after {
+    content: "O";
+    color: white;
+    background-color: blue;
+}
+
+.type4 {
+    background-color: violet;
+}
+
+.type4::before,
+.type4::after {
+    content: "O";
+    color: white;
+    background-color: purple;
+}
+
+
+/* size of the frog */
+.small {
+    width: 150px;
+    height: 70px;
+    position: relative;
+}
+
+.small::before {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 10px 12px;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}
+
+
+.small::after {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 10px 12px;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+}
+
+.small p {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+}
+
+
+.big {
+    width: 250px;
+    height: 100px;
+    position: relative;
+}
+
+.big::before {
+    font-size: 20px;
+    padding: 15px 17px;
+    border: 3px solid black;
+    border-radius: 100px;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}
+
+.big::after {
+    font-size: 20px;
+    padding: 15px 17px;
+    border: 3px solid black;
+    border-radius: 100px;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+}
+
+.big p {
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 104px;
+}

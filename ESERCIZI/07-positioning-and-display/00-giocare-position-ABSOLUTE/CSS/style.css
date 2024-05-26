@@ -1,0 +1,26 @@
+.contenitore-1 {
+    position: absolute; /* Contenitore posizionato */
+    width: 600px;
+    height: 300px;
+    background-color: lightyellow;
+    padding: 20px;
+    bottom: 0px;
+    }
+    
+    .contenitore-2 {
+    position: absolute; /* Contenitore posizionato */
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    }
+    
+    .assoluto-nidificato {
+    position: absolute; /* Posizionamento assoluto */
+    bottom: 10px; /* 10px dal bordo inferiore del contenitore 2 */
+    right: 15px; /* 15px dal bordo destro del contenitore 2 */
+    background-color: lightpink;
+    padding: 10px;
+    }

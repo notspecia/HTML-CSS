@@ -1,0 +1,223 @@
+/**
+ * style.css
+ * This stylesheet contains CSS definitions for a web page with a three-column layout,
+ * a fixed header, and a fixed footer. The main sections include:
+ 
+ * 1. Styles for the header which remains fixed at the top of the viewport.
+ *
+ * 2. Styles for the main content area with top padding to prevent it from being hidden
+ *    by the fixed header.
+ *
+ * 3. Styles for section 1 with float left and a parent container with relative positioning
+ *    to allow absolute positioning of its child elements.
+ *
+ * 4. Styles for section 2 with display set to inline-block.
+ *
+ * 6. Styles for section 3 with float right and a figure with an absolutely positioned
+ *    caption.
+ *
+ * 5. Styles for the footer which remains fixed at the bottom of the viewport.
+ * 
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+
+/* -------------- START HEADER -------------- */
+
+/* header which when we scroll the page, it will always be visible on top of viewport, 
+to make I know you win on the other positions, we give them a high z-Index */
+header {
+    background-color: yellow;
+    font-size: 30px;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    border: 3px dotted black;
+    position: fixed;
+    z-index: 10;
+}
+
+header h2 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* -------------- END HEADER -------------- */
+
+
+
+
+/* -------------- START MAIN -------------- */
+
+/* Let's go to give the padding-top that allows the titles of the various sections
+not to be submitted by the Header  */
+main {
+    background-color: bisque;
+    width: 100%;
+    min-height: 30%;
+    padding-top: 80px;
+}
+
+/* -------------- START SECTION 1 -------------- */
+
+/* Let's go to give to the section1 il float left,so that the column will be displayed on the left
+it will become an element inline-block, il which allows us to put other section next to it and to which we can set
+a width and an height,Let's also assign the property position:relative, So the div inside it has
+position: absolut, he can stay inside his parent(section1 is !static)*/
+#section1 {
+    background-color: orange;
+    font-size: 30px;
+    width: 20%;
+    min-height: 650px;
+    padding: 20px 5px;
+    border: 3px dotted black;
+    float: left;
+    position: relative;
+}
+
+#section1 h2 {
+    font-size: 1em;
+}
+
+#section1>p {
+    font-size: 0.91em;
+}
+
+/* Let's create 1 div which contain 2 div in
+And let's go play with the position of them (relative,absolute) 
+it will go change the flow of the document, It will be sided above the <p> di section1 */
+#section1 .father {
+    background-color: aqua;
+    font-size: 0.5em;
+    width: 97%;
+    min-height: 300px;
+    border: 2px solid black;
+    margin-top: 40px;
+    position: absolute;
+    top: 90px;
+}
+
+#section1 .div1 {
+    background-color: gray;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+#section1 .div2 {
+    background-color: red;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
+/* -------------- END SECTION 1 -------------- */
+
+
+
+/* -------------- START SECTION 2 -------------- */
+#section2 {
+    width: 40%;
+    font-size: 30px;
+    min-height: 1400px;
+    border: 2px dotted black;
+    display: inline-block;
+}
+
+#section2 h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 40px 0;
+    padding-left: 15px;
+}
+
+/* Let's go to give the padding bottom at the end of <p> to prevent the footer
+go to dominate the final part of the text*/
+#section2 p {
+    font-size: 0.6em;
+    padding: 0px 15px;
+    padding-bottom: 80px;
+}
+
+/* -------------- END SECTION 2 -------------- */
+
+
+
+/* -------------- START SECTION 3 -------------- */
+#section3 {
+    width: 40%;
+    font-size: 30px;
+    min-height: 850px;
+    border: 2px dotted black;
+    float: right;
+}
+
+#section3 h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 40px 0;
+    padding-left: 15px;
+}
+
+#section3 p {
+    font-size: 0.6em;
+    padding: 0px 15px;
+}
+
+#section3 figure {
+    position: relative;
+}
+
+#section3 img {
+    width: 600px;
+    display: block;
+    margin: 10px auto;
+}
+
+#section3 figcaption {
+    background-color: aqua;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+/* -------------- END SECTION 3 -------------- */
+
+/* -------------- END MAIN -------------- */
+
+
+
+
+/* -------------- START FOOTER -------------- */
+
+/* footer which when we scroll the page, it will always be visible in bottom of viewport*/
+footer {
+    background-color: cornflowerblue;
+    font-size: 30px;
+    width: 100%;
+    padding: 20px;
+    border: 3px dotted black;
+    position: fixed;
+    bottom: 0px;
+}
+
+footer h2 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* -------------- END FOOTER -------------- */
