@@ -95,7 +95,7 @@ the cover Scales the image to the smallest possible size to fill the containe, l
     background-color: red;
     background-image: url("../IMG/mcdonald-s-cheese-burger-with-egg.jpg");
     background-repeat: no-repeat;
-    background-size: 300px 60%;
+    background-size: 40px 200px;
     width: 750px;
     height: 600px;
 }
@@ -120,7 +120,7 @@ for define the position we can use:
     background-image: url("../IMG/mcdonald-s-cheese-burger-with-egg.jpg");
     background-repeat: no-repeat;
     background-size: 300px;
-    background-position: 14% 85%;
+    background-position: center;
     width: 750px;
     height: 600px;
 }
@@ -167,6 +167,7 @@ excluding both the border and the padding.
     width: 750px;
     height: 600px;
     padding: 50px;
+    border: 6px solid;
 }
 
 
@@ -202,12 +203,3 @@ excluding both the border and the padding.
 
 /* 8. background-clip 
 */
-
-
-
-
-
-
-
-
-

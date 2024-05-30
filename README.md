@@ -1,4 +1,4 @@
-# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.2
+# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.3
 
 During this course of HTML-CSS I'm learning the following notions, going to practice with practical exercises that identify with reality:
 
@@ -12,10 +12,13 @@ During this course of HTML-CSS I'm learning the following notions, going to prac
 6.  box-model 
 7.  positioning and display
 8.  float
+9.  responsive-web-pages
 
 
 All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
-1. complete section exercises 8(float) 
-2. Adjust section notes 7(positioning), 8(float) 
+
+
+1. Adjust section notes 8(float) and 9(responsive-web)
+2. complete exercise of section 9 (responsive-web)
