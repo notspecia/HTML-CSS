@@ -1,0 +1,68 @@
+/**
+ * style.css
+ *
+ * This stylesheet sets up a responsive background image
+ * for different screen sizes.
+ */
+
+ html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Basic styles for the background image element:
+   width: 100%: The image occupies the full available width
+   height: 100vh: The image occupies 100% of the viewport height
+
+   background-position: center: Centers the image
+   background-repeat: no-repeat: Prevents the image from repeating
+   background-size: cover: Scales the image to cover the entire available area
+
+   Image for screens > 1200px */
+.imagebg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../IMG/jeroen-cloosterman-bob-parr-rendercam-v001.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First breakpoint: screens between 993px and 1200px */
+@media (max-width: 1200px) {
+    .imagebg {
+        background-image: url(../IMG/11jz5bh1lmr81.jpg);
+    }
+}
+
+/* Second breakpoint: screens between 769px and 992px */
+@media (max-width: 992px) {
+    .imagebg {
+        background-image: url(../IMG/images.jpg);
+        color: white;
+        font-weight: bold;
+    }
+}
+
+/* Third breakpoint: screens between 577px and 768px */
+@media (max-width: 768px) {
+    .imagebg {
+        background-image: url(../IMG/hqdefault.jpg);
+        color: white;
+        font-weight: bold;
+    }
+}
+
+/* Fourth breakpoint: screens smaller than 576px */
+@media (max-width: 576px) {
+    .imagebg {
+        background-image: url(../IMG/images\ \(1\).jpg);
+        color: white;
+        font-weight: bold;
+    }
+}

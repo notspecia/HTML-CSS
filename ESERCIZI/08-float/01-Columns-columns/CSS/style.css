@@ -87,11 +87,13 @@ position: absolut, he can stay inside his parent(section1 is !static)*/
 }
 
 #section1 h2 {
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 30px;
 }
 
 #section1>p {
-    font-size: 0.91em;
+    font-size: 1em;
 }
 
 /* Let's create 1 div which contain 2 div in
@@ -134,7 +136,7 @@ it will go change the flow of the document, It will be sided above the <p> di se
     font-size: 30px;
     min-height: 1400px;
     border: 2px dotted black;
-    display: inline-block;
+display: inline-block;
 }
 
 #section2 h1 {
@@ -160,7 +162,7 @@ go to dominate the final part of the text*/
 #section3 {
     width: 40%;
     font-size: 30px;
-    min-height: 850px;
+    min-height: 900px;
     border: 2px dotted black;
     float: right;
 }
@@ -175,23 +177,28 @@ go to dominate the final part of the text*/
 #section3 p {
     font-size: 0.6em;
     padding: 0px 15px;
+    margin-bottom: 50px;
 }
 
 #section3 figure {
+    width: 80%;
+    margin: 0 auto;
     position: relative;
 }
 
 #section3 img {
-    width: 600px;
+    width: 100%;
     display: block;
     margin: 10px auto;
 }
 
 #section3 figcaption {
     background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
 }
 
 

@@ -20,5 +20,4 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 ## To fix
 
 
-1. Adjust section notes 8(float) and 9(responsive-web)
-2. complete exercise of section 9 (responsive-web)
+1. complete exercise of section 9 (responsive-web)
