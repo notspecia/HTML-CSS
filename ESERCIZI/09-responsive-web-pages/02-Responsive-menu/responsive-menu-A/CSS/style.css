@@ -26,11 +26,12 @@ body {
     background-repeat: no-repeat;
 }
 
-/* ------- INIZIO NAVBAR PRINCIPALE ---------- */
 
-/* la navbar sarà fissa in alto mentre scrolliamo la pagina
-andiamo a mettere la lista degli items al fondo della navbar
-e facciamo che la lista occupi il 100% della navbar*/
+
+/* ------------------------- INIZIO NAVBAR PRINCIPALE ---------------------------- */
+
+/* la navbar MAIN sarà fissa in alto mentre scrolliamo la pagina,
+andiamo a mettere la lista degli items al fondo della navbar e che occupi il 100% della navbar */
 nav ul.main-nav {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -42,7 +43,7 @@ nav ul.main-nav {
 }
 
 
-/* ogni elemento della lista (li) lo mettiamo uno di fianco all'altro, centrando
+/* ogni elemento della lista (li) nella nav MAIN, lo mettiamo uno di fianco all'altro, centrando
 il testo all'interno del suo genitore (ul) tramite text-align + line-height */
 nav ul.main-nav li {
     display: inline-block;
@@ -50,7 +51,7 @@ nav ul.main-nav li {
     line-height: 79px;
 }
 
-/* mettiamo a sinistra della lista (ul) il logo della navbar tramite float: left */
+/* mettiamo a sinistra della lista (ul) il logo della navbar MAIN tramite float: left */
 nav ul.main-nav li.logo {
     width: 15%;
     color: white;
@@ -62,8 +63,8 @@ nav ul.main-nav li.logo {
     float: left;
 }
 
-/* creiamo la lista degli items con le varie sezioni successive al logo
-aumentiamo il padding dell' <a> cosicche riesce a coprire tutta l'area del <li> */
+/* creiamo la lista degli items (li) con le varie sezioni successive al logo,
+diamogli un padding all' <a>, cosicché riesce a coprire tutta l'area del <li> */
 nav ul.main-nav li a {
     color: white;
     font-size: 0.9rem;
@@ -78,23 +79,24 @@ nav ul.main-nav li a:hover {
 }
 
 
-/* l'input checkbox NON SARA VISIBILE ma ESISTERA, ma se entriamo nel caso
-di responsive page se andiamo a cliccare il "label", andremo ad ad attivare/disattivare il checkbox*/
+/* l'input checkbox e il label NON SARANNO VISIBILI ma ESISTERANNO, ma se entriamo nel caso
+di responsive page (max-widht <= 1024px) se andiamo a cliccare il "label", andremo ad ad attivare/disattivare
+il checkbox, lo utilizzeremo per attivare e disattivare la nav SIDEBAR a comparsa */
 input {
     display: none;
 }
 
-/* ------- FINE NAVBAR PRINCIPALE ---------- */
+/* ---------------------------- FINE NAVBAR PRINCIPALE -------------------------------- */
 
 
 
-/* ------- START SIDEBAR NAV ---------- */
 
+
+/* ----------------------------- START SIDEBAR NAV --------------------------------------- */
+
+/* NASONCIAMO FINO A QUANDO NON SI CLICCA IL LABEL BURGER! */
 nav ul.sidebar {
-    /* NASONCIAMO FINO A QUANDO NON SI CLICCA IL BURGER! */
     display: none;
-    /* NASONCIAMO FINO A QUANDO NON SI CLICCA IL BURGER! */
-
     background-color: rgba(0, 0, 0, 0.7);
     width: 20%;
     position: absolute;
@@ -120,6 +122,9 @@ nav ul.sidebar li a {
 nav ul.sidebar li:hover {
     background-color: rgba(128, 128, 128, 0.65);
 }
+
+/* NASONCIAMO FINO A QUANDO NON SI CLICCA IL LABEL BURGER! */
+
 
 /* ------- END SIDEBAR NAV ---------- */
 
