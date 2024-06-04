@@ -5,7 +5,7 @@
  * for different screen sizes.
  */
 
- html {
+html {
     box-sizing: border-box;
 }
 
@@ -14,6 +14,7 @@
 *::before {
     box-sizing: inherit;
 }
+
 
 /* Basic styles for the background image element:
    width: 100%: The image occupies the full available width
@@ -25,44 +26,41 @@
 
    Image for screens > 1200px */
 .imagebg {
-    width: 100%;
+    background-color: red;
+    width: 50vw;
     height: 60vh;
-    background-image: url(../IMG/jeroen-cloosterman-bob-parr-rendercam-v001.jpg);
+    background-image: url(../IMG/phase-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    margin: 100px auto 0;
 }
+
 
 /* First breakpoint: screens between 993px and 1200px */
 @media (max-width: 1200px) {
     .imagebg {
-        background-image: url(../IMG/11jz5bh1lmr81.jpg);
+        background-image: url(../IMG/phase-2.jpg);
     }
 }
 
 /* Second breakpoint: screens between 769px and 992px */
 @media (max-width: 992px) {
     .imagebg {
-        background-image: url(../IMG/images.jpg);
-        color: white;
-        font-weight: bold;
+        background-image: url(../IMG/phase-3.jpg);
     }
 }
 
 /* Third breakpoint: screens between 577px and 768px */
 @media (max-width: 768px) {
     .imagebg {
-        background-image: url(../IMG/hqdefault.jpg);
-        color: white;
-        font-weight: bold;
+        background-image: url(../IMG/phase-4.jpg);
     }
 }
 
 /* Fourth breakpoint: screens smaller than 576px */
 @media (max-width: 576px) {
     .imagebg {
-        background-image: url(../IMG/images\ \(1\).jpg);
-        color: white;
-        font-weight: bold;
+        background-image: url(../IMG/phase-5.jpg);
     }
 }

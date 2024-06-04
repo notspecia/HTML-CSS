@@ -4,6 +4,8 @@
  * This stylesheet configures the overall style for the webpage,
  * including the main navigation bar and responsive sidebar.
  * All elements are set to use the border-box model.
+ *
+ * START FROM DESKTOP FIRST
  */
 
 html {
@@ -17,22 +19,17 @@ html {
     box-sizing: inherit;
 }
 
+/* Let's set a background image that occupies 100% of the viewport. Using background-attachment: fixed, 
+   the background image will be fixed relative to the browser window (viewport). 
+   This means the background image will remain fixed and not move when the user scrolls the page. */
 body {
-    min-width: 100vw;
-    min-height: 100vh;
     background-image: url("../IMG/background.jpg");
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-
-/* The input checkbox and the label will NOT BE VISIBLE but WILL EXIST. In the case
-   of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
-   the checkbox, which will be used to show and hide the SIDEBAR nav. */
-input {
-    display: none;
-}
 
 
 
@@ -41,7 +38,7 @@ input {
 /* The MAIN navbar will be fixed at the top while scrolling the page.
    The list of items will be positioned at the bottom of the navbar, occupying 100% of the navbar's width. */
 nav ul.main-nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.788);
     width: 100%;
     text-align: end;
     position: fixed;
@@ -51,7 +48,7 @@ nav ul.main-nav {
 }
 
 /* Each list item (li) in the MAIN nav will be displayed side by side, 
-with text centered inside its parent (ul) using text-align and line-height. */
+   with text centered inside its parent (ul) using text-align and line-height. */
 nav ul.main-nav li {
     display: inline-block;
     text-align: center;
@@ -59,7 +56,7 @@ nav ul.main-nav li {
 }
 
 /* The MAIN navbar logo will be placed on the left side of the list (ul) using float: left.
-Let's go stylize with properties */
+   Let's style it with properties. */
 nav ul.main-nav li.logo {
     width: 15%;
     color: white;
@@ -72,7 +69,7 @@ nav ul.main-nav li.logo {
 }
 
 /* Create the list items (li) with various sections next to the logo,
-   giving a padding to the <a> so it covers the entire area of the <li>. */
+   giving padding to the <a> so it covers the entire area of the <li>. */
 nav ul.main-nav li a {
     color: white;
     font-size: 0.8rem;
@@ -82,18 +79,7 @@ nav ul.main-nav li a {
     transition: background-color 0.5s;
 }
 
-nav ul.main-nav li a:hover {
-    background-color: rgba(128, 128, 128, 0.65);
-}
-
 /* ---------------------------- END MAIN NAVBAR -------------------------------- */
-
-
-
-
-
-
-
 
 
 /* ----------------------------- START SIDEBAR NAV --------------------------------------- */
@@ -106,7 +92,7 @@ nav ul.sidebar {
     display: none;
     background-color: rgba(0, 0, 0, 0.6);
     width: 200px;
-    position: absolute;
+    position: fixed;
     top: 80px;
     right: 0;
 }
@@ -126,16 +112,23 @@ nav ul.sidebar li a {
     padding: 28.5px 35px;
 }
 
-nav ul.sidebar li:hover {
-    background-color: rgba(128, 128, 128, 0.65);
-}
 
 /* HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
 
 /* ------------------------------- END SIDEBAR NAV ---------------------- */
 
 
+nav ul.main-nav li a:hover,
+nav ul.sidebar li:hover {
+    background-color: rgba(128, 128, 128, 0.65);
+}
 
+/* The input checkbox and the label will NOT BE VISIBLE but WILL EXIST. In the case
+   of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
+   the checkbox, which will be used to show and hide the SIDEBAR nav. */
+input {
+    display: none;
+}
 
 
 /* ------------------------- START RESPONSIVE NAVBAR ------------------------*/
@@ -143,8 +136,8 @@ nav ul.sidebar li:hover {
 /* From 481px to 1024px */
 @media(max-width: 1024px) {
 
-    /* Let's go to give one z-index negative, so that the hamburger will go 
-    above the Navbar Main and will be clickable*/
+    /* Set a negative z-index, so that the hamburger will be 
+    above the main navbar and will be clickable. */
     nav ul.main-nav {
         z-index: -1;
     }
@@ -159,8 +152,8 @@ nav ul.sidebar li:hover {
         display: none;
     }
 
-    /* LET'S SHOW THE LABEL (hamburger) on the right side of the nav,
-    clicking it will activate/deactivate the checkbox */
+    /* SHOW THE LABEL (hamburger) on the right side of the nav,
+       clicking it will activate/deactivate the checkbox. */
     label {
         width: 32px;
         height: 32px;
@@ -178,9 +171,9 @@ nav ul.sidebar li:hover {
     /* When the hamburger label is clicked, it activates a hidden input checkbox.
        The hamburger transforms into an X. */
     input:checked+label {
+        background-image: url("../IMG/close.png");
         width: 25px;
         height: 25px;
-        background-image: url("../IMG/close.png");
     }
 
     /* Show the sidebar when the checkbox is activated */
@@ -188,7 +181,6 @@ nav ul.sidebar li:hover {
         display: block;
     }
 }
-
 
 
 
