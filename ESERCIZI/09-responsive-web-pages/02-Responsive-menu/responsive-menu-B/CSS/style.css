@@ -1,13 +1,14 @@
 /**
  * style.css
- *
- *
- * let's sets also the box-sizing property to border-box for all elements.
- *
+ * 
+ * This stylesheet configures the overall style for the webpage,
+ * including the main navigation bar and responsive sidebar.
+ * All elements are set to use the border-box model.
  */
 
 html {
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 *,
@@ -16,4 +17,211 @@ html {
     box-sizing: inherit;
 }
 
-/* let's create a responsive navbar */
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("../IMG/background.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+/* ----------------------------- START SIDEBAR NAV --------------------------------------- */
+
+
+
+/* Skeleton of the SIDE navbar, will appear on the right side of the screen,
+   leaving space above to not overlap with the main navbar. */
+nav ul.sidebar {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 120px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+nav ul.sidebar li {
+    text-align: center;
+    line-height: 75px;
+    transition: background-color 0.5s;
+}
+
+nav ul.sidebar li a {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 28.5px 35px;
+}
+
+nav ul.sidebar li:hover {
+    background-color: rgba(128, 128, 128, 0.65);
+}
+
+label {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url("../IMG/menu.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+    margin-top: 26px;
+    margin-right: 30px;
+    float: right;
+}
+
+/* When the hamburger label is clicked, it activates a hidden input checkbox.
+   The hamburger transforms into an X. */
+input:checked+label {
+    width: 25px;
+    height: 25px;
+    background-image: url("../IMG/close.png");
+}
+
+/* Show the sidebar when the checkbox is selected */
+input:checked~ul.sidebar {
+    display: block;
+}
+
+/* The input checkbox and the label will NOT BE VISIBLE but WILL EXIST. In the case
+   of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
+   the checkbox, which will be used to show and hide the SIDEBAR nav. */
+input {
+    display: none;
+}
+
+
+
+
+/* ------------------------------- END SIDEBAR NAV ---------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- START MAIN NAVBAR ---------------------------- */
+
+/* The MAIN navbar will be fixed at the top while scrolling the page.
+   The list of items will be positioned at the bottom of the navbar, occupying 100% of the navbar's width. */
+nav ul.main-nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+/* Each list item (li) in the MAIN nav will be displayed side by side, with text centered inside its parent (ul) using text-align and line-height. */
+nav ul.main-nav li {
+    display: inline-block;
+    text-align: center;
+    line-height: 79px;
+}
+
+
+/* The MAIN navbar logo will be placed on the left side of the list (ul) using float: left. */
+nav ul.main-nav li.logo {
+    width: 15%;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 15px;
+    float: left;
+}
+
+
+/* Create the list items (li) with various sections next to the logo,
+   giving a padding to the <a> so it covers the entire area of the <li>. */
+nav ul.main-nav li a {
+    display: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 29px 35px;
+    transition: background-color 0.5s;
+}
+
+
+nav ul.main-nav li a:hover {
+    background-color: rgba(128, 128, 128, 0.65);
+}
+
+/* ---------------------------- END MAIN NAVBAR -------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- START RESPONSIVE NAVBAR ------------------------*/
+
+
+@media(min-width: 480px) {
+
+    nav ul.main-nav li.logo {
+        font-size: 2rem;
+    }
+
+    nav ul.sidebar {
+        width: 200px;
+    }
+
+
+    nav ul.sidebar li a {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+@media(min-width: 1024px) {
+
+    label {
+        display: none;
+    }
+
+    nav ul.main-nav {
+        z-index: 1;
+    }
+
+    nav ul.main-nav li.logo {
+        font-size: 2.5rem;
+    }
+
+
+    /* IMPORTAMTE!: ANDIAMO A DARGLI INLINE ALTRIMENTI PRENDERA IL  line-height: 79px;
+    E LO APPLICHERA ANCHE ALL'<a> */
+    nav ul.main-nav li a {
+        display: inline;
+    }
+
+
+
+
+}
+
+
+
+
+/* ------------------------- END RESPONSIVE NAVBAR ---------------------------- */

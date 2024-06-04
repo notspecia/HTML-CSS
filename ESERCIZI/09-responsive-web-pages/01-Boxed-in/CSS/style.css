@@ -26,7 +26,7 @@
    Image for screens > 1200px */
 .imagebg {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-image: url(../IMG/jeroen-cloosterman-bob-parr-rendercam-v001.jpg);
     background-position: center;
     background-repeat: no-repeat;

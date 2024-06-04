@@ -19,6 +19,5 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. complete the exercise number 2 of section 9 and the documentation
-
+1. complete the documentation number 2 of section 
 2. do exercise number 3 of section 9 (responsive-web)
