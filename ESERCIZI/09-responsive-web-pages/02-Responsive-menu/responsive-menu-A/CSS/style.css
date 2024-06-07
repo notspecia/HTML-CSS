@@ -127,7 +127,7 @@ nav ul.sidebar li:hover {
    of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
    the checkbox, which will be used to show and hide the SIDEBAR nav. */
 input {
-    display: none;
+    /* display: none; */
 }
 
 
