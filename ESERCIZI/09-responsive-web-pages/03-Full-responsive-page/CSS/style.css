@@ -8,6 +8,7 @@
 
 html {
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 *,
@@ -15,3 +16,362 @@ html {
 *::before {
     box-sizing: inherit;
 }
+
+/* Let's set a background image that occupies 100% of the viewport (body). Using background-attachment: fixed, 
+   the background image will be fixed relative to the browser window (viewport). 
+   This means the background image will remain fixed and not move when the user scrolls the page. */
+body {
+    background-image: url(../IMG/abstract-blue-circle-black-background-technology_1142-12714.avif);
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+/* ------------------------------------------START NAVBAR MAIN-------------------------------------------------- */
+
+/* The main navbar will be fixed at the top while scrolling the page.
+   The list of items will be positioned at the bottom of the navbar, occupying 100% of the navbar's width.
+   andiamo a mettere tutti gli elementi della navbar (li) alla fine del suo genitore cioè navMain */
+ul#navMain {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    text-align: end;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* mettiamo le varie liste una dietro l'altra tramite display: inline-block 
+il testo contenuto in essi (a) andranno al centro del loro genitore (li) */
+ul#navMain li {
+    display: inline-block;
+    text-align: center;
+    line-height: 85px;
+}
+
+/* The main navbar logo will be placed on the left side of the list (ul) using float: left.
+   Let's style it with few properties. */
+ul#navMain li.logo {
+    float: left;
+    color: whitesmoke;
+    font-size: 2.8rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 15px;
+}
+
+
+ul#navMain li a {
+    display: inline-block;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 35px;
+    transition: background-color 0.3s;
+}
+
+/*----------------------------------- END NAVBAR MAIN-------------------------------------- */
+
+
+
+
+
+
+
+/*-------------------------------- START NAVBAR ASIDE -------------------------------*/
+
+/* HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
+
+/* Skeleton of the SIDE navbar, will appear on the top right side of the screen,
+   leaving space above to not overlap with the main navbar. */
+ul#navAside {
+    display: none;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: fixed;
+    top: 93px;
+    right: 0;
+    z-index: 1000;
+}
+
+
+/* Style the list items of the SIDEBAR navbar. */
+ul#navAside li {
+    text-align: center;
+    line-height: 65px;
+}
+
+/* mettendogli display: inline-block e widht 100%, andranno le <a> a coprire
+completamente il loro genitore (li) */
+ul#navAside li a {
+    display: inline-block;
+    color: white;
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* The input checkbox and the label will NOT BE VISIBLE but WILL EXIST. In the case
+   of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
+   the checkbox, which will be used to show and hide the SIDEBAR nav. */
+input {
+    display: none;
+}
+
+/* ---------END NAVBAR ASIDE--------- */
+
+
+/* hover effects of the navbar */
+
+nav ul#navMain li a:hover,
+nav ul#navAside li a:hover {
+    background-color: rgba(180, 180, 180, 0.5);
+    color: black;
+}
+
+ul#navMain li:last-child a:hover {
+    border-bottom-right-radius: 40px;
+}
+
+ul#navAside li:first-child a:hover {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+ul#navAside li:last-child a:hover {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/*-------------------------------- START MAIN CONTENT ----------------------------------------*/
+
+/* START common propieties for the 2 content article */
+article {
+    width: 45%;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 90px;
+    padding: 40px;
+}
+
+article h1 {
+    background-color: rgba(100, 148, 237, 0.4);
+    backdrop-filter: blur(10px);
+    font-size: 2.2rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+article h1::first-letter{
+    color: white;
+}
+
+article h2 {
+    color: floralwhite;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+}
+
+article p {
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+hr {
+    width: 85%;
+    color: cornflowerblue;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+/* END common propieties for the 2 content article */
+
+#firstArticle {
+    float: left;
+    margin-left: 20px;
+}
+
+#secondArticle {
+    float: right;
+    margin-right: 20px;
+}
+
+#secondArticle figure {
+    margin-top: 45px;
+}
+
+#secondArticle img {
+    width: 90%;
+    border-radius: 20px;
+}
+
+/*--------------------------- END MAIN CONTENT ----------------------------*/
+
+
+
+
+
+/* ----------------------------- START FOOTER------------------------------------ */
+
+footer {
+    width: 100%;
+    background-color: green;
+    backdrop-filter: blur(10px);
+    color: white;
+    border-top-right-radius: 60px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    clear: both;
+}
+
+/* ----------------------------- END FOOTER------------------------------------ */
+
+
+
+
+
+/* ---------------------------------- START RESPONSIVE PAGE ------------------------------------------  */
+
+/* From 769px to 1024px width of the vw */
+@media(max-width: 1024px) {
+
+    /* Hide the list items (<a>) of the MAIN navbar */
+    nav ul#navMain li a {
+        display: none;
+    }
+
+    /* reduce the size of the logo */
+    ul#navMain li.logo {
+        font-size: 2.3rem;
+    }
+
+    /* SHOW THE LABEL (hamburger) on the top right side of the nav,
+       clicking it will activate/deactivate the checkbox. and will show the navbar aside hidden */
+    label {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url("../IMG/menu.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+        padding: 10px;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        z-index: 1001;
+    }
+
+    /* When the hamburger label is clicked, it activates a hidden input checkbox.
+       The hamburger transforms into an X. */
+    input:checked+label {
+        background-image: url("../IMG/close.png");
+        width: 24px;
+        height: 24px;
+        right: 32px;
+    }
+
+    /* Show the sidebar when the checkbox is activated */
+    input:checked~ul#navAside {
+        display: block;
+    }
+
+    article h1 {
+        font-size: 1.9rem;
+    }
+
+    article h2 {
+        font-size: 1.1rem;
+    }
+
+    article p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* From 577px to 768px */
+@media(max-width: 768px) {
+
+    /* Reduce the width of the SIDEBAR nav */
+    nav ul#navAside {
+        width: 140px;
+    }
+
+    /* Reduce the text size of the list items (li) */
+    nav ul#navAside li a {
+        font-size: 0.7rem;
+    }
+
+    article h1 {
+        font-size: 1.2rem;
+    }
+
+    article h2 {
+        font-size: 1rem;
+    }
+
+    article p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+/* CAMBIARE LA DISPOSIZIONE TOTALMENTE DEL MAIN e DELLE GRANDEZZE */
+/* From 0px to 576px */
+@media(max-width: 576px) {
+
+    #firstArticle {
+        float: none;
+        width: 85%;
+        margin: 140px auto;
+    }
+
+    #secondArticle {
+        float: none;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    article h1 {
+        font-size: 1.5rem;
+    }
+
+    article h2 {
+        font-size: 1.3rem;
+    }
+
+    article p {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* ---------------------------------- END RESPONSIVE PAGE ------------------------------------------  */

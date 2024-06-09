@@ -19,5 +19,5 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. do exercise number 3 of section 9 (responsive-web)
+1. complete the FOOTER and the documentation of exercise n 3  (responsive-page section 9)
 2. re-check all the past exsercise

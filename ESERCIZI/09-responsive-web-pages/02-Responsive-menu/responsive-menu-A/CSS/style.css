@@ -86,7 +86,7 @@ nav ul.main-nav li a {
 
 /* HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
 
-/* Skeleton of the SIDE navbar, will appear on the right side of the screen,
+/* Skeleton of the SIDE navbar, will appear on the top right side of the screen,
    leaving space above to not overlap with the main navbar. */
 nav ul.sidebar {
     display: none;
@@ -127,7 +127,7 @@ nav ul.sidebar li:hover {
    of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
    the checkbox, which will be used to show and hide the SIDEBAR nav. */
 input {
-    /* display: none; */
+    display: none;
 }
 
 
