@@ -55,11 +55,6 @@ we will displays a variety of alien frogs on a webpage. The frogs are styled and
 - **Hover Effect**: on hover, the background color of the eyes changes to black (eyes --> ::before ::after).
 
 
-### Break Class
-
-- **New Line**: the `.break` class is used to force a new line in the layout by setting the element to `display: block`.
-
-
 
 ### Frog Types
 

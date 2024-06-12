@@ -35,7 +35,7 @@ body {
 ul#navMain {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     text-align: end;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 40px;
@@ -82,11 +82,9 @@ ul#navMain li a {
 
 
 
-
-
 /*-------------------------------- START NAVBAR ASIDE -------------------------------*/
 
-/* HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
+/* !HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
 
 /* Skeleton of the SIDE navbar, will appear on the top right side of the screen,
    leaving space above to not overlap with the main navbar. */
@@ -97,16 +95,15 @@ ul#navAside {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     position: fixed;
-    top: 93px;
+    top: 90px;
     right: 0;
     z-index: 1000;
 }
 
-
 /* Style the list items of the SIDEBAR navbar. */
 ul#navAside li {
     text-align: center;
-    line-height: 65px;
+    line-height: 60px;
 }
 
 /* mettendogli display: inline-block e widht 100%, andranno le <a> a coprire
@@ -131,7 +128,7 @@ input {
 /* ---------END NAVBAR ASIDE--------- */
 
 
-/* hover effects of the navbar */
+/* !hover effects of the NAVBARS (main, aside) */
 
 nav ul#navMain li a:hover,
 nav ul#navAside li a:hover {
@@ -156,58 +153,6 @@ ul#navAside li:last-child a:hover {
 
 /*-------------------------------- START MAIN CONTENT ----------------------------------------*/
 
-/* START common propieties for the 2 content article */
-article {
-    width: 45%;
-    text-align: center;
-    margin-top: 150px;
-    margin-bottom: 90px;
-    padding: 40px;
-}
-
-article h1 {
-    background-color: rgba(100, 148, 237, 0.4);
-    backdrop-filter: blur(10px);
-    font-size: 2.2rem;
-    font-family: "Permanent Marker", cursive;
-    font-style: normal;
-    font-weight: 400;
-    padding: 10px;
-    border: 2px solid;
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
-
-article h1::first-letter{
-    color: white;
-}
-
-article h2 {
-    color: floralwhite;
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 15px;
-}
-
-article p {
-    color: whitesmoke;
-    font-size: 1.1rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-hr {
-    width: 85%;
-    color: cornflowerblue;
-    border: 2px solid;
-    border-radius: 20px;
-    margin-bottom: 30px;
-}
-
-/* END common propieties for the 2 content article */
-
 #firstArticle {
     float: left;
     margin-left: 20px;
@@ -218,6 +163,68 @@ hr {
     margin-right: 20px;
 }
 
+
+/* START whit common propieties for the 2 content article */
+article {
+    width: 45%;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 90px;
+    padding: 40px;
+}
+
+/* the title of the article section (both) */
+article h1 {
+    background-color: rgba(100, 148, 237, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    font-size: 2.2rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+/* the first letter of the title of the article (both) */
+article h1::first-letter {
+    color: black;
+    font-size: 2.5rem;
+}
+
+/* the sub-title of the article (both) */
+article h2 {
+    color: floralwhite;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+}
+
+/* the text-content of the article (both) */
+article p {
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*a line of separation above each title of the article (both) */
+hr {
+    width: 85%;
+    color: cornflowerblue;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+/* END common propieties for the 2 content article */
+
+
+/* FIGURE + IMG of the 2 article */
 #secondArticle figure {
     margin-top: 45px;
 }
@@ -303,6 +310,11 @@ footer {
         font-size: 1.9rem;
     }
 
+    article h1::first-letter {
+        color: black;
+        font-size: 2.2rem;
+    }
+
     article h2 {
         font-size: 1.1rem;
     }
@@ -329,6 +341,11 @@ footer {
 
     article h1 {
         font-size: 1.2rem;
+    }
+
+    article h1::first-letter {
+        color: black;
+        font-size: 1.9rem;
     }
 
     article h2 {
@@ -362,6 +379,11 @@ footer {
 
     article h1 {
         font-size: 1.5rem;
+    }
+
+    article h1::first-letter {
+        color: black;
+        font-size: 2.2rem;
     }
 
     article h2 {
