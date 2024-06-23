@@ -1,0 +1,152 @@
+$primary: darkorange;
+$secondary: #bada55;
+$special-border: 10px dashed $primary;
+
+/*----------- PROVA UTILIZZO VARIABILI e COMMENTI---------*/
+#sample {
+    color: $primary;
+    background-color: $secondary;
+}
+
+.special {
+    border: $special-border;
+}
+
+.unique {
+    border: 2px solid $secondary;
+}
+
+
+.prova {
+    color: $primary;
+    background-color: $secondary;
+}
+
+// sono invisibile
+/*sono visibile eccomi!!!!*/
+
+
+
+/*----------- PROVA UTILIZZO NESTING ---------*/
+ul {
+    background-color: $secondary;
+    padding: 30px;
+    border: $special-border;
+
+    li {
+        background-color: $primary;
+        padding: 10px;
+        border-radius: 30px;
+
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/*----------- PROVA UTILIZZO PARENT SELECTOR & ---------*/
+
+
+
+
+/*----------- PROVA UTILIZZO DELL'INHERITANCE @EXTEND---------*/
+// questo NON appare NEL .CSS!!!
+%modifyText {
+    color: $primary;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: 2px underline $secondary;
+}
+
+// importiamo il placeholder all'interno di 1 classe e 1 id
+.specialText {
+    @extend %modifyText;
+}
+
+#titlePage {
+    @extend %modifyText;
+}
+
+// idem all'h1 e aggiungiamo delle proprietà aggiuntive
+h1 {
+    @extend %modifyText;
+    background-color: aqua;
+    border: $special-border;
+}
+
+
+
+/*----------- PROVA UTILIZZO DEL Mixins @mixin @include---------*/
+
+// quelli con questo mixin non saranno in GRUPPO!!
+@mixin provaUno {
+    color: $primary;
+    background-color: yellow;
+    border-bottom: 3px solid $secondary;
+    border-radius: 5px;
+    border: 1px solid brown;
+    margin: 10px auto;
+}
+
+
+.infoProva {
+    @extend %modifyText;
+    @include provaUno;
+}
+
+#infoProvaID {
+    @include provaUno;
+}
+
+/*utilizzo di funzioni con @mixin @include giocare con variabili!*/
+$primoColore: yellow;
+$secondoColore: red;
+$terzoColore: blue;
+$bordiRotondi: 10px;
+$fontDefault: Georgia, 'Times New Roman', Times, serif;
+
+
+@mixin provaChangeUNO {
+    background-color: $primoColore;
+    color: $secondoColore;
+    border: 2px solid $terzoColore;
+    border-radius: $bordiRotondi;
+    font-family: $fontDefault;
+}
+
+
+.noFunctionChange {
+    @include provaChangeUNO;
+}
+
+
+
+
+// assegniamo i valori della variabili di prima, dentro altre variabili passate nella funzione
+// creando un nuovo mixin
+@mixin provaChangeDUE($bg-color: aqua, $text-color: brown,
+    $border-color: $primoColore, $border-radius: 50px, $font-family: Impact) {
+    // ----
+    background-color: $bg-color;
+    color: $text-color;
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    font-family: $font-family;
+}
+
+.yesFunctionChange {
+    @include provaChangeDUE;
+}
+
+/* modifichiamo SOLO PER QUESTO SELETTORE tramite funzione delle proprietà del @MIXIN 2*/
+#attention {
+    @include provaChangeDUE($border-radius: 200px, $bg-color: purple);
+    font-weight: bold;
+}
+
+// controlliamo se il provaChangeDUE è rimasto come l'originle (si)
+.didChangeTheOriginalDUENo {
+    @include provaChangeDUE;
+}

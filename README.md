@@ -20,8 +20,4 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. complete the FOOTER and the documentation of exercise n 3  (responsive-page section 9)
-
-2. re-check all the past exsercise
-
-3. read and complete the exercise, and take some notes about section 10 (SCSS)
+1. read and complete the exercise 2, and take MORE notes about section 10 (SCSS)

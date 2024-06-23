@@ -1,0 +1,56 @@
+// global variables
+$primaryColor: yellow;
+$secondaryColor: blue;
+$spaceUpDown: 20px;
+$spaceLeftRight: 15px;
+$borderStyle: 5px solid;
+$colorBorder: red;
+$radiusBorder: 15px;
+$topMargin: 300px;
+$leftMargin: 50px;
+
+// !mixin definitions
+
+// text style mixin with default parameters
+@mixin textStyle($colorText: $primaryColor, $background: $secondaryColor, $fontFamily: Arial) {
+    color: $colorText;
+    background-color: $background;
+    font-family: $fontFamily;
+}
+
+// container style mixin with default parameters and optional text style
+@mixin containerStyle($colorText: $primaryColor, $background: $secondaryColor, $paddingTopDown: $spaceUpDown, $paddingLeftRight: $spaceLeftRight, $border: $borderStyle, $borderColor: $colorBorder, $borderRadius: $radiusBorder) {
+    @include textStyle($colorText: $colorText, $background: $background);
+    padding: $paddingTopDown $paddingLeftRight;
+    border: $border;
+    border-color: $borderColor;
+    border-radius: $borderRadius;
+}
+
+// complete style mixin with default parameters
+@mixin completeStyle($colorText: $primaryColor, $background: $secondaryColor, $marginTop: $topMargin, $marginLeft: $leftMargin) {
+    @include containerStyle($colorText: $colorText, $background: $background);
+    margin-top: $marginTop;
+    margin-left: $marginLeft;
+}
+
+
+
+// !applying mixins with specific styles
+
+.firstTitle {
+    @include textStyle;
+}
+
+.secondTitle {
+    @include containerStyle($colorText: aqua);
+}
+
+.thirdTitle {
+    @include completeStyle($colorText: pink, $background: black);
+}
+
+// test, using original global variables
+#areChangedDefaultVariables {
+    @include completeStyle;
+}

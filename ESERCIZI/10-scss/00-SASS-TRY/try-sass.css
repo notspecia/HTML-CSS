@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*----------- PROVA UTILIZZO VARIABILI e COMMENTI---------*/
+#sample {
+  color: darkorange;
+  background-color: #bada55;
+}
+
+.special {
+  border: 10px dashed darkorange;
+}
+
+.unique {
+  border: 2px solid #bada55;
+}
+
+.prova {
+  color: darkorange;
+  background-color: #bada55;
+}
+
+/*sono visibile eccomi!!!!*/
+/*----------- PROVA UTILIZZO NESTING ---------*/
+ul {
+  background-color: #bada55;
+  padding: 30px;
+  border: 10px dashed darkorange;
+}
+ul li {
+  background-color: darkorange;
+  padding: 10px;
+  border-radius: 30px;
+}
+ul li p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+/*----------- PROVA UTILIZZO PARENT SELECTOR & ---------*/
+/*----------- PROVA UTILIZZO DELL'INHERITANCE @EXTEND---------*/
+.infoProva, h1, #titlePage, .specialText {
+  color: darkorange;
+  font-style: italic;
+  font-weight: bolder;
+  text-decoration: 2px underline #bada55;
+}
+
+h1 {
+  background-color: aqua;
+  border: 10px dashed darkorange;
+}
+
+/*----------- PROVA UTILIZZO DEL Mixins @mixin @include---------*/
+.infoProva {
+  color: darkorange;
+  background-color: yellow;
+  border-bottom: 3px solid #bada55;
+  border-radius: 5px;
+  border: 1px solid brown;
+  margin: 10px auto;
+}
+
+#infoProvaID {
+  color: darkorange;
+  background-color: yellow;
+  border-bottom: 3px solid #bada55;
+  border-radius: 5px;
+  border: 1px solid brown;
+  margin: 10px auto;
+}
+
+/*utilizzo di funzioni con @mixin @include giocare con variabili!*/
+.noFunctionChange {
+  background-color: yellow;
+  color: red;
+  border: 2px solid blue;
+  border-radius: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.yesFunctionChange {
+  background-color: aqua;
+  color: brown;
+  border: 2px solid yellow;
+  border-radius: 50px;
+  font-family: Impact;
+}
+
+/* modifichiamo SOLO PER QUESTO SELETTORE tramite funzione delle proprietà del @MIXIN 2*/
+#attention {
+  background-color: purple;
+  color: brown;
+  border: 2px solid yellow;
+  border-radius: 200px;
+  font-family: Impact;
+  font-weight: bold;
+}
+
+.didChangeTheOriginalDUENo {
+  background-color: aqua;
+  color: brown;
+  border: 2px solid yellow;
+  border-radius: 50px;
+  font-family: Impact;
+}
+
+/*# sourceMappingURL=try-sass.css.map */

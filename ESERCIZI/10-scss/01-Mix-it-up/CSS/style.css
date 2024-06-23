@@ -1,0 +1,41 @@
+.firstTitle {
+  color: yellow;
+  background-color: blue;
+  font-family: Arial;
+}
+
+.secondTitle {
+  color: aqua;
+  background-color: blue;
+  font-family: Arial;
+  padding: 20px 15px;
+  border: 5px solid;
+  border-color: red;
+  border-radius: 15px;
+}
+
+.thirdTitle {
+  color: pink;
+  background-color: black;
+  font-family: Arial;
+  padding: 20px 15px;
+  border: 5px solid;
+  border-color: red;
+  border-radius: 15px;
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+#areChangedDefaultVariables {
+  color: yellow;
+  background-color: blue;
+  font-family: Arial;
+  padding: 20px 15px;
+  border: 5px solid;
+  border-color: red;
+  border-radius: 15px;
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */

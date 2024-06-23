@@ -1,8 +1,8 @@
 /**
  * style.css
  *
- *
- * let's sets also the box-sizing property to border-box for all elements.
+ * This file includes rules for layout, colors, typography,
+ * as well as media queries to make the site responsive.
  *
  */
 
@@ -17,9 +17,9 @@ html {
     box-sizing: inherit;
 }
 
-/* Let's set a background image that occupies 100% of the viewport (body). Using background-attachment: fixed, 
-   the background image will be fixed relative to the browser window (viewport). 
-   This means the background image will remain fixed and not move when the user scrolls the page. */
+/* Setting a background image that covers 100% of the viewport (body).
+   Using background-attachment: fixed keeps the background image fixed relative to the browser window (viewport),
+   preventing it from moving when the user scrolls the page. */
 body {
     background-image: url(../IMG/abstract-blue-circle-black-background-technology_1142-12714.avif);
     background-size: cover;
@@ -27,15 +27,19 @@ body {
     background-attachment: fixed;
 }
 
-/* ------------------------------------------START NAVBAR MAIN-------------------------------------------------- */
-
-/* The main navbar will be fixed at the top while scrolling the page.
-   The list of items will be positioned at the bottom of the navbar, occupying 100% of the navbar's width.
-   andiamo a mettere tutti gli elementi della navbar (li) alla fine del suo genitore cioè navMain */
-ul#navMain {
-    width: 100vw;
+/* Used in both navbars */
+.backGroundNavBar {
     background-color: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(5px);
+}
+
+/* ------------------------------------------START NAVBAR MAIN-------------------------------------------------- */
+
+/* The main navbar is fixed at the top while scrolling the page.
+   List items are aligned to the bottom of the navbar, occupying 100% of its width.
+   All list items (li) are positioned at the end of their parent (navMain). */
+ul#navMain {
+    width: 100vw;
     text-align: end;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 40px;
@@ -45,16 +49,14 @@ ul#navMain {
     z-index: 1000;
 }
 
-/* mettiamo le varie liste una dietro l'altra tramite display: inline-block 
-il testo contenuto in essi (a) andranno al centro del loro genitore (li) */
+/* Display list items inline-block to center their content (a) within their parent (li). */
 ul#navMain li {
     display: inline-block;
     text-align: center;
     line-height: 85px;
 }
 
-/* The main navbar logo will be placed on the left side of the list (ul) using float: left.
-   Let's style it with few properties. */
+/* Main navbar logo is floated to the left within its list item (li). */
 ul#navMain li.logo {
     float: left;
     color: whitesmoke;
@@ -64,7 +66,6 @@ ul#navMain li.logo {
     font-weight: 400;
     padding: 0 15px;
 }
-
 
 ul#navMain li a {
     display: inline-block;
@@ -79,20 +80,15 @@ ul#navMain li a {
 /*----------------------------------- END NAVBAR MAIN-------------------------------------- */
 
 
-
-
-
 /*-------------------------------- START NAVBAR ASIDE -------------------------------*/
 
-/* !HIDDEN UNTIL THE BURGER LABEL IS CLICKED! */
+/*! HIDDEN UNTIL THE BURGER LABEL IS CLICKED */
 
-/* Skeleton of the SIDE navbar, will appear on the top right side of the screen,
-   leaving space above to not overlap with the main navbar. */
+/* Sidebar skeleton navbar, appearing on the top right side of the screen,
+   leaving space above to avoid overlap with the main navbar. */
 ul#navAside {
     display: none;
     width: 180px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
     border-radius: 20px;
     position: fixed;
     top: 90px;
@@ -100,14 +96,13 @@ ul#navAside {
     z-index: 1000;
 }
 
-/* Style the list items of the SIDEBAR navbar. */
+/* Style for list items of the sidebar navbar. */
 ul#navAside li {
     text-align: center;
     line-height: 60px;
 }
 
-/* mettendogli display: inline-block e widht 100%, andranno le <a> a coprire
-completamente il loro genitore (li) */
+/* Display list item content (a) as inline-block to fill their parent (li) completely. */
 ul#navAside li a {
     display: inline-block;
     color: white;
@@ -118,9 +113,9 @@ ul#navAside li a {
     transition: background-color 0.3s;
 }
 
-/* The input checkbox and the label will NOT BE VISIBLE but WILL EXIST. In the case
-   of a responsive page (max-width <= 1024px), clicking the "label" will activate/deactivate
-   the checkbox, which will be used to show and hide the SIDEBAR nav. */
+/* The input checkbox and label are invisible but exist.
+   When the label (burger icon) is clicked in responsive mode (max-width <= 1024px),
+   it toggles the checkbox to show or hide the sidebar navbar. */
 input {
     display: none;
 }
@@ -128,7 +123,7 @@ input {
 /* ---------END NAVBAR ASIDE--------- */
 
 
-/* !hover effects of the NAVBARS (main, aside) */
+/*! Hover effects for NAVBARS (main, aside) */
 
 nav ul#navMain li a:hover,
 nav ul#navAside li a:hover {
@@ -136,6 +131,7 @@ nav ul#navAside li a:hover {
     color: black;
 }
 
+/* Adjust hover effect for rounded-corner rectangles. */
 ul#navMain li:last-child a:hover {
     border-bottom-right-radius: 40px;
 }
@@ -153,18 +149,29 @@ ul#navAside li:last-child a:hover {
 
 /*-------------------------------- START MAIN CONTENT ----------------------------------------*/
 
+/* First article on the left side of the page */
 #firstArticle {
     float: left;
     margin-left: 20px;
 }
 
+
+/* Second article on the right side of the page + figure containing an image */
 #secondArticle {
     float: right;
     margin-right: 20px;
 }
 
+#secondArticle figure {
+    margin-top: 45px;
+}
 
-/* START whit common propieties for the 2 content article */
+#secondArticle img {
+    width: 85%;
+    border-radius: 20px;
+}
+
+/* Shared properties for both content articles */
 article {
     width: 45%;
     text-align: center;
@@ -173,28 +180,24 @@ article {
     padding: 40px;
 }
 
-/* the title of the article section (both) */
+/* Title of the article section (both) */
 article h1 {
-    background-color: rgba(100, 148, 237, 0.3);
     color: white;
-    backdrop-filter: blur(10px);
     font-size: 2.2rem;
     font-family: "Permanent Marker", cursive;
     font-style: normal;
     font-weight: 400;
     padding: 10px;
-    border: 2px solid black;
-    border-radius: 20px;
     margin-bottom: 40px;
 }
 
-/* the first letter of the title of the article (both) */
+/* First letter of the article title (both) */
 article h1::first-letter {
-    color: black;
+    color: blue;
     font-size: 2.5rem;
 }
 
-/* the sub-title of the article (both) */
+/* Subtitle of the article (both) */
 article h2 {
     color: floralwhite;
     font-size: 1.3rem;
@@ -203,7 +206,7 @@ article h2 {
     margin-bottom: 15px;
 }
 
-/* the text-content of the article (both) */
+/* Text content of the article (both) */
 article p {
     color: whitesmoke;
     font-size: 1.1rem;
@@ -212,26 +215,13 @@ article p {
     font-style: normal;
 }
 
-/*a line of separation above each title of the article (both) */
-hr {
-    width: 85%;
-    color: cornflowerblue;
+/* Line separator above each article title (both) */
+main hr {
+    width: 90%;
+    color: rgba(100, 148, 237, 0.3);
     border: 2px solid;
     border-radius: 20px;
     margin-bottom: 30px;
-}
-
-/* END common propieties for the 2 content article */
-
-
-/* FIGURE + IMG of the 2 article */
-#secondArticle figure {
-    margin-top: 45px;
-}
-
-#secondArticle img {
-    width: 90%;
-    border-radius: 20px;
 }
 
 /*--------------------------- END MAIN CONTENT ----------------------------*/
@@ -242,16 +232,93 @@ hr {
 
 /* ----------------------------- START FOOTER------------------------------------ */
 
+/* Footer parent containing all elements */
 footer {
     width: 100%;
-    background-color: green;
-    backdrop-filter: blur(10px);
+    background-color: rgba(100, 148, 237, 0.2);
+    backdrop-filter: blur(5px);
     color: white;
-    border-top-right-radius: 60px;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    border-top-left-radius: 60px;
     clear: both;
+}
+
+/* Applied at the end of the content to avoid improper positioning. */
+footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/* Footer figure containing the footer logo, positioned on the left */
+footer figure#logoFooter {
+    float: left;
+    padding: 50px 0 20px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+footer figure#logoFooter img {
+    width: 70px;
+}
+
+footer figure#logoFooter figcaption {
+    font-size: 1.3rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Common title for both footer sections */
+footer div.disclaimer h3,
+footer div.contacts h3 {
+    font-size: 1.2rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+/* Footer disclaimer with copyright, positioned on the left after the logo */
+footer div.disclaimer {
+    float: left;
+    padding: 20px 0;
+    margin-left: 100px;
+}
+
+footer div.disclaimer p {
+    font-size: 0.7rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    padding: 20px 0;
+}
+
+footer div.disclaimer a,
+footer div.disclaimer address {
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Footer contacts, positioned on the right side of the footer */
+footer div.contacts {
+    float: right;
+    padding: 20px 0 0;
+    margin-right: 100px;
+}
+
+/* Social media logos */
+div.imagesLogo {
+    padding: 20px 0 0;
+}
+
+div.imagesLogo img {
+    width: 70px;
+    padding-right: 20px;
 }
 
 /* ----------------------------- END FOOTER------------------------------------ */
@@ -260,23 +327,23 @@ footer {
 
 
 
-/* ---------------------------------- START RESPONSIVE PAGE ------------------------------------------  */
+/* ---------------------------------- START RESPONSIVE PAGE ------------------------------------------ */
 
-/* From 769px to 1024px width of the vw */
-@media(max-width: 1024px) {
+/* From 769px to 1024px viewport width */
+@media (max-width: 1024px) {
 
     /* Hide the list items (<a>) of the MAIN navbar */
     nav ul#navMain li a {
         display: none;
     }
 
-    /* reduce the size of the logo */
+    /* Reduce the size of the logo */
     ul#navMain li.logo {
         font-size: 2.3rem;
     }
 
     /* SHOW THE LABEL (hamburger) on the top right side of the nav,
-       clicking it will activate/deactivate the checkbox. and will show the navbar aside hidden */
+       clicking it will activate/deactivate the checkbox, and will show the hidden navbar aside */
     label {
         display: block;
         width: 30px;
@@ -306,12 +373,12 @@ footer {
         display: block;
     }
 
+    /* MODIFIED THE MAIN CONTENT sizes (reduced) */
     article h1 {
         font-size: 1.9rem;
     }
 
     article h1::first-letter {
-        color: black;
         font-size: 2.2rem;
     }
 
@@ -322,16 +389,59 @@ footer {
     article p {
         font-size: 0.9rem;
     }
+
+    /* MODIFIED THE FOOTER CONTENT sizes (reduced) */
+    footer figure#logoFooter {
+        padding: 40px 0 10px;
+        margin-left: 15px;
+    }
+
+    footer figure#logoFooter img {
+        width: 50px;
+    }
+
+    footer figure#logoFooter figcaption {
+        font-size: 1.2rem;
+    }
+
+    footer div.disclaimer h3,
+    footer div.contacts h3 {
+        font-size: 1rem;
+    }
+
+    footer div.disclaimer {
+        margin-left: 20px;
+    }
+
+    footer div.disclaimer p {
+        font-size: 0.55rem;
+    }
+
+    footer div.disclaimer a,
+    footer div.disclaimer address {
+        font-size: 0.7rem;
+    }
+
+    footer div.contacts {
+        margin-right: 50px;
+    }
+
+    div.imagesLogo {
+        padding: 20px 0 0;
+    }
+
+    div.imagesLogo img {
+        width: 60px;
+        padding-right: 20px;
+    }
 }
 
-
-
 /* From 577px to 768px */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
 
-    /* Reduce the width of the SIDEBAR nav */
+    /* Reduce the width of the SIDEBAR navbar */
     nav ul#navAside {
-        width: 140px;
+        width: 150px;
     }
 
     /* Reduce the text size of the list items (li) */
@@ -339,12 +449,12 @@ footer {
         font-size: 0.7rem;
     }
 
+    /* MODIFIED THE MAIN CONTENT sizes (reduced) */
     article h1 {
         font-size: 1.2rem;
     }
 
     article h1::first-letter {
-        color: black;
         font-size: 1.9rem;
     }
 
@@ -355,16 +465,59 @@ footer {
     article p {
         font-size: 0.8rem;
     }
+
+    /* MODIFIED THE FOOTER CONTENT sizes (reduced) */
+    footer figure#logoFooter {
+        padding: 30px 0 10px;
+    }
+
+    footer figure#logoFooter img {
+        width: 40px;
+    }
+
+    footer figure#logoFooter figcaption {
+        font-size: 1rem;
+    }
+
+    footer div.disclaimer h3,
+    footer div.contacts h3 {
+        font-size: 0.9rem;
+    }
+
+    footer div.disclaimer {
+        margin-left: 5px;
+    }
+
+    footer div.disclaimer p {
+        font-size: 0.5rem;
+    }
+
+    footer div.disclaimer a,
+    footer div.disclaimer address {
+        font-size: 0.6rem;
+    }
+
+    footer div.contacts {
+        margin-right: 0;
+    }
+
+    div.imagesLogo {
+        padding: 10px 0 0;
+    }
+
+    div.imagesLogo img {
+        width: 50px;
+        padding-right: 10px;
+    }
 }
 
+/* From 481px to 576px */
+@media (max-width: 576px) {
 
+    /* Set both articles' float to none,
+       making them stack on top of each other to adjust this behavior */
 
-
-
-/* CAMBIARE LA DISPOSIZIONE TOTALMENTE DEL MAIN e DELLE GRANDEZZE */
-/* From 0px to 576px */
-@media(max-width: 576px) {
-
+    /* MODIFIED THE MAIN CONTENT sizes (adjusted and increased) */
     #firstArticle {
         float: none;
         width: 85%;
@@ -374,7 +527,7 @@ footer {
     #secondArticle {
         float: none;
         width: 85%;
-        margin: 0 auto;
+        margin: 0 auto 150px;
     }
 
     article h1 {
@@ -382,7 +535,6 @@ footer {
     }
 
     article h1::first-letter {
-        color: black;
         font-size: 2.2rem;
     }
 
@@ -394,6 +546,110 @@ footer {
         font-size: 0.9rem;
     }
 
+    /* FIX THE WRAP OF THE 2 DIVS IN THE FOOTER AND ADJUST ALL THE ELEMENTS */
+
+    /* MODIFIED THE FOOTER CONTENT sizes (revised) */
+    footer figure#logoFooter {
+        padding: 20px 0 0;
+        margin-left: 15px;
+    }
+
+    footer div.disclaimer {
+        margin-left: 30px;
+    }
+
+    footer div.disclaimer p {
+        font-size: 0.55rem;
+    }
+
+    /* Adjust its width based on content length,
+       positioning it below the disclaimer in its own centered space */
+    footer div.contacts {
+        float: none;
+        clear: both;
+        width: fit-content;
+        padding: 30px 0 10px;
+        margin: 0 auto;
+    }
+
+    footer div.contacts div.imagesLogo {
+        padding: 20px 0 0;
+    }
+
+    footer div.contacts div.imagesLogo img {
+        width: 65px;
+        padding-right: 20px;
+    }
 }
 
-/* ---------------------------------- END RESPONSIVE PAGE ------------------------------------------  */
+/* From 0px to 480px */
+@media (max-width: 480px) {
+
+    /* MODIFIED THE MAIN CONTENT sizes (reduced) */
+    article h1 {
+        font-size: 1.5rem;
+    }
+
+    article h1::first-letter {
+        font-size: 1.8rem;
+    }
+
+    article h2 {
+        font-size: 1.2rem;
+    }
+
+    article p {
+        font-size: 0.75rem;
+    }
+
+    /* REWORK THE FOOTER POSITION, WRAPPING THE DIVS */
+    footer {
+        text-align: center;
+    }
+
+    footer figure#logoFooter,
+    footer div.disclaimer {
+        float: none;
+        clear: both;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    /* MODIFIED THE FOOTER CONTENT sizes (increased / adjusted) */
+    footer figure#logoFooter {
+        padding: 25px 0;
+    }
+
+    footer figure#logoFooter img {
+        width: 70px;
+    }
+
+    footer figure#logoFooter figcaption {
+        font-size: 1.3rem;
+    }
+
+    footer div.disclaimer h3,
+    footer div.contacts h3 {
+        font-size: 1.2rem;
+    }
+
+    footer div.disclaimer p {
+        font-size: 0.65rem;
+    }
+
+    footer div.disclaimer a,
+    footer div.disclaimer address {
+        font-size: 0.75rem;
+    }
+
+    div.imagesLogo {
+        padding: 20px 0 0;
+    }
+
+    div.imagesLogo img {
+        width: 50px;
+        padding-right: 20px;
+    }
+}
+
+/* ---------------------------------- END RESPONSIVE PAGE ------------------------------------------ */
