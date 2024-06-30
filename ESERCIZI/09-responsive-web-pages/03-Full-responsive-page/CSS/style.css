@@ -511,6 +511,7 @@ div.imagesLogo img {
     }
 }
 
+
 /* From 481px to 576px */
 @media (max-width: 576px) {
 
@@ -581,6 +582,7 @@ div.imagesLogo img {
         padding-right: 20px;
     }
 }
+
 
 /* From 0px to 480px */
 @media (max-width: 480px) {

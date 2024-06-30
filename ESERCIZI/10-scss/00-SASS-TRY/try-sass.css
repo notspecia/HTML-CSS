@@ -35,6 +35,16 @@ ul li p {
   font-weight: bold;
 }
 
+.special {
+  border: 10px dashed darkorange;
+}
+.special ul li {
+  background-color: beige;
+}
+.special ul li.selected {
+  background-color: brown;
+}
+
 /*----------- PROVA UTILIZZO PARENT SELECTOR & ---------*/
 /*----------- PROVA UTILIZZO DELL'INHERITANCE @EXTEND---------*/
 .infoProva, h1, #titlePage, .specialText {

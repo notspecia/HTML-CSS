@@ -28,8 +28,8 @@ $leftMargin: 50px;
 }
 
 // complete style mixin with default parameters
-@mixin completeStyle($colorText: $primaryColor, $background: $secondaryColor, $marginTop: $topMargin, $marginLeft: $leftMargin) {
-    @include containerStyle($colorText: $colorText, $background: $background);
+@mixin completeStyle($colorText: $primaryColor, $background: $secondaryColor, $border: $borderStyle, $marginTop: $topMargin, $marginLeft: $leftMargin) {
+    @include containerStyle($colorText: $colorText, $background: $background, $border: $border);
     margin-top: $marginTop;
     margin-left: $marginLeft;
 }
@@ -47,10 +47,10 @@ $leftMargin: 50px;
 }
 
 .thirdTitle {
-    @include completeStyle($colorText: pink, $background: black);
+    @include completeStyle($colorText: pink, $background: black, $border: 20px solid);
 }
 
-// test, using original global variables
+// test, check and using if  the original global variables changed using @mixin functions
 #areChangedDefaultVariables {
     @include completeStyle;
 }

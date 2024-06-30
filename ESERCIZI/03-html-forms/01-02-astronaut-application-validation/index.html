@@ -22,6 +22,7 @@
 
             <legend> CANDIDATURA ASTRONAUTA</legend>
             <form action="https://wiki.pokemoncentral.it/Pok%C3%A9mon_extraterrestri" method="post" target="_blank">
+               
                 <!-- nome e cognome -->
                 <p>Nome e Cognome</p>
                 <label for="nome_astronauta">Nome:</label>
@@ -31,11 +32,13 @@
                 <input type="text" name="cognome" id="cognome_astronauta" placeholder="Bianchi" required>
                 <br><br>
                 <hr>
+                
                 <!-- età dell'astronauta -->
                 <p>Dati Sensibili</p>
                 <label for="eta_astronauta">Età:</label>
                 <input type="number" name="eta" id="eta_astronauta" min="18" max="60" required>
                 <br><br>
+                
                 <!-- genere -->
                 <input type="radio" name="genere" id="maschio_astronauta" value="maschio" required>
                 <label for="maschio_astronauta">maschio</label>
@@ -44,6 +47,7 @@
                 <input type="radio" name="genere" id="nonspecificato_astronauta" value="nonspecificato" required>
                 <label for="nonspecificato_astronauta">non specificato</label>
                 <br><br>
+                
                 <!-- colore capelli -->
                 <label for="capelli_astronauta">Capelli:</label>
                 <select name="capelli_astronauta" id="capelli_astronauta" required>
@@ -54,6 +58,7 @@
                     <option value="rossi">rossi</option>
                 </select>
                 <br><br>
+                
                 <!-- colore occhi -->
                 <label for="occhi_astronauta">Occhi:</label>
                 <select name="occhi_astronauta" id="occhi_astronauta" required>
@@ -64,11 +69,13 @@
                     <option value="nocciola">nocciola</option>
                 </select>
                 <br><br>
+                
                 <!-- peso dell'astronauta -->
                 <label for="peso_astronauta">Peso:</label>
                 <input type="number" name="peso" id="peso_astronauta" min="40" max="99" required>
                 <br><br>
                 <hr>
+                
                 <!-- informazioni per contattarmi (email, n telefono, indirizzo) -->
                 <p>Recapiti per il Contatto</p>
                 <label for="email_astronauta">E-mail:</label>
@@ -79,9 +86,11 @@
                     placeholder="338-456-7890" maxlength="12" required>
                 <br><br>
                 <label for="indirizzo_astronauta">Indirizzo:</label>
-                <input type="text" name="indirizzo" id="indirizzo_astronauta" placeholder="Via Pietro Sarpi 23" required>
+                <input type="text" name="indirizzo" id="indirizzo_astronauta" placeholder="Via Pietro Sarpi 23"
+                    required>
                 <br><br>
                 <hr>
+                
                 <!-- missione dell'astronauta e + informazioni a piacere max lenght per dare una lunghezza massima alla biografia -->
                 <p>Altre Informazioni</p>
                 <label for="missione_astronauta">Missione:</label>
@@ -91,13 +100,17 @@
                 <br><br>
                 <label for="biografia_astronauta">Biografia:</label>
                 <textarea name="biografia" id="biografia_astronauta" cols="30" rows="5"
-                    placeholder="ciao sono Mario Rossi e sono... (max 255 caratteri)" maxlength="255" required></textarea>
+                    placeholder="ciao sono Mario Rossi e sono... (max 255 caratteri)" maxlength="255"
+                    required></textarea>
                 <br><br><br><br><br>
+                
                 <!-- pulsanti con invia o reset -->
                 <input type="reset" id="reset" value="RESET">
                 <input type="submit" id="submit" value="INVIA">
+
+                
             </form>
-            
+
         </fieldset>
     </div>
 

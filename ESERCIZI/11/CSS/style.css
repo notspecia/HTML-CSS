@@ -1,0 +1,66 @@
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+div {
+    margin: 80px 0;
+}
+
+/* inizio tests  shadows */
+
+div.box {
+    width: 200px;
+    height: 200px;
+}
+
+div.ocra {
+    background-color: #caae3f;
+}
+
+/* primo valore --> POSIZIONE DELL'OMBRA ASSE X, 
+secondo valore --> POSIZIONE DELL'OMBRA ASSE Y
+terzo valore --> EFFETTO DI BLUR 
+quarto valore --> EFFETTO DI SPREAD RADIUS (DIFFUSIONE/ESPANSIONE DEI BORDI) */
+/* POSSIAMO AGGIUNGERE ANCHE IL COLORE (in qualsiasi posizione va bene!!) */
+div.shadow {
+    box-shadow: rgba(248, 33, 58, 0.5) 10px 20px 5px 8px;
+}
+
+
+/* POSSIAMO ANCHE COMBINARE + EFFETTI DI SHADOW UNO SOTTO L'ALTRO */
+div.purple {
+    background-color: purple;
+}
+
+div.shadow2 {
+    box-shadow:
+        5px 5px 5px 0px #289fed,
+        10px 10px 0px 0px #5fb8ff,
+        15px 15px 0px 0px #a1d8ff,
+        20px 20px 0px 0px #cae6ff;
+}
+
+/* funziona anche suoìi testi con la propriety TEXT-SHADOW*/
+
+/* primo valore --> POSIZIONE DELL'OMBRA ASSE X, 
+secondo valore --> POSIZIONE DELL'OMBRA ASSE Y
+terzo valore --> EFFETTO DI BLUR */
+/* POSSIAMO AGGIUNGERE ANCHE IL COLORE (in qualsiasi posizione va bene!!) */
+p {
+    font-size: 50px;
+    text-shadow: rgba(248, 33, 58, 0.5) 3px 0px 1px;
+}

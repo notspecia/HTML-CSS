@@ -14,10 +14,11 @@ During this course of HTML-CSS I'm learning the following notions, going to prac
 8.  float
 9.  responsive-web-pages
 10. SCSS
-
+11. box-shadow
 
 All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. read and complete the exercise 2, and take MORE notes about section 10 (SCSS)
+1. read and complete the exercise 2
+2. read the new units 11 (box-shadow)
