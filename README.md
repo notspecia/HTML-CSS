@@ -1,4 +1,4 @@
-# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.5
+# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.6
 
 During this course of HTML-CSS I'm learning the following notions, going to practice with practical exercises that identify with reality:
 
