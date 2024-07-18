@@ -1,0 +1,60 @@
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/*--------- styling the containers and the boxs ---------*/
+
+/* container occupy all the viewport */
+#container {
+    background-color: brown;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* container which contains the boxs */
+#boxContainer {
+    background-color: whitesmoke;
+    width: 65%;
+    border: 3px solid;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* the boxs and all the variants */
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 90px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.first {
+    background-color: yellow;
+}
+
+.second {
+    background-color: lightcoral;
+}
+
+.third {
+    background-color: blue;
+}
+
+.fourth {
+    background-color: greenyellow;
+}

@@ -35,13 +35,14 @@ div.ocra {
 secondo valore --> POSIZIONE DELL'OMBRA ASSE Y
 terzo valore --> EFFETTO DI BLUR 
 quarto valore --> EFFETTO DI SPREAD RADIUS (DIFFUSIONE/ESPANSIONE DEI BORDI) */
-/* POSSIAMO AGGIUNGERE ANCHE IL COLORE (in qualsiasi posizione va bene!!) */
+/* POSSIAMO AGGIUNGERE ANCHE IL COLORE DELL'OMBRA (in qualsiasi posizione va bene!!) */
 div.shadow {
-    box-shadow: rgba(248, 33, 58, 0.5) 10px 20px 5px 8px;
+    color: aqua;
+    box-shadow: 50px 20px 5px 8px;
 }
 
 
-/* POSSIAMO ANCHE COMBINARE + EFFETTI DI SHADOW UNO SOTTO L'ALTRO */
+/* POSSIAMO ANCHE COMBINARE + EFFETTI DI SHADOW UNO SOTTO L'ALTRO SEPARANDOLI CON LA , */
 div.purple {
     background-color: purple;
 }
@@ -49,12 +50,12 @@ div.purple {
 div.shadow2 {
     box-shadow:
         5px 5px 5px 0px #289fed,
-        10px 10px 0px 0px #5fb8ff,
-        15px 15px 0px 0px #a1d8ff,
+        400px 10px 0px 0px #5fb8ff,
+        15px 30px 0px 0px #a1d8ff,
         20px 20px 0px 0px #cae6ff;
 }
 
-/* funziona anche suoìi testi con la propriety TEXT-SHADOW*/
+/* funziona anche sui testi con la propriety TEXT-SHADOW */
 
 /* primo valore --> POSIZIONE DELL'OMBRA ASSE X, 
 secondo valore --> POSIZIONE DELL'OMBRA ASSE Y
@@ -63,4 +64,10 @@ terzo valore --> EFFETTO DI BLUR */
 p {
     font-size: 50px;
     text-shadow: rgba(248, 33, 58, 0.5) 3px 0px 1px;
+}
+
+.boxGradient {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(teal, purple);
 }

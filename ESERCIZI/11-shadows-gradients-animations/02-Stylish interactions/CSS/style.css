@@ -1,0 +1,43 @@
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* styling elements of the page */
+
+/* set an background gradients to the header */
+header {
+    background: linear-gradient(to left,
+            rgb(68, 0, 254) 30%,
+            rgb(191, 255, 80) 60%);
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* sets an text shadow to the paragraph */
+p {
+    font-size: 25px;
+    padding: 20px;
+    text-shadow: 10px 10px 2px rgb(169, 179, 255);
+}

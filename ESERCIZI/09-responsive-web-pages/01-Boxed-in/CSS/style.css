@@ -26,7 +26,6 @@ html {
 
    Image for screens > 1200px */
 .imagebg {
-    background-color: red;
     width: 50vw;
     height: 60vh;
     background-image: url(../IMG/phase-1.jpg);

@@ -50,8 +50,15 @@ body {
 }
 
 .content {
-    margin-top: 200px; /* Aggiunge spazio per lo scrolling */
+    margin-top: 200px;
+    /* Aggiunge spazio per lo scrolling */
     padding: 20px;
     background-color: white;
     border: 2px solid black;
+}
+
+
+
+span {
+    padding: 60px;
 }

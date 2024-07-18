@@ -31,8 +31,6 @@ html {
     box-sizing: inherit;
 }
 
-
-
 /* -------------- START HEADER -------------- */
 
 /* header which when we scroll the page, it will always be visible on top of viewport, 
@@ -56,15 +54,12 @@ header h2 {
 /* -------------- END HEADER -------------- */
 
 
-
-
-/* -------------- START MAIN -------------- */
+/* -------------------------------- START MAIN ----------------------------------- */
 
 /* Let's go to give the padding-top that allows the titles of the various sections
 not to be submitted by the Header  */
 main {
     background-color: bisque;
-    width: 100%;
     min-height: 30%;
     padding-top: 80px;
 }
@@ -131,12 +126,13 @@ it will go change the flow of the document, It will be sided above the <p> di se
 
 
 /* -------------- START SECTION 2 -------------- */
+
 #section2 {
     width: 40%;
     font-size: 30px;
     min-height: 1400px;
     border: 2px dotted black;
-display: inline-block;
+    display: inline-block;
 }
 
 #section2 h1 {
@@ -159,6 +155,7 @@ go to dominate the final part of the text*/
 
 
 /* -------------- START SECTION 3 -------------- */
+
 #section3 {
     width: 40%;
     font-size: 30px;
@@ -192,6 +189,7 @@ go to dominate the final part of the text*/
     margin: 10px auto;
 }
 
+/* figcaption positioned on the top right of the figure img of the dog */
 #section3 figcaption {
     background-color: aqua;
     border: 2px solid black;
@@ -200,7 +198,6 @@ go to dominate the final part of the text*/
     top: 10px;
     right: 10px;
 }
-
 
 /* -------------- END SECTION 3 -------------- */
 
@@ -214,8 +211,8 @@ go to dominate the final part of the text*/
 /* footer which when we scroll the page, it will always be visible in bottom of viewport*/
 footer {
     background-color: cornflowerblue;
-    font-size: 30px;
     width: 100%;
+    font-size: 30px;
     padding: 20px;
     border: 3px dotted black;
     position: fixed;
