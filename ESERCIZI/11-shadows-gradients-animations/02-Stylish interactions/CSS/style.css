@@ -3,6 +3,7 @@
  *
  *
  * let's sets also the box-sizing property to border-box for all elements.
+ * setted and tested for all the elements the proprieties required
  *
  */
 
@@ -17,17 +18,13 @@ html {
     box-sizing: inherit;
 }
 
-/* styling elements of the page */
 
 /* set an background gradients to the header */
 header {
-    background: linear-gradient(to left,
-            rgb(68, 0, 254) 30%,
-            rgb(191, 255, 80) 60%);
+    background: radial-gradient(circle, rgb(68, 0, 254) 40%, rgb(191, 255, 80) 80%);
     margin-bottom: 100px;
     padding: 20px;
 }
-
 
 h1 {
     font-size: 50px;
@@ -35,9 +32,66 @@ h1 {
     text-align: center;
 }
 
-/* sets an text shadow to the paragraph */
+
+/* sets an text shadow to the paragraph 
+sets an transition to the paragraph on hover it*/
 p {
     font-size: 25px;
-    padding: 20px;
     text-shadow: 10px 10px 2px rgb(169, 179, 255);
+    padding: 20px;
+    margin-bottom: 100px;
+    transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+p:hover {
+    color: red;
+    text-shadow: 10px 10px 2px rgb(139, 255, 38);
+}
+
+
+/* sets an transform which rotate the div to 45deg from its original position*/
+div {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    transition: transform 1s ease-in, background-color 0.3s ease-out;
+}
+
+div:hover {
+    background-color: yellowgreen;
+    transform: rotate(45deg);
+}
+
+
+/* sets animations which move the div continuously from left to right */
+.animation {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    transition: border-radius 1s ease-out;
+    animation: move 3s linear infinite;
+}
+
+/* add the keyframes for the continuous movement */
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Add hover effect to pause the animation */
+.animation:hover {
+    background-color: blue;
+    animation-play-state: paused;
+    border-radius: 100px;
 }

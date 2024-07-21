@@ -1,0 +1,180 @@
+/**
+ * style.css
+ *
+ *
+ * using some property for the presentation of the new section
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 50px;
+}
+
+/* division for each section */
+section div {
+    float: left;
+    margin: 20px 30px;
+}
+
+section p {
+    margin: 10px 20px;
+}
+
+section::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* common box for all the trys of code */
+.box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+
+/* play whit the box-shadows on the div whit class (.box) */
+.box.shadow {
+    box-shadow: 15px 5px 2px 1px red;
+}
+
+.box.shadows {
+    box-shadow:
+        5px 5px 5px 0px #289fed,
+        10px 10px 0px 0px #5fb8ff,
+        15px 30px 0px 0px #a1d8ff,
+        20px 20px 0px 0px #cae6ff;
+}
+
+
+/* play whit the text-shadows on the p */
+p.text-shadow {
+    font-size: 50px;
+    text-shadow: rgba(248, 33, 58, 0.5) 8px 2px 1px;
+}
+
+
+/* play whit the gradients on the div whit class (.box) */
+.box.linear {
+    background: linear-gradient(45deg, red, blue);
+}
+
+.box.radial {
+    background: radial-gradient(circle, red, blue);
+}
+
+.box.conic {
+    background: conic-gradient(red, blue);
+}
+
+
+/* play whit the transitons on the div whit class (.box) */
+
+/* 1. transition of the background-color */
+.box.color {
+    background-color: blue;
+    transition: background-color 2s;
+}
+
+.box.color:hover {
+    background-color: red;
+}
+
+/* 2. transition of the border-radius */
+.box.radius {
+    background-color: red;
+    transition: border-radius 2s;
+}
+
+.box.radius:hover {
+    border-radius: 50%;
+}
+
+/* 3. transition */
+.box.dimension {
+    transition: all 2s;
+    background-color: blue;
+}
+
+.box.dimension:hover {
+    width: 100px;
+    height: 50px;
+}
+
+
+/* play whit the transform on the div whit class (.box) */
+
+/* 1. translate */
+.box.translate {
+    background-color: red;
+}
+
+.box.translate:hover {
+    transform: translate(25px, 25px);
+    transition: all 1s;
+}
+
+/* 2.scale */
+.box.scale {
+    background-color: blue;
+}
+
+.box.scale:hover {
+    transform: scale(0.8);
+    transition: all 1s;
+}
+
+/*3. skew */
+.box.skew {
+    background: linear-gradient(to right, red, blue);
+}
+
+.box.skew:hover {
+    transform: skew(10deg, 10deg);
+    transition: all 1s;
+}
+
+/* 4. transform-origin */
+.box.transform-origin {
+    transform-origin: 0 0;
+}
+
+
+/*  play whit the animations on the div whit class (.box)  */
+.box.animations {
+    width: 200px;
+    height: 200px;
+    animation: 5s animations infinite ease-in-out;
+}
+
+@keyframes animations {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    33% {
+        transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    }
+
+    67% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+
+    }
+}
