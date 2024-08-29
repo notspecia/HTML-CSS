@@ -16,6 +16,7 @@ During this course of HTML-CSS I'm learning the following notions, going to prac
 10. SCSS
 11. shadows-gradients-transtions-transform-animations
 12. flexbox
+13. flexbox VS alternative
 14. bootstrap
 
 All the topics mentioned are fully in -depth, have an happy reading :) !!
