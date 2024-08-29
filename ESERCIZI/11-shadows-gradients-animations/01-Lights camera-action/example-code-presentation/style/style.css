@@ -22,6 +22,11 @@ h1 {
     margin-bottom: 50px;
 }
 
+h2 {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
 /* division for each section */
 section div {
     float: left;
@@ -42,9 +47,11 @@ section::after {
 .box {
     width: 200px;
     height: 100px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
+
+/* -------------------------------------------------------------- */
 
 /* play whit the box-shadows on the div whit class (.box) */
 .box.shadow {
@@ -59,27 +66,30 @@ section::after {
         20px 20px 0px 0px #cae6ff;
 }
 
+/* -------------------------------------------------------------- */
 
 /* play whit the text-shadows on the p */
 p.text-shadow {
     font-size: 50px;
-    text-shadow: rgba(248, 33, 58, 0.5) 8px 2px 1px;
+    text-shadow: 8px 2px 1px rgba(248, 33, 58, 0.5);
 }
 
+/* -------------------------------------------------------------- */
 
 /* play whit the gradients on the div whit class (.box) */
 .box.linear {
-    background: linear-gradient(45deg, red, blue);
+    background: linear-gradient(140deg, red, blue);
 }
 
 .box.radial {
-    background: radial-gradient(circle, red, blue);
+    background: radial-gradient(at bottom left, red, blue, pink, yellow);
 }
 
 .box.conic {
-    background: conic-gradient(red, blue);
+    background: conic-gradient(red 80deg, blue 10deg, yellow 280deg, green, aqua, pink);
 }
 
+/* -------------------------------------------------------------- */
 
 /* play whit the transitons on the div whit class (.box) */
 
@@ -105,76 +115,129 @@ p.text-shadow {
 
 /* 3. transition */
 .box.dimension {
-    transition: all 2s;
+    transition: all 3s;
     background-color: blue;
+
+    &:hover {
+        width: 100px;
+        height: 50px;
+    }
 }
 
-.box.dimension:hover {
+
+/* 4. MULTIPLE ELEMENTS transition (list) */
+.box.multipleTrans {
     width: 100px;
-    height: 50px;
+    height: 100px;
+    background-color: red;
+    transition: width 1s ease-in-out,
+        height 0.2s ease-in,
+        background-color 2.5s ease-out,
+        border-radius 4s ease-in-out;
+
+    &:hover {
+        width: 250px;
+        height: 150px;
+        background-color: blue;
+        border-radius: 30px;
+    }
 }
 
 
-/* play whit the transform on the div whit class (.box) */
+/* -------------------------------------------------------------- */
+
+/* play whit the TRANSFORM on the div whit class (.box) */
+
 
 /* 1. translate */
 .box.translate {
     background-color: red;
+    transition: transform 1s;
+
+    &:hover {
+        transform: translate(125px, 125px);
+    }
 }
 
-.box.translate:hover {
-    transform: translate(25px, 25px);
-    transition: all 1s;
+
+/* 2. rotate X Y*/
+.box.rotate {
+    background: linear-gradient(red, blue);
+    transition: transform 2s;
+
+    &:hover {
+        transform: rotateY(360deg) rotateX(160deg);
+    }
 }
 
-/* 2.scale */
-.box.scale {
+
+/* 3. rotate Z */
+.box.rotateZ {
     background-color: blue;
+    transition: transform 2s;
+
+    &:hover {
+        transform: rotateZ(180deg);
+    }
 }
 
-.box.scale:hover {
-    transform: scale(0.8);
-    transition: all 1s;
+
+/* 4.scale using --> scale(ASSEX, ASSEY) // scale(ASSEX+ASSEY)
+1 == 100% of the element
+0.5% == 50% of the element */
+.box.scale {
+    background-color: red;
+    transition: transform 1s;
+
+    &:hover {
+        transform: scale(0.8, 2);
+    }
 }
 
-/*3. skew */
+
+/* 5. skew  using --> skew(ASSEX, ASSEY)*/
 .box.skew {
-    background: linear-gradient(to right, red, blue);
+    background: blue;
+    transition: transform 4s;
+
+    &:hover {
+        transform: skew(180deg, 180deg);
+    }
 }
 
-.box.skew:hover {
-    transform: skew(10deg, 10deg);
-    transition: all 1s;
-}
 
-/* 4. transform-origin */
+/* 6. transform-origin */
 .box.transform-origin {
     transform-origin: 0 0;
 }
 
 
+/* -------------------------------------------------------------- */
+
 /*  play whit the animations on the div whit class (.box)  */
+/* infinite animation (will repeat every 5sec), has different transform every fase */
+/* SI POSSONO USARE --> from (da) to (a)   /   %(percentuali che indicano la fase dell'animazione)   */
+
 .box.animations {
     width: 200px;
     height: 200px;
-    animation: 5s animations infinite ease-in-out;
+    animation: 5s animationsBox infinite ease-in-out;
 }
 
-@keyframes animations {
+@keyframes animationsBox {
     0% {
-        transform: rotateX(0) rotateY(0) rotateZ(0);
+        transform: skew(30deg, 20deg);
     }
 
-    33% {
-        transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    30% {
+        transform: scale(0.8, 0.5);
     }
 
     67% {
-        transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+        transform: rotateY(180deg) rotateZ(0);
     }
 
     100% {
         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-
     }
 }

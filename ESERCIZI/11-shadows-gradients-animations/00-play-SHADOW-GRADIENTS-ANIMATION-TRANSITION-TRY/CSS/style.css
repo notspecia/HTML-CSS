@@ -21,7 +21,7 @@ div {
     margin: 80px 0;
 }
 
-/* inizio tests  shadows */
+/* inizio text shadows */
 
 div.box {
     width: 200px;
@@ -67,8 +67,39 @@ p {
     text-shadow: rgba(248, 33, 58, 0.5) 3px 0px 1px;
 }
 
-.boxGradient {
-    width: 200px;
-    height: 100px;
+div.gradient {
     background: linear-gradient(teal, purple);
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* ANIMATIONS PROPRIETIES + @KEYFRAMES */
+
+div.animations {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    font-size: 150px;
+    text-align: center;
+    border: 5px solid;
+    border-radius: 100px;
+
+    /* ANIMATIONS PROPRIETIES */
+    animation-name: tryAnimations;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes tryAnimations {
+
+    50% {
+        background-color: red;
+        transform: rotateX(360deg) rotateY(360deg) translateY(-100px);
+    }
+
 }

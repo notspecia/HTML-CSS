@@ -21,32 +21,35 @@ html {
 
 /* set an background gradients to the header */
 header {
-    background: radial-gradient(circle, rgb(68, 0, 254) 40%, rgb(191, 255, 80) 80%);
+    background: radial-gradient(circle, pink, yellowgreen);
     margin-bottom: 100px;
     padding: 20px;
 }
 
-h1 {
+header h1 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
 }
 
 
+
 /* sets an text shadow to the paragraph 
 sets an transition to the paragraph on hover it*/
 p {
     font-size: 25px;
+    color: black;
     text-shadow: 10px 10px 2px rgb(169, 179, 255);
     padding: 20px;
     margin-bottom: 100px;
-    transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+    transition: color 0.5s, text-shadow 2s;
+
+    &:hover {
+        color: red;
+        text-shadow: 10px 10px 2px rgb(139, 255, 38);
+    }
 }
 
-p:hover {
-    color: red;
-    text-shadow: 10px 10px 2px rgb(139, 255, 38);
-}
 
 
 /* sets an transform which rotate the div to 45deg from its original position*/
@@ -56,23 +59,32 @@ div {
     background-color: blue;
     margin-left: 50px;
     margin-bottom: 100px;
-    transition: transform 1s ease-in, background-color 0.3s ease-out;
+    transition: transform 1.5s, background-color 0.5s;
+
+    &:hover {
+        background-color: yellowgreen;
+        transform: rotateZ(45deg);
+    }
 }
 
-div:hover {
-    background-color: yellowgreen;
-    transform: rotate(45deg);
-}
 
 
 /* sets animations which move the div continuously from left to right */
+/* also added an hover effect to pause the animation */
 .animation {
     width: 200px;
     height: 200px;
     background-color: lightcoral;
     transition: border-radius 1s ease-out;
     animation: move 3s linear infinite;
+
+    &:hover {
+        background-color: blue;
+        animation-play-state: paused;
+        border-radius: 100px;
+    }
 }
+
 
 /* add the keyframes for the continuous movement */
 @keyframes move {
@@ -81,17 +93,10 @@ div:hover {
     }
 
     50% {
-        transform: translateX(500px);
+        transform: translateX(600px);
     }
 
     100% {
         transform: translateX(0);
     }
-}
-
-/* Add hover effect to pause the animation */
-.animation:hover {
-    background-color: blue;
-    animation-play-state: paused;
-    border-radius: 100px;
 }

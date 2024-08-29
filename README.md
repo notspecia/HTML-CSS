@@ -1,4 +1,4 @@
-# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.7
+# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 0.8
 
 During this course of HTML-CSS I'm learning the following notions, going to practice with practical exercises that identify with reality:
 
@@ -14,8 +14,9 @@ During this course of HTML-CSS I'm learning the following notions, going to prac
 8.  float
 9.  responsive-web-pages
 10. SCSS
-11. box-shadow
+11. shadows-gradients-transtions-transform-animations
 12. flexbox
+14. bootstrap
 
 All the topics mentioned are fully in -depth, have an happy reading :) !!
 

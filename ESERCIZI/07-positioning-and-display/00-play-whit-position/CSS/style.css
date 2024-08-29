@@ -5,7 +5,8 @@ body {
 
 .static {
     position: static;
-    top: 50px;
+    top: 500px;
+    /*will not change!*/
     background-color: lightgrey;
     padding: 10px;
     border: 2px solid black;
@@ -60,5 +61,5 @@ body {
 
 
 span {
-    padding: 60px;
+    padding: 600px;
 }

@@ -60,7 +60,7 @@ Specifies if and how a background image must be repeated.
 If the image has a length and height > of the container 
 the image will repeat horizontally and vertically, propeties are:
 
--background-repeat: repeat-x/y --> will only repeat on the x axis / y axis
+-background-repeat: repeat-x/y --> will only repeat on the x axis (or) y axis
 
 -background-repeat: no-repeat --> the image will not repeat
 
@@ -185,18 +185,6 @@ excluding both the border and the padding.
     width: 750px;
     height: 600px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
