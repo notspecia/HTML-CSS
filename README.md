@@ -23,5 +23,6 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. take more notes of the new section 11
-2. read the new section 12 (flexbox), and do the exsercise
+1. write the readme in the exsercise num 3 (column + nations)
+
+2. read and do the exsercise of the new section 14 (boostrap)

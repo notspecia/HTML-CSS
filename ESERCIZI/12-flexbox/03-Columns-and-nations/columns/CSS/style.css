@@ -1,5 +1,6 @@
 /**
  * style.css
+
  * This stylesheet contains CSS definitions for a web page with a three-column layout,
  * a fixed header, and a fixed footer. The main sections include:
  
@@ -8,15 +9,10 @@
  * 2. Styles for the main content area with top padding to prevent it from being hidden
  *    by the fixed header.
  *
- * 3. Styles for section 1 with float left and a parent container with relative positioning
- *    to allow absolute positioning of its child elements.
+ * 3. Style the sections using flex instead of float
+ *  
  *
- * 4. Styles for section 2 with display set to inline-block.
- *
- * 5. Styles for section 3 with float right and a figure with an absolutely positioned
- *    caption.
- *
- * 6. Styles for the footer which remains fixed at the bottom of the viewport.
+ * 4. Styles for the footer which remains fixed at the bottom of the viewport.
  * 
  *
  */
@@ -34,7 +30,7 @@ html {
 /*! -------------- START HEADER -------------- */
 
 /* header which when we scroll the page, it will always be visible on top of viewport, 
-to make I know you win on the other positions, we give them a high z-Index */
+to make I know you win on the other elements, give to them a high z-Index */
 header {
     width: 100%;
     background-color: yellow;
@@ -51,17 +47,21 @@ header h2 {
     font-weight: bold;
 }
 
-/*! -------------- END HEADER -------------- */
+/*! ---------------- END HEADER -------------- */
 
 
 /*! -------------------------------- START MAIN ----------------------------------- */
 
+/* TODO USE HERE FLEXBOX */
 /* Let's go to give the padding-top that allows the titles of the various sections
 not to be submitted by the Header  */
 main {
+    display: flex;
+    flex-direction: row;
     background-color: bisque;
     padding-top: 95px;
 }
+
 
 /* -------------- START SECTION 1 -------------- */
 
@@ -71,9 +71,8 @@ a width and an height.
 Let's also assign the property position:relative, So the div inside it has
 position: absolut, he can stay inside his parent(section1 is !static)*/
 #section1 {
-    float: left;
     width: 20%;
-    min-height: 650px;
+    height: 650px;
     background-color: orange;
     font-size: 30px;
     padding: 20px 5px;
@@ -121,16 +120,15 @@ it will go change the flow of the document, It will be sided above the <p> di se
     right: 10px;
 }
 
-/* -------------- END SECTION 1 -------------- */
+/* --------------- END SECTION 1 -------------- */
 
 
 
 /* -------------- START SECTION 2 -------------- */
 
 #section2 {
-    display: inline-block;
     width: 40%;
-    min-height: 1400px;
+    height: 1400px;
     font-size: 30px;
     border: 2px dotted black;
 }
@@ -150,7 +148,7 @@ go to dominate the final part of the text*/
     padding-bottom: 80px;
 }
 
-/* -------------- END SECTION 2 -------------- */
+/* ---------------- END SECTION 2 -------------- */
 
 
 
@@ -158,10 +156,9 @@ go to dominate the final part of the text*/
 
 #section3 {
     width: 40%;
-    min-height: 900px;
+    height: 900px;
     font-size: 30px;
     border: 2px dotted black;
-    float: right;
 }
 
 #section3 h1 {

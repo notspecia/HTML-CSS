@@ -8,6 +8,8 @@
  * The header is fixed and has a high z-index to ensure it stays above other elements 
  * when scrolling.
  *
+ * styling the page using --> display: flex instead of using float
+ *
  */
 
 html {
@@ -42,17 +44,19 @@ header {
     z-index: 1000;
 }
 
-/* put the lists (li), at the center of his father container (ol) */
+/* put the lists (li), at the center of his father container (ol) 
+and give them a space each others whit FLEXBOX*/
 header ol {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /* transform the lists through display: inline-block, so they will be inline  while using block proprieties */
 header ol li {
-    display: inline-block;
     width: calc(80% / 3);
-    padding: 10px;
 }
 
 header ol li a {
@@ -73,10 +77,11 @@ header ol li a {
 
 /*--------------------------- START MAIN --------------------------------*/
 
-/* Let's go to give the margin above so as not to allow the Navbar
+/* give the margin above so as not to allow the Navbar
 of the header, to submit the first contents */
 main {
-    width: 80%;
+    display: flex;
+    width: 90%;
     background-color: #3e2a60;
     color: white;
     margin: 80px auto 0;
@@ -86,7 +91,6 @@ main {
 /*? ------------ UNIVERSAL SETTINGS for all lists --> ul (nation, flag, population), li ----------------------- */
 
 main ul {
-    float: left;
     width: calc(100%/3);
     border: 1px solid;
 }
@@ -96,10 +100,11 @@ main ul li:nth-child(even) {
     color: black;
 }
 
-main ul.nation li,
-main ul.population li {
-    line-height: 200px;
-    text-align: center;
+main ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 
 main .huge::before,
@@ -117,35 +122,18 @@ main .huge::after {
 
 /* !1 list (nations) */
 
-/* centre the <li>, in the <ol>
-assign the same height as others <li> next to it (200px) */
 main ul.nation li {
     font-size: 28px;
     font-weight: bold;
 }
 
 
-
 /* !2 list (flags)*/
 
-/* assign the --> position: relative, to allow you to move the image
-that will have one position: absolute, within it */
-main ul.flags li {
-    position: relative;
-    text-align: center;
-    height: 200px;
-}
-
 main ul.flags li img {
-    width: 250px;
+    width: 270px;
     height: 170px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /*use to centre the element both horizontally and vertically */
-    transform: translate(-50%, -50%);
 }
-
 
 
 /* !3 list (population) */

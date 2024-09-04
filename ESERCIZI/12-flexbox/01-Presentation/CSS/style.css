@@ -1,0 +1,325 @@
+/*
+ * style.css
+ *
+ *
+ * PRESENTATION, code using flexbox properties
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(67, 67, 67);
+}
+
+/*--------- styling the containers (flex) and the boxs (direct childs) ---------*/
+
+h1 {
+    text-shadow: 6px 10px rgba(245, 245, 245, 0.392);
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 200px;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 0 40px 50px;
+}
+
+
+
+/* styling the boxs and create differents variants */
+.box {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* the items will have differents FONT-SIZES for using the --> align-items: baseline / strech */
+.first {
+    background-color: greenyellow;
+    font-size: 100px;
+}
+
+.second {
+    background-color: red;
+    font-size: 40px;
+}
+
+.third {
+    background-color: blue;
+    font-size: 80px;
+}
+
+.fourth {
+    background-color: purple;
+    font-size: 100px;
+}
+
+
+
+
+/*? items ROW / ROW-REVERSE:
+
+
+    ^
+    | (CROSS axis) = align
+    | 
+    |
+    |    
+    |  [A]   [B]   [C]
+----+------------------------> (MAIN axis) = justify-content
+    |
+    |
+    |
+*/
+
+
+/*? items COLUMN / COLUMN-REVERSE: 
+
+
+    ^
+    |  (MAIN axis) = justify
+    |
+    |
+    |   [A]                                                        
+    |
+    |   [B]  
+    |
+    |   [C]
+    |
+----+--------------------> (CROSS axis) = align
+    |
+    |
+    |
+*/
+
+
+
+
+
+/* ! 01 section using --> display: flex / inline-flex , flex-direction, flex-wrap, flex-flow */
+
+/**01.
+   DISPLAY: flex --> FLEX + BLOCK ELEMENT
+   DISPLAY: inline-flex --> FLEX + INLINE ELEMENT */
+
+/**02.
+   FLEX-DIRECTION --> row / row-reverse    column / coulumn-reverse */
+
+/**03.
+   FLEX-WRAP: nowrap (default) --> items wont wrap,  even if they overflow the container
+   FLEX-WRAP: wrap --> items wrap onto multiple lines, TOP to BOTTOM   /   LEFT to RIGHT
+   FLEX-WRAP: wrap-reverse --> items wrap onto multiple lines, BOTTOM to TOP   /   RIGHT to LEFT    */
+
+/**04.
+   FLEX-FLOW --> shorthand(FLEX-DIRECTION + FLEX-WRAP) */
+
+#boxContainerOne {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 30px auto 500px;
+    /*? */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    /* SHORTHAND --> flex-flow: (column-reverse) (wrap-reverse); */
+}
+
+
+
+
+
+
+/* ! 2 section using --> justify-content (MAIN axis) */
+/* spacing between items on the main axis using the property (ASSE X "HORIZONTAL")  */
+
+/**01.
+   JUSTIFY-CONTENT: flex-start (default) --> items are packed toward the START of the main axis (there aren't apparent cahnges, beaucouse is the deafult!)
+   JUSTIFY-CONTENT: flex-end --> items are packed toward the END of the main axis
+   JUSTIFY-CONTENT: center --> items are CENTERED along the main axis  */
+
+/**02.
+   JUSTIFY-CONTENT: space-between --> items are evenly distributed with an EQUAL SPACE BETWEEN them
+   JUSTIFY-CONTENT: space-around --> it's the same of space-between, but also now INCLUDED THE SPACE AROUND of them!
+   JUSTIFY-CONTENT: space-evenly --> useful when you want a perfect balance of spaces, both among the elements and their margins (it's a perfect mix of space-beetwen + space-around)
+  */
+
+#boxContainerTwo {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+/* ! 3 section using --> align (VERTICAL axis) */
+/* alignment of items with respect to each other along the cross axis using align-items (ASSE Y "VERTICAL")*/
+
+/**01.
+   ALIGN-ITEMS: flex-start (default) --> items are packed toward the START of the cross axis (there aren't apparent cahnges, bc is the deafult!)
+   ALIGN-ITEMS: flex-end --> items are packed toward the END of the cross axis
+   ALIGN-ITEMS: center --> items are CENTERED along the cross axis  */
+
+/**02.
+   ALIGN-ITEMS: base-line --> items are aligned such that their baselines align (line on which the text characters rest!)
+   ALIGN-ITEMS: strech --> items are stretched to fill the container along the CROSS axis, taking up any remaining space */
+
+
+#boxContainerThree {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+
+
+
+
+
+/* ! 4 section using --> try combos whit: flex prop + justify-content (MAIN axis) + align (VERTICAL axis) */
+/* use all the properties learning from now! */
+
+#boxContainerFour {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+
+/* ! 5 section --> align-content */
+
+/**01. 
+   ALIGN-CONTENT -->  controls spacing between lines in a multi-line flex container along the CROSS axis
+                      it ONLY takes effect when flex-wrap is set to: WRAP or WRAP-REVERSE and there are MULTIPLE LINES of items!!
+   
+!INCLUDES: flex-start, flex-end, center, space-between, space-around, space-evenly, and stretch */
+
+#boxContainerFifth {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+
+
+
+
+
+
+/* ! 6 section --> row-gap, column-gap */
+
+/**01. 
+    ROW-GAP --> sets the size of the gap between FLEX-ITEMS rows */
+
+/**02. 
+     COLUMN-GAP --> sets the size of the gap between FLEX-ITEMS column */
+
+/**03. 
+    GAP --> is the shortand which uses both gaps (row-gap + column-gap) */
+
+#boxContainerSixty {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    row-gap: 10px;
+    column-gap: 60px;
+    /* SHORTHAND --> gap: (row-gap, column-gap); */
+}
+
+
+
+
+
+
+
+
+/* ! 7 section --> align-self, order */
+
+/**01.
+   ALIGN-SELF --> overrides the align-items property for INDIVIDUAL FLEX ITEMS into a flex container,
+                  the align-items property sets the alignment of all flex items along the CROSS axis
+                  
+!INCLUDES: auto(inheritance from align-items), flex-start, flex-end, center, base-line and stretch*/
+
+/**02.
+   ORDER --> the order of items within a flex container can be CUSTOMIZED using the order property 
+   
+   0  --> normal priority, follow the order (not specified)
+   1+ --> more priority than 0 and minors of it
+   -1 --> the first who will be put in the sequence of the items */
+
+
+.selfBox {
+    background: linear-gradient(red, lime, blue);
+    font-size: 100px;
+    border: 3px solid rgb(0, 0, 0);
+    order: 2;
+    align-self: flex-end;
+}
+
+#boxContainerSeven {
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border: 10px solid;
+    margin: 0px auto 500px;
+    /*? */
+    display: flex;
+}

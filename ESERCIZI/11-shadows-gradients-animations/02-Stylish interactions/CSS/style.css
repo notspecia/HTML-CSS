@@ -19,7 +19,7 @@ html {
 }
 
 
-/* set an background gradients to the header */
+/* Set a background gradient for the header */
 header {
     background: radial-gradient(circle, pink, yellowgreen);
     margin-bottom: 100px;
@@ -34,8 +34,8 @@ header h1 {
 
 
 
-/* sets an text shadow to the paragraph 
-sets an transition to the paragraph on hover it*/
+
+/* Add a text shadow to the paragraph and a transition effect on hover */
 p {
     font-size: 25px;
     color: black;
@@ -52,8 +52,8 @@ p {
 
 
 
-/* sets an transform which rotate the div to 45deg from its original position*/
-div {
+/* Apply a 45-degree rotation to the div on hover */
+div.transform {
     width: 200px;
     height: 200px;
     background-color: blue;
@@ -63,40 +63,42 @@ div {
 
     &:hover {
         background-color: yellowgreen;
-        transform: rotateZ(45deg);
+        transform: rotate(45deg);
     }
 }
 
 
-
-/* sets animations which move the div continuously from left to right */
-/* also added an hover effect to pause the animation */
-.animation {
+/* Add an animation to move the div from left to right and a 
+hover effect to pause the animation and change the color of the box */
+div.animation {
     width: 200px;
     height: 200px;
     background-color: lightcoral;
-    transition: border-radius 1s ease-out;
+    position: relative;
+    transition: background-color 0.7s ease-out;
     animation: move 3s linear infinite;
 
     &:hover {
-        background-color: blue;
+        background-color: red;
         animation-play-state: paused;
-        border-radius: 100px;
+    }
+
+    &:hover::before {
+        content: "!stop";
+        font-size: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
 
-/* add the keyframes for the continuous movement */
+/* Define keyframes for continuous movement */
+/* 50% of the animation duration is used to move the box to the right,
+   the remaining 50% returns it to its original position */
 @keyframes move {
-    0% {
-        transform: translateX(0);
-    }
-
     50% {
         transform: translateX(600px);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
