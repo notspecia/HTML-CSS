@@ -52,7 +52,7 @@ header h2 {
 
 /*! -------------------------------- START MAIN ----------------------------------- */
 
-/* TODO USE HERE FLEXBOX */
+
 /* Let's go to give the padding-top that allows the titles of the various sections
 not to be submitted by the Header  */
 main {
@@ -221,4 +221,4 @@ footer h2 {
     font-weight: bold;
 }
 
-/*! -------------- END FOOTER -------------- */
+/* !-------------- END FOOTER -------------- */

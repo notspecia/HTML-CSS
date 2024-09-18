@@ -155,7 +155,7 @@ p.text-shadow {
     transition: transform 1s;
 
     &:hover {
-        transform: translate(125px, 125px);
+        transform: translateX(120px);
     }
 }
 

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP demo</title>
+    <meta name="description" content="try it!">
+    <meta name="author" content="Speciale Gabriele">
+
+    <!-- external CSS file style -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- BOOTSTRAP compiled CSS (cdn) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- BOOTSTRAP icons (cdn) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- content start -->
+
+
+    <!--? try if bootstrap cdn work -->
+    <h1>hello world!</h1>
+
+
+
+    <!--? try if the bootstrap icons cdn work-->
+    <i class="bi bi-wrench-adjustable-circle-fill" style="font-size: 80px;">logo</i>
+
+
+
+    <!--? try the breakpoints and the containers of bootstrap -->
+
+    <h1 style="margin-top: 200px;">container and breakpoints</h1>
+
+    <!-- 01. container -> sotto < 576 (xs) sarà il 100% della width, per le altre misure (sm, md) 
+     ocupperà tot px in base alla misura PREDEFINITA di bootstrap seguendo i px totali della viewport! -->
+    <div class="container" style="background-color: turquoise;">hello im a container!</div>
+
+    <!-- 02. container-{breakpoint} -> in base al breakpoint selezionato (sm, md, lg, xl, xll), il container
+     sarà lungo 100% fino a quando non supererà il breakpoint della sua misura della viewport massima!, 
+     dopodiche, andrà ad essere tot px totali seguendo le misure PREDEFINITE di bootstrap  -->
+    <div class="container-lg" style="background-color: red;">hello im a container-{breakpoint}!</div>
+
+    <!-- 03. container-fluid -> la width del container SARA SEMPRE = al 100% (occuperà sempre il massimo della VW) -->
+    <div class="container-fluid" style="background-color: green;">hello im a container-fluid!</div>
+
+
+
+
+
+    <!--? try the grid and columns BASIC SYSTEM of bootstrap (are similar to the flexbox in CSS!) -->
+
+    <h1 style="margin-top: 200px;">grid and column (base)</h1>
+
+    <!-- ovviamente la grid si applicherà all'interno di un CONTAINER (01 caso) (+ possiede una classe in cui
+     il testo al suo interno sarà centrato) -->
+    <div class="container-lg text-center">
+
+        <!-- le colonne saranni divise in uguali proporzioni nella stessa riga (33% ognuna) -->
+        <div class="row">
+            <div class="col" style="background-color: yellow;">col</div>
+            <div class="col" style="background-color: aqua;">col</div>
+            <div class="col" style="background-color: red;">col</div>
+        </div>
+
+        <!-- qui le colonne sarrano divise con proporzioni 50% e 50% (sono 2!) -->
+        <div class="row">
+            <div class="col" style="background-color: teal;">col</div>
+            <div class="col" style="background-color: pink;">col</div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--? try the grid and columns ADVANCED SYSTEM of bootstrap (usando le unità di misura sottoforma di colonna) -->
+
+    <h1 style="margin-top: 200px;">grid and column (advanced "12 number explain")</h1>
+
+    <!-- botstrap ci da un METRO (unità di misura) ogni row di bootstrap si può dividere mentalmente in 12 colonne 
+     come consigliato da bootstrap massimo 12 colonne anche se si potrebbe con molte di +, 12 perchè è il numero
+     + divisibile tra tutti e si possono fare varie combinazioni!! se mettiamo a una col-12, quella colonna occuperà TUTTA LA ROW!
+
+     la WIDTH del container NON CAMBIERA IL FUNZIONAMENTO DELLA GRIGLIA E DELLE COLONNE! -->
+
+    <!-- SINTASSI: col-{numerototdispazioOccupato 1 / 12} -->
+    <div class="container text-center">
+
+        <!-- 01 riga: due colonne normali e una colonna di 6/12 dello spazio totale -->
+        <div class="row">
+            <div class="col" style="background-color: red;">col</div> <!-- *Prende 1/12 dello spazio -->
+            <div class="col-6" style="background-color: pink;">col-6 (take 6/12 of the space row)</div>
+            <div class="col" style="background-color: blanchedalmond;">col</div> <!-- *Prende 1/12 dello spazio -->
+        </div>
+
+
+        <!-- 02 riga: due colonne normali e una colonna di 10/12 dello spazio totale -->
+        <div class="row">
+            <div class="col-10" style="background-color: blueviolet;">col-10 (take 10/12 of the space row)</div>
+            <div class="col" style="background-color: yellow;">col</div> <!-- *Prende 1/12 dello spazio -->
+            <div class="col" style="background-color: yellowgreen;">col</div> <!-- *Prende 1/12 dello spazio -->
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--? combine the BREAKPOINTS + rules of THE GRIDS -> col-{breakpoint}-{unitàMisura} -->
+
+    <h1 style="margin-top: 250px;">create layout: container + grid + breakpoints</h1>
+
+    <!-- esempio facendo finta di cambiare il layout di 2 container in base alla
+     grandezza della viewport (usando sistema di griglia + break points sulle col), in base
+     alle misure del container, le righe e le column andranno a wrapparsi / spostarsi -->
+
+    <!-- FASI E COMPORTAMENTO -> 
+      01. in cima ci sarà un container-fluid (sempre 100% della width) con una row che farà da come header.
+
+      02. nella sezione in basso, ci sarà un container (% width si aggiusta auto), con una row che contiene
+       - column1: questa (prima column), andrà ad occupare sotto il {breakpoint-lg} (<992px) tutte 12 le caselle della row,
+       nel momento in cui supera il {breakpoint-lg} (>=992px) la colonna andrà ad occupare un totale di 10 caselle della row,
+       nel momento in cui supera il {breakpoint-xl} (>=1200px) la colonna andrà ad occupare la metà della row quindi 6
+       
+       - column2: questa (seconda column), si trova sempre nella stessa riga e: 
+       andrà ad occupare sotto il {breakpoint-lg} (<992px) tutte 12 le caselle della row, QUESTO COMPORTERA
+       CHE LA COLONNA ANDRA A CAPO! (PERCHE SONO 12 E 12 PER OGNI COL -> MAX DELLA ROW E 12!!).
+       nel momento in cui supera il {breakpoint-lg} (>=992px) la colonna andrà ad occupare le 2 caselle rimaste disponibili della row,
+       nel momento in cui supera il {breakpoint-xl} (>=1200px) la colonna andrà ad occupare l'altra metà della row quindi 6 caselle
+       -->
+
+    <!-- QUESTO PERMETTERA DI CREARE UN LAYOUT RESPONSIVE IN CUI LE COLONNE CAMBIERANNO LA POSIZIONE IN BASE ALLA
+     GRANDEZZA DELLO SCHERMO! -->
+
+
+    <!-- 01. container -> la riga presente nel container, occuperà il 100% della width (come se fosse un header) -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" style="background-color: red;">HEADER</div>
+        </div>
+    </div>
+
+    <!-- 02. container -> avrà una riga che conterrà 2 colonne in cui la loro posizione
+     e width andrà a variare in base ai break point stabiliti e l'unità di misura -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 col-xl-6" style="background-color: yellow;">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Consectetur, reiciendis. consectetur adipisicing elit. Perspiciatis
+                commodi mollitia hic id voluptatibus incidunt officiis
+            </div>
+            <div class="col-12 col-lg-2 col-xl-6" style="background-color: purple;">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Perspiciatis commodi mollitia hic id voluptatibus incidunt officiis
+                similique magnam doloribus assumenda.
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--?  Form of bootstrap -->
+
+    <!-- NOZIONI IMPORTANTI DA RICORDARE PER I FORM:
+     1. l'attributo for del `label`, deve corrispondere con l'id dell' `input` 
+     2. placeholder è quello che appare come esempio prima che il campo sia compilato 
+     3. aria-label è FONDAMENTALE per aumentare il punteggio di accessibilità (SEO)
+     3. il testo descrittivo <div> `form-text`, deve corrispondere con l'attributo aria-describeBy dell' `input`
+        
+
+    Per le situazioni in cui non è possibile includere un <label>contenuto di testo visibile o appropriato, 
+    esistono modi alternativi per fornire comunque un nome accessibile, ad esempio:
+
+    -<label> elementi nascosti usando la .visually-hidden class
+    -Indicando un elemento esistente che può fungere da etichetta utilizzando aria-labelledby
+    -Fornire un title attributo
+    -Impostare esplicitamente il nome accessibile su un elemento utilizzando aria-label-->
+
+    <h1 style="margin-top: 250px;">Form</h1>
+
+
+    <!--01. form-control -> ci crea bootstrap uno stile automatico applicato agli input (rendendoli + belli visivamente).
+     la classe con il div "mb-3", indica il marign bottom che lascia sotto di esso (max 5) 
+     
+     aria-label=".form-control-lg example" -> assegna una DESCRIZIONE testuale a un elemento, che sarà letta dagli screen reader per 
+     le persone con disabilità visive, permettendo di capire meglio lo scopo o il contenuto di quell'elemento-->
+    <div class="mb-5">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            aria-label="email input">
+    </div>
+    <div class="mb-5">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" aria-label="textarea input"></textarea>
+    </div>
+
+
+    <!-- 02. form-control-{unitàMisura} -> si può aggiungere al `form-control` anche un'unità di misura, che permette di cambiare
+     l'height dell'input: {form-control-(sm,lg,md...)}, prima va scritto form-control normale, successivamete `form-control-unitàMisura` -->
+    <div class="mb-5">
+        <label for="exampleFormControlInput" class="form-label">Username input lg</label>
+        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput"
+            placeholder="username-input-lg" aria-label="Username input">
+    </div>
+
+
+    <!-- 03. form-text ->  tilizzata per aggiungere testo descrittivo o di aiuto sotto (BLOCK con div) un campo di input in un form. 
+     È spesso usata per fornire indicazioni aggiuntive su come compilare il campo. esiste per non essere confusa
+     come se fosse del testo staccato da quell'input (ex-> un <p>)
+        
+    se il campo descrittivo si vuole mettere a fianco dell'input, allora si usa span che lo rende INLINE.
+    ovviamente andrebbe sistemato anche il div che contiene tutti gli elementi (label, input...) 
+    https://getbootstrap.com/docs/5.3/forms/form-control/#form-text -->
+
+    <div class="mb-5">
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <div id="passwordHelpBlock" class="form-text">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
+            special characters, or emoji.
+        </div>
+    </div>
+
+
+    <!-- 04. disabled -> attributo booleano a un input per conferirgli un aspetto disattivato, 
+     rimuovere gli eventi del puntatore e impedire la messa a fuoco (il campo non potrà essere compilato) -->
+    <div class="mb-5">
+        <label for="exampleDisableInput" class="form-label">Disabled input!</label>
+        <input type="text" class="form-control" id="exampleDisableInput" placeholder="Disabled input :("
+            aria-label="disabled input" disabled>
+    </div>
+
+
+    <!-- 05. readonly -> aattributo booleano ad un input per impedire la modifica del valore dell'input. 
+     con readonly, gli input possono comunque essere focalizzati e selezionati, mentre con disable no -->
+    <div class="mb-5">
+        <label for="exampleReadonlyInput" class="form-label">readonly input!</label>
+        <input type="text" class="form-control" id="exampleReadonlyInput" placeholder="readonly input here :("
+            aria-label="readonly input" readonly>
+    </div>
+
+
+    <!-- 06. file input -> tipo di input che permette di caricare file, trattabile sempre con gli STESSI ATTRIBUTI (disabled, aria-label...),
+     come tutti gli altri input (text, email, password...), vediamo TUTTI i casi di "stato" dei file input  -->
+    <div class="mb-4">
+        <label for="formFileSingle" class="form-label">Default file input</label>
+        <input type="file" class="form-control" id="formFileSingle">
+    </div>
+    <div class="mb-4">
+        <label for="formFileMultiple" class="form-label">Multiple files input</label>
+        <input type="file" class="form-control" id="formFileMultiple" multiple>
+    </div>
+    <div class="mb-4">
+        <label for="formFileDisabled" class="form-label">Disabled file input</label>
+        <input type="file" class="form-control" id="formFileDisabled" disabled>
+    </div>
+    <div class="mb-4">
+        <label for="formFileSm" class="form-label">Small file input</label>
+        <input type="file" class="form-control form-control-sm" id="formFileSm">
+    </div>
+    <div class="mb-5">
+        <label for="formFileLg" class="form-label">Large file input</label>
+        <input type="file" class="form-control form-control-lg" id="formFileLg">
+    </div>
+
+
+    <!-- 07. color input -> imposta type="color"e aggiungi la .form-control-color <input> (oltre anche magari per cambiare l'height)  
+     il colore iniziale lo inseriamo attraverso l'attributo `value`-->
+    <div class="mb-5">
+        <label for="exampleFormColor" class="form-label">Color input</label>
+        <input type="color" value="#563e3c" class="form-control form-control-lg form-control-color"
+            id="exampleFormColor" aria-label="color input">
+    </div>
+
+
+    <!-- 08. <datalist> -> Gli elementi <datalist> permettono di creare un elenco di opzioni (<option>) 
+    che possono essere suggerite quando l'utente scrive in un campo di input.
+
+    Per usare un elemento <datalist>, l'ATTRIBUTO list dell'<input> deve essere UGUALE all'id del <datalist>. 
+    In questo modo, l'input sarà collegato all'elenco di opzioni suggerite. 
+
+    * Sono simili a un menu a tendina come quello creato con <select>, ma funzionano in modo diverso e con più limitazioni:
+
+    - A differenza di <select>, gli utenti possono digitare il proprio testo oltre a selezionare un'opzione dall'elenco.
+        
+    - Anche se molti browser supportano <datalist>, l'aspetto del menu può variare da un browser o sistema operativo all'altro, 
+    risultando a volte poco coerente. -->
+    <div class="mb-5">
+        <label for="exampleDataList" class="form-label">Datalist</label>
+        <input list="datalistOptions" class="form-control" id="exampleDataList" placeholder="Type to search..."
+            aria-label="DataList input whit the USA city">
+        <datalist id="datalistOptions">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Seattle">
+            <option value="Los Angeles">
+            <option value="Chicago">
+        </datalist>
+    </div>
+
+
+
+    <!-- end content -->
+
+    <!-- BOOTSTRAP compiled (cdn) -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>
