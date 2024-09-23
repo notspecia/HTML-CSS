@@ -24,5 +24,5 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. read and do the exsercise of the new section 14 (boostrap-core)
-3. read and do the exsercise of the new section 15 (boostrap-components)
+1. read and do the exsercise number 1 of the new section 14 (boostrap-core)
+2. read and do the exsercise of the new section 15 (boostrap-components)

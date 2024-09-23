@@ -2,3 +2,7 @@ div.container div.row div[class*="col"] {
     border: 2px solid black;
     font-weight: bold;
 }
+
+fieldset {
+    width: 30%;
+}

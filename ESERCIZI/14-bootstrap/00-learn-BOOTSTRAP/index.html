@@ -167,9 +167,12 @@
 
 
 
-    <!--?  Form of bootstrap -->
 
-    <!-- NOZIONI IMPORTANTI DA RICORDARE PER I FORM:
+    <fieldset class="ms-5">
+
+        <!--?  Form Controll of bootstrap -->
+
+        <!-- NOZIONI IMPORTANTI DA RICORDARE PER I FORM:
      1. l'attributo for del `label`, deve corrispondere con l'id dell' `input` 
      2. placeholder è quello che appare come esempio prima che il campo sia compilato 
      3. aria-label è FONDAMENTALE per aumentare il punteggio di accessibilità (SEO)
@@ -184,35 +187,35 @@
     -Fornire un title attributo
     -Impostare esplicitamente il nome accessibile su un elemento utilizzando aria-label-->
 
-    <h1 style="margin-top: 250px;">Form</h1>
+        <h1 style="margin-top: 250px;">Form CONTROLL</h1>
 
 
-    <!--01. form-control -> ci crea bootstrap uno stile automatico applicato agli input (rendendoli + belli visivamente).
-     la classe con il div "mb-3", indica il marign bottom che lascia sotto di esso (max 5) 
+        <!--01. form-control -> ci crea bootstrap uno stile automatico applicato agli input (rendendoli + belli visivamente).
+         la classe con il div "mb-3", indica il marign bottom che lascia sotto di esso (max 5) 
      
-     aria-label=".form-control-lg example" -> assegna una DESCRIZIONE testuale a un elemento, che sarà letta dagli screen reader per 
-     le persone con disabilità visive, permettendo di capire meglio lo scopo o il contenuto di quell'elemento-->
-    <div class="mb-5">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
-            aria-label="email input">
-    </div>
-    <div class="mb-5">
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" aria-label="textarea input"></textarea>
-    </div>
+        aria-label=".form-control-lg example" -> assegna una DESCRIZIONE testuale a un elemento, che sarà letta dagli screen reader per 
+        le persone con disabilità visive, permettendo di capire meglio lo scopo o il contenuto di quell'elemento-->
+        <div class="mb-5">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                aria-label="email input">
+        </div>
+        <div class="mb-5">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                aria-label="textarea input"></textarea>
+        </div>
 
 
-    <!-- 02. form-control-{unitàMisura} -> si può aggiungere al `form-control` anche un'unità di misura, che permette di cambiare
+        <!-- 02. form-control-{unitàMisura} -> si può aggiungere al `form-control` anche un'unità di misura, che permette di cambiare
      l'height dell'input: {form-control-(sm,lg,md...)}, prima va scritto form-control normale, successivamete `form-control-unitàMisura` -->
-    <div class="mb-5">
-        <label for="exampleFormControlInput" class="form-label">Username input lg</label>
-        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput"
-            placeholder="username-input-lg" aria-label="Username input">
-    </div>
+        <div class="mb-5">
+            <label for="exampleFormControlInput" class="form-label">Username input lg</label>
+            <input type="text" class="form-control form-control-lg" id="exampleFormControlInput" label="Username input">
+        </div>
 
 
-    <!-- 03. form-text ->  tilizzata per aggiungere testo descrittivo o di aiuto sotto (BLOCK con div) un campo di input in un form. 
+        <!-- 03. form-text ->  tilizzata per aggiungere testo descrittivo o di aiuto sotto (BLOCK con div) un campo di input in un form. 
      È spesso usata per fornire indicazioni aggiuntive su come compilare il campo. esiste per non essere confusa
      come se fosse del testo staccato da quell'input (ex-> un <p>)
         
@@ -220,68 +223,68 @@
     ovviamente andrebbe sistemato anche il div che contiene tutti gli elementi (label, input...) 
     https://getbootstrap.com/docs/5.3/forms/form-control/#form-text -->
 
-    <div class="mb-5">
-        <label for="inputPassword5" class="form-label">Password</label>
-        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-        <div id="passwordHelpBlock" class="form-text">
-            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
-            special characters, or emoji.
+        <div class="mb-5">
+            <label for="inputPassword5" class="form-label">Password</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            <div id="passwordHelpBlock" class="form-text">
+                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
+                special characters, or emoji.
+            </div>
         </div>
-    </div>
 
 
-    <!-- 04. disabled -> attributo booleano a un input per conferirgli un aspetto disattivato, 
+        <!-- 04. disabled -> attributo booleano a un input per conferirgli un aspetto disattivato, 
      rimuovere gli eventi del puntatore e impedire la messa a fuoco (il campo non potrà essere compilato) -->
-    <div class="mb-5">
-        <label for="exampleDisableInput" class="form-label">Disabled input!</label>
-        <input type="text" class="form-control" id="exampleDisableInput" placeholder="Disabled input :("
-            aria-label="disabled input" disabled>
-    </div>
+        <div class="mb-5">
+            <label for="exampleDisableInput" class="form-label">Disabled input!</label>
+            <input type="text" class="form-control" id="exampleDisableInput" placeholder="Disabled input :("
+                aria-label="disabled input" disabled>
+        </div>
 
 
-    <!-- 05. readonly -> aattributo booleano ad un input per impedire la modifica del valore dell'input. 
+        <!-- 05. readonly -> attributo booleano ad un input per impedire la modifica del valore dell'input. 
      con readonly, gli input possono comunque essere focalizzati e selezionati, mentre con disable no -->
-    <div class="mb-5">
-        <label for="exampleReadonlyInput" class="form-label">readonly input!</label>
-        <input type="text" class="form-control" id="exampleReadonlyInput" placeholder="readonly input here :("
-            aria-label="readonly input" readonly>
-    </div>
+        <div class="mb-5">
+            <label for="exampleReadonlyInput" class="form-label">readonly input!</label>
+            <input type="text" class="form-control" id="exampleReadonlyInput" placeholder="readonly input here :("
+                aria-label="readonly input" readonly>
+        </div>
 
 
-    <!-- 06. file input -> tipo di input che permette di caricare file, trattabile sempre con gli STESSI ATTRIBUTI (disabled, aria-label...),
+        <!-- 06. file input -> tipo di input che permette di caricare file, trattabile sempre con gli STESSI ATTRIBUTI (disabled, aria-label...),
      come tutti gli altri input (text, email, password...), vediamo TUTTI i casi di "stato" dei file input  -->
-    <div class="mb-4">
-        <label for="formFileSingle" class="form-label">Default file input</label>
-        <input type="file" class="form-control" id="formFileSingle">
-    </div>
-    <div class="mb-4">
-        <label for="formFileMultiple" class="form-label">Multiple files input</label>
-        <input type="file" class="form-control" id="formFileMultiple" multiple>
-    </div>
-    <div class="mb-4">
-        <label for="formFileDisabled" class="form-label">Disabled file input</label>
-        <input type="file" class="form-control" id="formFileDisabled" disabled>
-    </div>
-    <div class="mb-4">
-        <label for="formFileSm" class="form-label">Small file input</label>
-        <input type="file" class="form-control form-control-sm" id="formFileSm">
-    </div>
-    <div class="mb-5">
-        <label for="formFileLg" class="form-label">Large file input</label>
-        <input type="file" class="form-control form-control-lg" id="formFileLg">
-    </div>
+        <div class="mb-4">
+            <label for="formFileSingle" class="form-label">Default file input</label>
+            <input type="file" class="form-control" id="formFileSingle">
+        </div>
+        <div class="mb-4">
+            <label for="formFileMultiple" class="form-label">Multiple files input</label>
+            <input type="file" class="form-control" id="formFileMultiple" multiple>
+        </div>
+        <div class="mb-4">
+            <label for="formFileDisabled" class="form-label">Disabled file input</label>
+            <input type="file" class="form-control" id="formFileDisabled" disabled>
+        </div>
+        <div class="mb-4">
+            <label for="formFileSm" class="form-label">Small file input</label>
+            <input type="file" class="form-control form-control-sm" id="formFileSm">
+        </div>
+        <div class="mb-5">
+            <label for="formFileLg" class="form-label">Large file input</label>
+            <input type="file" class="form-control form-control-lg" id="formFileLg">
+        </div>
 
 
-    <!-- 07. color input -> imposta type="color"e aggiungi la .form-control-color <input> (oltre anche magari per cambiare l'height)  
+        <!-- 07. color input -> imposta type="color"e aggiungi la .form-control-color <input> (oltre anche magari per cambiare l'height)  
      il colore iniziale lo inseriamo attraverso l'attributo `value`-->
-    <div class="mb-5">
-        <label for="exampleFormColor" class="form-label">Color input</label>
-        <input type="color" value="#563e3c" class="form-control form-control-lg form-control-color"
-            id="exampleFormColor" aria-label="color input">
-    </div>
+        <div class="mb-5">
+            <label for="exampleFormColor" class="form-label">Color input</label>
+            <input type="color" value="#563e3c" class="form-control form-control-lg form-control-color"
+                id="exampleFormColor" aria-label="color input">
+        </div>
 
 
-    <!-- 08. <datalist> -> Gli elementi <datalist> permettono di creare un elenco di opzioni (<option>) 
+        <!-- 08. <datalist> -> Gli elementi <datalist> permettono di creare un elenco di opzioni (<option>) 
     che possono essere suggerite quando l'utente scrive in un campo di input.
 
     Per usare un elemento <datalist>, l'ATTRIBUTO list dell'<input> deve essere UGUALE all'id del <datalist>. 
@@ -293,20 +296,51 @@
         
     - Anche se molti browser supportano <datalist>, l'aspetto del menu può variare da un browser o sistema operativo all'altro, 
     risultando a volte poco coerente. -->
-    <div class="mb-5">
-        <label for="exampleDataList" class="form-label">Datalist</label>
-        <input list="datalistOptions" class="form-control" id="exampleDataList" placeholder="Type to search..."
-            aria-label="DataList input whit the USA city">
-        <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
-        </datalist>
-    </div>
+        <div class="mb-5">
+            <label for="exampleDataList" class="form-label">Datalist</label>
+            <input list="datalistOptions" class="form-control" id="exampleDataList" placeholder="Type to search..."
+                aria-label="DataList input whit the USA city">
+            <datalist id="datalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">s
+            </datalist>
+        </div>
 
 
+
+
+
+        <!--?  Form Select input of bootstrap -->
+
+        <h1 style="margin-top: 250px;">Form SELECT</h1>
+
+        <!-- 01. default -> I menu personalizzati <select> necessitano solo di una classe personalizzata .form-select 
+        per attivare gli stili personalizzati. Gli stili personalizzati sono limitati all'aspetto <select>iniziale di e 
+        non possono modificare <option> a causa delle limitazioni del browser. -->
+
+        <!-- 02. sizing ->  Puoi anche scegliere tra selezioni personalizzate piccole e grandi per adattarle ai nostri input di testo di dimensioni simili.
+        sintassi: `form-select form-select-lg` -->
+
+        <!-- 03. ATTRIBUTO multiple -> è una attributo che si puo inserire dentro il <select> e crea un menu a tendina fisso, senza bisogno di cliccare -->
+
+        <!-- 04. ATTRIBUTO size -> -->
+        <select class="mb-5 form-select form-select-sm" aria-label="Default select example">
+            <option selected>Click on the select menu!</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+
+
+
+
+
+
+    </fieldset>
 
     <!-- end content -->
 

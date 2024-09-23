@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta Data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN FORMATION</title>
+    <meta name="description" content="form whit inputs and validation sented to a RequestBin">
+    <meta name="author" content="Speciale Gabriele">
+
+    <!-- external CSS file style -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- BOOTSTRAP compiled CSS (cdn) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- content start -->
+
+    <fieldset class="mt-4 ms-5">
+
+
+        <!-- the form is using a system of row and column (to support + input if you want to set multiple fields on a wor,
+          or if one occupies all the space of the row)
+
+          the link to action to the request bin -> When the user presses the button "Submit", 
+          RequestBin will receive a request with the following data (in key-loore format), 
+          link of the final destination to see the datas sented whit the form: https://pipedream.com/@specia/projects/proj_XZsEpo7/p_n1CwDJz/inspect
+          
+          trought the class needs-validation you can take advantage of personalized validation and dynamic error messages
+          from BOOTSTRAP -->
+        <form class="needs-validation row g-3" action="https://eoz17w0umk9ztn.m.pipedream.net" method="post"
+            target="_blank" novalidate>
+
+            <h1 class="mb-5">Hi! please, compile this form</h1>
+
+
+            <!--! inputs: same row using (row + col): name(1 input) + surname(2 input) using form-floating fields -->
+            <!-- floating input name (take 6 column of 12), the name input has the autofocus when the page is loaded -->
+            <div class="col-6 mb-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputName" name="name" value=""
+                        placeholder="name" minlength="3" maxlength="50" aria-label="name input" required autofocus>
+                    <label for="floatingInputName">Name</label>
+                </div>
+            </div>
+            <!-- floating input surname (take 6 column of 12) -->
+            <div class="col-6 mb-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputSurname" name="surname" value=""
+                        minlength="3" maxlength="50" placeholder="Surname" aria-label="surname input" required>
+                    <label for="floatingInputSurname">Surname</label>
+                </div>
+            </div>
+
+
+            <!--! inputs: on the same row using (row + col): city(1 input) + state(2 input select) + CAP(3 input) -->
+            <!-- input city (take 6 column of 12) -->
+            <div class="col-6 mb-3">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city" aria-label="city input" required>
+            </div>
+            <!-- input state (take 4 column of 12) -->
+            <div class="col-4 mb-3">
+                <label for="inputState" class="form-label">State</label>
+                <select class="form-select" id="inputState" name="state" aria-label="select state input" required>
+                    <option value="" selected disabled>Choose a state...</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="England">England</option>
+                </select>
+            </div>
+            <!-- input CAP (take 2 column of 12) control regarding the CAP, it is inserted as of type "text"
+            but a set of 5 numbers is actually made thanks to the regex pattern (it does not accept anything else beyond numbers from 0-9!!) 
+            Thanks to the attribute -> inputmode="numeric": suggests the display of a numerical keypad on mobile devices,    
+            making it easier to enter only numbers-->
+            <div class="col-2 mb-3">
+                <label for="inputCAP" class="form-label">CAP</label>
+                <input type="text" inputmode="numeric" class="form-control" id="inputCAP" name="CAP" minlength="5"
+                    maxlength="5" pattern="\d{5}" aria-label="CAP input" required>
+            </div>
+
+
+            <!--! inputs: on the same row using (row + col): radioOption(1(1,2,3) input) + colorPicker (2 input) + range(3 input)-->
+            <!-- X3 fields of the same row occupied by 3 checkboxes indicating the user's gender -->
+            <div class="form-check col-2 mb-5">
+                <input type="radio" class="form-check-input" id="radioFemale" name="radioOptions" value="female"
+                    aria-label="radio input female" required checked>
+                <label class="form-check-label" for="radioFemale">Female</label>
+            </div>
+            <div class="form-check col-2 mb-5">
+                <input type="radio" class="form-check-input" id="radioMale" name="radioOptions" value="male"
+                    aria-label="radio input male" required>
+                <label class="form-check-label" for="radioMale">Male</label>
+            </div>
+            <div class="form-check col-2 mb-5">
+                <input type="radio" class="form-check-input" id="radioNonBinary" name="radioOptions" value="nonBinary"
+                    aria-label="radio input non binary" required>
+                <label class="form-check-label" for="radioNonBinary">Non-binary</label>
+            </div>
+            <!-- set type="color" and add .form-control-color <input> the initial color is inserted through the `value` attribute -->
+            <div class="col-2 ms-5 mb-5 ">
+                <label for="hairColor" class="form-label">Hair color</label>
+                <input type="color" class="form-control form-control-color" id="hairColor" name="color" value="#563e3c"
+                    aria-label="color input">
+            </div>
+            <!-- input range to measure the user's happiness
+            we set 2 attributes to put a minimum and maximum happiness in numeric form for the range -->
+            <div class="col-3 mb-5">
+                <label for="userHappines" class="form-label">How much are u happy? <em>(optional)</em></label>
+                <input type="range" class="form-range" id="userHappines" name="range" min="0" max="100"
+                    aria-label="range input to misure your happines">
+            </div>
+
+
+
+            <!--! inputs: on the same row using (row + col): email(1 input) + password(2 input) -->
+            <!-- input email in which a check is carried out via the regex pattern, to confirm whether the email is valid -->
+            <div class="col-6 mt-5">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" name="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="e.g. name@example.com"
+                    autocomplete="email" aria-label="email input" required>
+            </div>
+            <!-- input password where it is controlled if the password has a min of 8 characters and a maximum of 20
+            also, is inserted under the field to compile a small help text on the rules regarding insertion
+            of the password, to associate this text with the input, we use:  
+            1) aria-describedby="passwordHelpBlock" (input)
+            2) id="passwordHelpBlock" (div with the text) -->
+            <div class="col-6 mt-5">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" minlength="8"
+                    maxlength="20" aria-describedby="passwordHelpBlock" aria-label="password input" required>
+                <div class="form-text" id="passwordHelpBlock">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                    spaces,special characters, or emoji.
+                </div>
+            </div>
+
+
+            <!--! input: Phone Number -->
+            <!-- input number collects the user's phone number, ensuring that:
+             1. a country code is selected (required)
+             2. the phone number input matches a specific pattern (optional '+' followed by 1 to 15 digits)
+             3. the phone number must be entered in a valid format including the country code -->
+            <div class="mb-5">
+                <label for="inputPhone" class="form-label">Phone Number</label>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <select class="form-select" id="inputCountryCode" name="countryCode"
+                            aria-label="select country code" required>
+                            <option value="" selected disabled>Select your country...</option>
+                            <option value="+39">Italy (+39)</option>
+                            <option value="+1">USA (+1)</option>
+                            <option value="+44">UK (+44)</option>
+                            <option value="+33">France (+33)</option>
+                            <option value="+34">Spain (+34)</option>
+                        </select>
+                    </span>
+                    <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="e.g. 1234567890"
+                        pattern="^\+?\d{1,15}$" aria-describedby="telHelpBlock" aria-label="Phone input" required>
+                </div>
+                <div class="form-text" id="telHelpBlock">
+                    Please enter your phone number, including the country code.
+                </div>
+            </div>
+
+
+            <!--! input: input used for upload files
+            the attribute `accept` can be used to accept specific types of files (png, pdf, svg...) 
+            the attribute `multiple` allows users to select more than one file at a time when uploading files -->
+            <div class="mt-5 mb-5 col-12">
+                <label for="formFileMd" class="form-label">Insert your curriculum <em>(optional)</em></label>
+                <input type="file" class="form-control form-control-md" id="formFileMd" name="file" accept=".pdf"
+                    aria-label="input file for curriculum" multiple>
+            </div>
+
+
+            <!--! button to submit the data of the fields
+            added a classes which change the size and the style of the button -->
+            <div class="mt-5 mb-5 col-12">
+                <button type="submit" class="btn btn-primary btn-lg" name="submit">Submit</button>
+            </div>
+
+        </form>
+
+
+    </fieldset>
+
+
+    <!-- end content -->
+
+    <!-- JS file whit personalized validation and dynamic error messages-->
+    <script src="JS/main.js" defer></script>
+
+    <!-- BOOTSTRAP compiled (cdn) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

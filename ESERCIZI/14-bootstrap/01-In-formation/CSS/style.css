@@ -1,0 +1,35 @@
+/**
+ * style.css
+ *
+ *
+ * styling the fields and the form which contains all the inputs
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------- */
+
+
+fieldset {
+    width: 60%;
+}
+
+label,
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19px;
+    font-family: Inter, sans-serif;
+}
+
+select[name="countryCode"] {
+    background-color: rgb(241, 240, 240);
+}
