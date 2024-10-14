@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 /**
  * style.css
  *
@@ -25,4 +27,20 @@ nav a.navbar-brand img {
 
 ul.navbar-nav li.nav-item a.active {
     font-weight: bolder;
+}
+
+/* universal title whit a font imported from google */
+h1,
+h2 {
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 4px;
+}
+
+/* universal animation on the cards elements */
+div.card {
+    transition: transform 0.5s ease-in-out;
+}
+
+div.card:hover {
+    transform: scale(1.05);
 }
