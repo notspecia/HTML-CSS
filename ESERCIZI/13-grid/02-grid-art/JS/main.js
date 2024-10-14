@@ -25,34 +25,56 @@ Bonus:
 */
 
 
+
+
+// get the gallery container grid which contains ALL THE IMAGES
+const gallery = document.querySelector(".gallery");
+
 // get the images from the grid by creating a NodeList
 const images = document.querySelectorAll(".gallery img");
 
 // get the modal window where the clicked image will be displayed
-const dialog = document.querySelector(".dialog");
+const dialog = document.querySelector("dialog");
 
 
-// add an event listener that closes the modal when the X inside it is clicked
-document.querySelector(".dialog label").addEventListener("click", () => {
-    dialog.classList.remove("show");
+//! apply an event listener for each image to handle click events
+images.forEach((image) => {
+    image.addEventListener("click", () => {
+
+        // if the modal is already visible, prevent opening it again
+        if (dialog.classList.contains("show")) {
+            return;
+
+        } else {
+
+            // show the modal with the clicked image
+            dialog.classList.add("show");
+            dialog.style.backgroundImage = `url(${image.src})`;
+
+            // stop the animation on the gallery layout
+            gallery.classList.add("layoutStop");
+
+            // disable hover effects on all images
+            images.forEach((img) => {
+                img.classList.add("noHover");
+            });
+        }
+    });
 });
 
 
 
-// apply this event listener for each image (taken from the NodeList)
-images.forEach((image) => {
-    image.addEventListener("click", () => {
+//! add an event listener to the X button inside the modal to close it
+document.querySelector("dialog label").addEventListener("click", () => {
 
-        /* if the dialog is already displayed and shows an image, other images cannot be clicked to show them */
-        if (dialog.classList.contains("show")) {
-            return;
+    // hide the modal
+    dialog.classList.remove("show");
 
-            // add a class that shows the dialog (from display: none -> to display: block)
-        } else {
-            dialog.classList.add("show");
+    // restart the gallery layout animation
+    gallery.classList.remove("layoutStop");
 
-            // fill the dialog with the clicked image from the gallery
-            dialog.style.backgroundImage = `url(${image.src})`;
-        }
+    // re-enable hover effects on all images
+    images.forEach((img) => {
+        img.classList.remove("noHover");
     });
 });

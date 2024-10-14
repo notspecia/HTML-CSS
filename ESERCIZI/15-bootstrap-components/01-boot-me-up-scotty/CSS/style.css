@@ -24,6 +24,5 @@ nav a.navbar-brand img {
 }
 
 ul.navbar-nav li.nav-item a.active {
-    color: blue;
     font-weight: bolder;
 }

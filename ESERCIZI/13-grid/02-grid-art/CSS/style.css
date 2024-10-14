@@ -67,6 +67,11 @@ html {
     animation-play-state: paused;
 }
 
+/* class added trough JS, which stop the animation change layout when the modal is open */
+.gallery.layoutStop {
+    animation-play-state: paused;
+}
+
 
 /* ------------------------------------------------------------------ */
 
@@ -83,16 +88,21 @@ img {
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+/* class added trough JS, which "disable" the hover effect on the image when the modal is open */
+img.noHover:hover {
+    cursor: not-allowed;
+    transform: scale(1.0);
+}
 
 /* ------------------------------------------------------------------ */
 
 
-.dialog {
+dialog {
     display: none;
-    /** background-image will be added via JS */
+    /** background-image will be added trough JS */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -109,23 +119,23 @@ img:hover {
 }
 
 /* class added via JS to show the dialog */
-.dialog.show {
+dialog.show {
     display: block;
 }
 
 /* styling for the close (X) button */
-.dialog label {
+dialog label {
     width: 20px;
     height: 20px;
     background: url("../IMG/close.png");
     background-size: 100%;
     cursor: pointer;
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: -30px;
+    top: -30px;
 }
 
 /* input checkbox is invisible but exists in the document */
-.dialog input {
+dialog input {
     display: none;
 }
