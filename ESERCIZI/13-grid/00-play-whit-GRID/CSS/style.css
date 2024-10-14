@@ -1,0 +1,307 @@
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+[class*="grid-container"] {
+    margin-bottom: 100px;
+}
+
+[class*="grid-item"] {
+    border: 1px solid black;
+}
+
+
+
+
+/*! --------------------------------------------------------------------------------------------------- */
+
+
+
+/* MDN ESERCITATI CON TANTI BLOCCHI IN UN GRID GENITORE --> https://developer.mozilla.org/en-US/play 
+APPUNTI ED ESEMPI ALLE PROPRIETA DI GRID */
+
+/*! basic CONTAINER GRID 
+  - display: grid --> Imposta un elemento come contenitore di griglia, attivando il layout di griglia per i suoi elementi figli.
+  
+  - grid-template-columns -->  Definisce il numero e la larghezza delle COLONNE nella griglia. 
+                               Può utilizzare unità di misura come `px`, `%`, `fr`
+  
+  - grid-template-rows --> Definisce il numero e l'altezza delle RIGHE nella griglia, 
+                           utilizzando unità di misura simili a `grid-template-columns`
+  
+  - repeat --> Funzione che consente di ripetere una definizione di colonna o riga un certo numero di volte, 
+               semplificando la scrittura del layout. 
+  
+  - minmax --> Funzione che definisce un intervallo per la dimensione di una colonna o riga, specificando un valore minimo e uno massimo. 
+               Utile per rendere la griglia responsiva.
+  
+  - gap (row-gap + column-gap) --> Imposta lo spazio tra le righe e le colonne della griglia. `gap` 
+                                   è un'abbreviazione per impostare entrambi i valori, 
+                                   mentre `row-gap` e `column-gap` possono essere usati separatamente.
+  
+  - auto --> Utilizzato per impostare le dimensioni di una colonna o riga in modo automatico in base al contenuto, 
+             spesso usato per il riempimento.
+
+tramite le [] possiamo anche dare dei nomi alle linee della griglia
+*/
+
+
+/*? basic ITEMS GRID 
+  - grid-row-start --> Definisce la riga di partenza per un elemento nella griglia, specificando da quale riga deve iniziare l'elemento.
+  - grid-row-end --> Definisce la riga di fine per un elemento nella griglia, specificando fino a quale riga l'elemento deve estendersi.
+  
+  - grid-column-start --> Definisce la colonna di partenza per un elemento nella griglia.
+  - grid-column-end --> Definisce la colonna di fine per un elemento nella griglia.
+  
+  - grid-column --> Shorthand per impostare `grid-column-start` e `grid-column-end` contemporaneamente.
+  - grid-row --> Shorthand per impostare `grid-row-start` e `grid-row-end` contemporaneamente.
+
+  - grid-area --> Shorthand per impostare `grid-row-start` / `grid-column-start` / `grid-row-end` / `grid-column-end` contemporaneamente.
+
+si possono accetare anche valori negativi (-) !!!, gli elementi creati successivamente sovrastano in caso i precedenti (z-index)
+*/
+
+
+
+/* gird CONTAINER usato creato con degli items al suo interno */
+.grid-containerBase {
+    display: grid;
+    grid-template-columns: repeat(5, 100px) 100px [last-line];
+    grid-template-rows: repeat(6, 100px);
+    gap: 3px;
+}
+
+/* items del container */
+.grid-containerBase .grid-item-one {
+    grid-column-start: -4;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: #00BFFF;
+}
+
+.grid-containerBase .grid-item-two {
+    grid-column: 5/7;
+    grid-row: 4/6;
+    background-color: red;
+}
+
+.grid-containerBase .grid-item-three {
+    /*         rs  cs  rw  ce */
+    grid-area: 3 / 2 / 6 / 4;
+    background-color: green;
+}
+
+
+
+
+/** --------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*! advanced CONTAINER GRID 
+  - grid-template-areas --> Permette di definire aree di layout utilizzando nomi, 
+                            facilitando la disposizione degli elementi nella griglia in modo visivo.
+*/
+
+
+/*? advanced ITEMS GRID 
+  - grid-area --> può essere usato anche in combinazione con il `grid-template-areas` applichiamo un nome all'item
+                  per poi posizionarlo LETTERALMENTE nell'editor dentro il grid container
+ */
+
+
+
+/* gird CONTAINER usato creato con degli items al suo interno */
+.grid-containerAdvanced {
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    display: grid;
+    grid-template-areas:
+        "item1      .       .       .        ."
+        "item1      .       item3   item3    item3"
+        "item1      .       item3   item3    item3"
+        "item1      .       .       .        ."
+        "item1      .   item2   item2        ."
+    ;
+
+}
+
+/* items del container */
+.grid-containerAdvanced .grid-item-one {
+    grid-area: item1;
+    background-color: yellow;
+}
+
+.grid-containerAdvanced .grid-item-two {
+    grid-area: item2;
+    background-color: purple;
+}
+
+.grid-containerAdvanced .grid-item-three {
+    grid-area: item3;
+    background-color: olivedrab;
+}
+
+
+
+
+/** --------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*! BASIC responsive grid */
+
+.grid-containerResponsiveSimple {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap: 20px;
+}
+
+img {
+    width: 100px;
+    height: 150px;
+}
+
+
+
+/*! ADVANCED responsive grid */
+
+/* will be modified whit the media querys when the viewport is smaller! 
+le prossime righe andranno a creare il loro spazio tramite il contenuto */
+.grid-containerResponsiveAdvanced {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 250px 150px auto;
+}
+
+
+
+/* all the items created into the grid layout */
+header,
+#featureOne,
+#featureTwo,
+#featureThree,
+#singUp,
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header {
+    background-color: aquamarine;
+    grid-column: 1/4;
+}
+
+#featureOne {
+    background-color: orange;
+}
+
+#featureTwo {
+    background-color: purple;
+}
+
+#featureThree {
+    background-color: lightcoral;
+}
+
+#singUp {
+    background-color: rgb(100, 137, 230);
+    grid-column: 1/4;
+}
+
+#content {
+    background-color: whitesmoke;
+    grid-column: 1/4;
+}
+
+/* responsive change layout TABLETS (768px breakpoint) */
+@media screen and (max-width: 768px) {
+
+    /* cambiamo la struttura delle COLONNE e ROW della griglia */
+    .grid-containerResponsiveAdvanced {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 300px 150px 150px;
+    }
+
+
+    /* spostiamo i vari elementi basandoci su 2 colonne */
+
+    #content {
+        grid-row: 2/3;
+    }
+
+    #singUp {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #featureOne {
+        grid-column: 2/3;
+    }
+
+    #featureTwo {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    #featureThree {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    #featureThree {
+        background-color: lightcoral;
+    }
+
+}
+
+
+/* responsive change layout MOBILE (768px breakpoint) */
+@media screen and (max-width: 480px) {
+
+    /* cambiamo la struttura delle COLONNE e ROW della griglia */
+    .grid-containerResponsiveAdvanced {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 150px 300px repeat(4, 125px);
+    }
+
+
+    /* spostiamo i vari elementi basandoci su 1 colonna */
+
+    #featureOne {
+        grid-column: 1;
+        grid-row: 4/5;
+    }
+
+    #featureThree {
+        grid-column: 1;
+        grid-row: 5/6;
+    }
+
+    #featureTwo {
+        grid-column: 1;
+        grid-row: 6/7;
+    }
+
+}

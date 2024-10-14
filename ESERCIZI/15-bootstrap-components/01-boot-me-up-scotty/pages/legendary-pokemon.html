@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Fan Page</title>
+    <meta name="description" content="legendary page for the fan of pokemons created with bootstrap">
+    <meta name="author" content="Speciale Gabriele">
+
+    <!-- external CSS file style -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- external CDN bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!--? navbar for navigation between pages, using the Bootstrap "navbar" component -->
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- logo on the top left of the page -->
+        <a class="navbar-brand" href="home.html"><img src="../IMG/logoPokemon.png" alt="logo pokemon"></a>
+        <!-- create a hamburger navbar for devices with smaller viewports -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- main links href to the other pages -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="starter-pokemon.html">Starter Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="legendary-pokemon.html">Legendary Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="battle-mechanics.html">Battle Mechanics</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <!--? main content of the page -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5 fw-bold">Legendary Pokémon</h2>
+
+        <!-- tabs used to group legendary Pokémon from various generations -->
+        <ul class="nav nav-tabs mt-5" id="legendaryTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="gen1-tab" data-bs-toggle="tab" href="#gen1" role="tab"
+                    aria-controls="gen1" aria-selected="true">First Generation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="gen2-tab" data-bs-toggle="tab" href="#gen2" role="tab" aria-controls="gen2"
+                    aria-selected="false">Second Generation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="gen3-tab" data-bs-toggle="tab" href="#gen3" role="tab" aria-controls="gen3"
+                    aria-selected="false">Third Generation</a>
+            </li>
+        </ul>
+
+        <!-- container of the tabs of all generations -->
+        <div class="tab-content mt-3">
+
+            <!-- first generation TAB -->
+            <div class="tab-pane fade show active" id="gen1" role="tabpanel" aria-labelledby="gen1-tab">
+                <h3>Mewtwo and Articuno</h3>
+                <p>Mewtwo is one of the most powerful Pokémon of the first generation, created through genetic
+                    experiments.</p>
+                <p>Articuno is one of the three legendary birds of Kanto, living inside an icy cave.</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/mewtwo.png" class="card-img-top" alt="Mewtwo">
+                            <div class="card-body">
+                                <h5 class="card-title">Mewtwo</h5>
+                                <p class="card-text">Mewtwo is a Psychic-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/articuno.png" class="card-img-top" alt="Articuno">
+                            <div class="card-body">
+                                <h5 class="card-title">Articuno</h5>
+                                <p class="card-text">Articuno is an Ice/Flying-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second generation TAB -->
+            <div class="tab-pane fade" id="gen2" role="tabpanel" aria-labelledby="gen2-tab">
+                <h3>Lugia and Ho-Oh</h3>
+                <p>Lugia is the guardian of the seas.</p>
+                <p>Ho-Oh represents the rainbow and is a symbol of rebirth.</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/lugia.png" class="card-img-top" alt="Lugia">
+                            <div class="card-body">
+                                <h5 class="card-title">Lugia</h5>
+                                <p class="card-text">Lugia is a Flying/Psychic-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/ho-oh.png" class="card-img-top" alt="Ho-Oh">
+                            <div class="card-body">
+                                <h5 class="card-title">Ho-Oh</h5>
+                                <p class="card-text">Ho-Oh is a Flying/Fire-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- third generation TAB -->
+            <div class="tab-pane fade" id="gen3" role="tabpanel" aria-labelledby="gen3-tab">
+                <h3>Groudon, Kyogre, and Rayquaza</h3>
+                <p>These three legendary Pokémon control the forces of nature: land, water, and air.</p>
+                <p>Groudon is the Pokémon that controls the land and the force of volcanoes. According to legend, it can
+                    expand the land by evaporating water. Its presence is associated with intense heatwaves and
+                    droughts.</p>
+                <p>Kyogre is the ruler of the oceans and controls torrential rains and storms. It is considered the
+                    creator of seas and the abundant rains that bring life to aquatic ecosystems. Its legend states that
+                    it can make the oceans grow immensely.</p>
+                <p>Rayquaza is the Pokémon that controls the skies and acts as a peacemaker between Groudon and Kyogre.
+                    Legend says it lives in the ozone layer and has come down to earth only to stop conflicts between
+                    the two legendaries. Rayquaza is seen as the protector of the sky and atmospheric tranquility.</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/groudon.png" class="card-img-top" alt="Groudon">
+                            <div class="card-body">
+                                <h5 class="card-title">Groudon</h5>
+                                <p class="card-text">Groudon is a Ground-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/kyogre.png" class="card-img-top" alt="Kyogre">
+                            <div class="card-body">
+                                <h5 class="card-title">Kyogre</h5>
+                                <p class="card-text">Kyogre is a Water-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../IMG/rayquaza.png" class="card-img-top" alt="Rayquaza">
+                            <div class="card-body">
+                                <h5 class="card-title">Rayquaza</h5>
+                                <p class="card-text">Rayquaza is a Dragon/Flying-type Legendary Pokémon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--? footer of the pages -->
+    <footer class="bg-light text-center p-3 mt-5">
+        <p>Created by <strong>Speciale Gabriele</strong> - Pokémon Fan Page © 2024</p>
+    </footer>
+
+    <!-- end content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js" defer></script>
+</body>
+
+</html>

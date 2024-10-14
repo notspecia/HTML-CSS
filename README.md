@@ -1,4 +1,4 @@
-# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 1.0
+# HTML-CSS ENGLISH/ITALIAN COURSE VERSION 1.2
 
 During this course of HTML-CSS I'm learning the following notions, going to practice with practical exercises that identify with reality:
 
@@ -17,6 +17,7 @@ During this course of HTML-CSS I'm learning the following notions, going to prac
 11. shadows-gradients-transtions-transform-animations
 12. flexbox
 12. flexbox VS alternative
+13. grid
 14. bootstrap-core
 15. bootstrap-components
 
@@ -24,5 +25,4 @@ All the topics mentioned are fully in -depth, have an happy reading :) !!
 
 ## To fix
 
-1. read and do the exsercise number 1 of the new section 14 (boostrap-core)
-2. read and do the exsercise of the new section 15 (boostrap-components)
+1. Review everything before the final exam :(

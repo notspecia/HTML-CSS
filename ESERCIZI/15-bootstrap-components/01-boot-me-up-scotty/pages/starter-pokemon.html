@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Fan Page</title>
+    <meta name="description" content="STARTER page for the fan of pokemons created with bootstrap">
+    <meta name="author" content="Speciale Gabriele">
+
+    <!-- external CSS file style -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- external CDN bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!--? navbar for navigation between pages, using the Bootstrap "navbar" component -->
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- logo on the top left of the page -->
+        <a class="navbar-brand" href="home.html"><img src="../IMG/logoPokemon.png" alt="logo pokemon"></a>
+        <!-- create a hamburger navbar for devices with smaller viewports -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- main links href to the other pages -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="starter-pokemon.html">Starter Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="legendary-pokemon.html">Legendary Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="battle-mechanics.html">Battle Mechanics</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <!--? main content of the page -->
+    <!-- cards containing the info of the starters of KANTO -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5 fw-bold">Pokémon Starter of Kanto</h2>
+
+        <div class="row g-5 d-flex justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/bulbasaur.png" class="card-img-top" alt="Bulbasaur">
+                    <div class="card-body">
+                        <h5 class="card-title">Bulbasaur</h5>
+                        <p class="card-text">Bulbasaur is a Grass/Poison type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Bulbasaur" class="btn btn-success">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/charmander.png" class="card-img-top" alt="Charmander">
+                    <div class="card-body">
+                        <h5 class="card-title">Charmander</h5>
+                        <p class="card-text">Charmander is a Fire type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Charmander" class="btn btn-danger">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/squirtle.png" class="card-img-top" alt="Squirtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Squirtle</h5>
+                        <p class="card-text">Squirtle is a Water type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Squirtle" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- cards containing the info of the starters of JOHTO -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5 fw-bold">Pokémon Starter of Johto</h2>
+
+        <div class="row g-5 d-flex justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/chikorita.png" class="card-img-top" alt="Chikorita">
+                    <div class="card-body">
+                        <h5 class="card-title">Chikorita</h5>
+                        <p class="card-text">Chikorita is a Grass type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Chikorita" class="btn btn-success">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/cyndaquil.png" class="card-img-top" alt="Cyndaquil">
+                    <div class="card-body">
+                        <h5 class="card-title">Cyndaquil</h5>
+                        <p class="card-text">Cyndaquil is a Fire type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Cyndaquil" class="btn btn-danger">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../IMG/totodile.png" class="card-img-top" alt="Totodile">
+                    <div class="card-body">
+                        <h5 class="card-title">Totodile</h5>
+                        <p class="card-text">Totodile is a Water type Pokémon.</p>
+                        <a href="https://wiki.pokemoncentral.it/Totodile" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--? footer of the pages -->
+    <footer class="bg-light text-center p-3 mt-5">
+        <p>Created by <strong>Speciale Gabriele</strong> - Pokémon Fan Page © 2024</p>
+    </footer>
+
+    <!-- end content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js" defer></script>
+</body>
+
+</html>

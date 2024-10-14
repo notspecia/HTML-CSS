@@ -1,0 +1,131 @@
+/**
+ * style.css
+ *
+ *
+ * let's set the box-sizing property to border-box for all elements.
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+/* ------------------------------------------------------------------ */
+
+/* container for the images, adapt the images with auto-fill and set a min and max size */
+.gallery {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 200px 140px 400px 160px 250px 70px 340px 120px;
+    gap: 10px;
+    margin: 40px auto;
+    animation: layoutGallery 15s linear 2s infinite;
+}
+
+/* phases that change the layout of the gallery every few seconds */
+@keyframes layoutGallery {
+    0% {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-auto-rows: 200px 140px 400px 160px 250px 70px 340px 120px;
+    }
+
+    20% {
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        grid-auto-rows: 300px 400px 350px 300px 250px 140px 360px 80px;
+    }
+
+    40% {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 400px 220px 380px 300px 270px 120px 310px 140px;
+    }
+
+    60% {
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        grid-auto-rows: 250px 460px 300px 300px 340px 160px 290px 120px;
+    }
+
+    80% {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-auto-rows: 280px 150px 320px 230px 250px 100px 300px 150px;
+    }
+
+    100% {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-auto-rows: 200px 360px 290px 170px 300px 150px 340px 200px;
+    }
+}
+
+/* pause the animation when hovered */
+.gallery:hover {
+    animation-play-state: paused;
+}
+
+
+/* ------------------------------------------------------------------ */
+
+
+/* set common properties for the images */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ------------------------------------------------------------------ */
+
+
+.dialog {
+    display: none;
+    /** background-image will be added via JS */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    width: 40vw;
+    height: 60vh;
+    padding-top: 60px;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* class added via JS to show the dialog */
+.dialog.show {
+    display: block;
+}
+
+/* styling for the close (X) button */
+.dialog label {
+    width: 20px;
+    height: 20px;
+    background: url("../IMG/close.png");
+    background-size: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+/* input checkbox is invisible but exists in the document */
+.dialog input {
+    display: none;
+}

@@ -1,0 +1,29 @@
+/**
+ * style.css
+ *
+ *
+ * apply more styling to the bootstrap elements
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* universal settings for the navabar of all the pages */
+nav a.navbar-brand img {
+    width: 200px;
+}
+
+ul.navbar-nav li.nav-item a.active {
+    color: blue;
+    font-weight: bolder;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta data information of the HTML file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Fan Page - Battle Mechanics</title>
+    <meta name="description" content="battle mechanics page for the fan of pokémons created with bootstrap">
+    <meta name="author" content="Speciale Gabriele">
+
+    <!-- external CSS file style -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- external CDN bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!--? navbar for navigation between pages, using the Bootstrap "navbar" component -->
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- logo on the top left of the page -->
+        <a class="navbar-brand" href="home.html"><img src="../IMG/logoPokemon.png" alt="logo pokemon"></a>
+        <!-- create a hamburger navbar for devices with smaller viewports -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- main links href to the other pages -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="starter-pokemon.html">Starter Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="legendary-pokemon.html">Legendary Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="battle-mechanics.html">Battle Mechanics</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <!--? main content of the page -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5 fw-bold">Pokémon Battle Mechanics</h2>
+
+        <!-- button to show additional information -->
+        <div class="text-center">
+            <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="collapse"
+                data-bs-target="#battleInfo" aria-expanded="false" aria-controls="battleInfo">
+                Show Battle Details
+            </button>
+        </div>
+        <div class="collapse mt-2" id="battleInfo">
+            <div class="card card-body shadow-sm p-4 mb-4 bg-body-tertiary rounded text-center">
+                In each battle, each Pokémon has strengths and weaknesses based on its type. For example,
+                Water-type Pokémon have an advantage against Fire-type Pokémon but are vulnerable to Electric-type
+                attacks.
+            </div>
+        </div>
+
+        <!-- tooltip on attack types -->
+        <div class="text-center mt-5">
+            <button type="button" class="btn btn-danger me-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Fire type is weak against Water">
+                Fire Attack
+            </button>
+            <button type="button" class="btn btn-success me-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Grass type is weak against Fire">
+                Grass Attack
+            </button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Electric type is weak against Ground">
+                Electric Attack
+            </button>
+        </div>
+
+        <!-- image demonstrating a battle between Pokémon -->
+        <div class="row mt-5">
+            <div class="col-md-6 mx-auto">
+                <div class="card shadow-sm">
+                    <img src="../IMG/battle.jpg" class="card-img-top" alt="Pokémon battle">
+                    <!-- alert to show an important message -->
+                    <div class="alert alert-info text-center" role="alert">
+                        Remember: Pokémon type is crucial in battle!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--? footer of the pages -->
+    <footer class="bg-light text-center p-3 mt-5">
+        <p>Created by <strong>Speciale Gabriele</strong> - Pokémon Fan Page © 2024</p>
+    </footer>
+
+    <!-- end content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js" defer></script>
+</body>
+
+</html>
