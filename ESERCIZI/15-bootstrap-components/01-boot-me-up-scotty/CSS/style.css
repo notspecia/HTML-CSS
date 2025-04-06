@@ -29,12 +29,14 @@ ul.navbar-nav li.nav-item a.active {
     font-weight: bolder;
 }
 
+
 /* universal title whit a font imported from google */
 h1,
 h2 {
     font-family: 'Pokemon Solid', sans-serif;
     letter-spacing: 4px;
 }
+
 
 /* universal animation on the cards elements */
 div.card {

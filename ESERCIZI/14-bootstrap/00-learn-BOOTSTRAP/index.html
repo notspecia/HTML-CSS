@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <!-- meta data information of the HTML file -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,11 +58,11 @@
 
     <h1 style="margin-top: 200px;">grid and column (base)</h1>
 
-    <!-- ovviamente la grid si applicherà all'interno di un CONTAINER (01 caso) (+ possiede una classe in cui
+    <!-- ovviamente la row si applicherà all'interno di un CONTAINER (01 caso) (+ possiede una classe in cui
      il testo al suo interno sarà centrato) -->
     <div class="container-lg text-center">
 
-        <!-- le colonne saranni divise in uguali proporzioni nella stessa riga (33% ognuna) -->
+        <!-- le colonne saranni divise in uguali proporzioni AUTOMATICAMENTE nella stessa riga (33% ognuna) -->
         <div class="row">
             <div class="col" style="background-color: yellow;">col</div>
             <div class="col" style="background-color: aqua;">col</div>
@@ -209,7 +209,7 @@
 
 
         <!-- 02. form-control-{unitàMisura} -> si può aggiungere al `form-control` anche un'unità di misura, che permette di cambiare
-     l'height dell'input: {form-control-(sm,lg,md...)}, prima va scritto form-control normale, successivamete `form-control-unitàMisura` -->
+         l'height dell'input: {form-control-(sm,lg,md...)}, prima va scritto form-control normale, successivamete `form-control-unitàMisura` -->
         <div class="mb-5">
             <label for="exampleFormControlInput" class="form-label">Username input lg</label>
             <input type="text" class="form-control form-control-lg" id="exampleFormControlInput" label="Username input">
@@ -217,12 +217,12 @@
 
 
         <!-- 03. form-text ->  tilizzata per aggiungere testo descrittivo o di aiuto sotto (BLOCK con div) un campo di input in un form. 
-     È spesso usata per fornire indicazioni aggiuntive su come compilare il campo. esiste per non essere confusa
-     come se fosse del testo staccato da quell'input (ex-> un <p>)
+        È spesso usata per fornire indicazioni aggiuntive su come compilare il campo. esiste per non essere confusa
+        come se fosse del testo staccato da quell'input (ex-> un <p>)
         
-    se il campo descrittivo si vuole mettere a fianco dell'input, allora si usa span che lo rende INLINE.
-    ovviamente andrebbe sistemato anche il div che contiene tutti gli elementi (label, input...) 
-    https://getbootstrap.com/docs/5.3/forms/form-control/#form-text -->
+        se il campo descrittivo si vuole mettere a fianco dell'input, allora si usa span che lo rende INLINE.
+        ovviamente andrebbe sistemato anche il div che contiene tutti gli elementi (label, input...) 
+        https://getbootstrap.com/docs/5.3/forms/form-control/#form-text -->
 
         <div class="mb-5">
             <label for="inputPassword5" class="form-label">Password</label>
@@ -235,7 +235,7 @@
 
 
         <!-- 04. disabled -> attributo booleano a un input per conferirgli un aspetto disattivato, 
-     rimuovere gli eventi del puntatore e impedire la messa a fuoco (il campo non potrà essere compilato) -->
+        rimuovere gli eventi del puntatore e impedire la messa a fuoco (il campo non potrà essere compilato) -->
         <div class="mb-5">
             <label for="exampleDisableInput" class="form-label">Disabled input!</label>
             <input type="text" class="form-control" id="exampleDisableInput" placeholder="Disabled input :("
@@ -244,7 +244,7 @@
 
 
         <!-- 05. readonly -> attributo booleano ad un input per impedire la modifica del valore dell'input. 
-     con readonly, gli input possono comunque essere focalizzati e selezionati, mentre con disable no -->
+        con readonly, gli input possono comunque essere focalizzati e selezionati, mentre con disable no -->
         <div class="mb-5">
             <label for="exampleReadonlyInput" class="form-label">readonly input!</label>
             <input type="text" class="form-control" id="exampleReadonlyInput" placeholder="readonly input here :("
@@ -253,7 +253,7 @@
 
 
         <!-- 06. file input -> tipo di input che permette di caricare file, trattabile sempre con gli STESSI ATTRIBUTI (disabled, aria-label...),
-     come tutti gli altri input (text, email, password...), vediamo TUTTI i casi di "stato" dei file input  -->
+        come tutti gli altri input (text, email, password...), vediamo TUTTI i casi di "stato" dei file input  -->
         <div class="mb-4">
             <label for="formFileSingle" class="form-label">Default file input</label>
             <input type="file" class="form-control" id="formFileSingle">
@@ -277,7 +277,7 @@
 
 
         <!-- 07. color input -> imposta type="color"e aggiungi la .form-control-color <input> (oltre anche magari per cambiare l'height)  
-     il colore iniziale lo inseriamo attraverso l'attributo `value`-->
+        il colore iniziale lo inseriamo attraverso l'attributo `value`-->
         <div class="mb-5">
             <label for="exampleFormColor" class="form-label">Color input</label>
             <input type="color" value="#563e3c" class="form-control form-control-lg form-control-color"
